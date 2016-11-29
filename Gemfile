@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
+# gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
+gem 'rails', github: 'rails/rails', branch: "5-0-stable" # Since silly Rails has critical bug with cypher!!!
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
@@ -30,9 +31,17 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Project related gems
+gem 'pg', '~> 0.18.4'
+gem 'bootstrap', '~> 4.0.0.alpha5'
+gem 'dotenv-rails'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platform: :mri
+  gem 'pry'
+  gem 'pry-byebug'
+  gem 'factory_girl_rails'
+  gem 'rspec-rails', '~> 3.5'
 end
 
 group :development do

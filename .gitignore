@@ -11,7 +11,11 @@
 /tmp/
 
 # Used by dotenv library to load environment variables.
-# .env
+/.env
+/.env.development
+/.env.test
+/.env.staging
+/.env.production
 
 ## Specific to RubyMotion:
 .dat*
