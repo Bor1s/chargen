@@ -12,7 +12,18 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class='my-red'>
+  <body>
+    <nav class='navbar'>
+      <ul class='nav navbar-nav float-md-right'>
+        <li class='nav-item'>
+          <%= link_to 'Sign In / Register', 'void(0);', class: 'nav-link' %>
+        </li>
+      </ul>
+    </nav>
+
     <%= yield %>
+    <footer>
+      Footer
+    </footer>
   </body>
 </html>
