@@ -2,11 +2,27 @@ html, body {
   height: 100%;
   padding: 0;
   margin: 0;
+  display: -webkit-flex;
   display: flex;
   flex-direction: column;
+  -webkit-flex-direction: column;
 }
 
-.flex-container {
-  display: flex;
-  height: 100%;
+#available-games {
+  // -webkit-flex: 4;
+  // flex: 4;
+
+  // Hack for Safari to vertically center content
+  height: 70%;
+
+  div.row {
+    height: 100%;
+    text-align: center;
+  }
 }
+
+footer {
+  -webkit-flex: 1;
+  flex: 1
+}
+
