@@ -1,11 +1,27 @@
-<div id='available-games' class='container'>
-  <div class='row flex-items-xs-middle'>
-    <div class='col-sm col-md col-lg'>
-      <%= image_tag('fate-logo.png', class: 'img-thumbnail', size: '300x300') %>
+<div id='available-systems' class='container'>
+  <div class='row'>
+    <div class='col text-center'>
+      <h1 class='mt-5'><b><%= t('.create_character_sheet') %></b></h1>
+    </div>
+  </div>
+
+  <div class='row align-items-center text-center logos'>
+    <div class='col'>
+      <%= link_to fate_new_character_sheet_path, class: 'hvr-grow-rotate' do %>
+        <%= image_tag('fate-logo.png', size: '200x100') %>
+      <% end %>
     </div>
 
-    <div class='col-sm col-md col-lg'>
-      <%= image_tag('fate-logo.png', class: 'img-thumbnail', size: '300x300') %>
+    <div class='col'>
+      <%= link_to gurps_new_character_sheet_path, class: 'hvr-grow-rotate' do %>
+        <%= image_tag('gurps-logo.png', size: '200x100') %>
+      <% end %>
+    </div>
+
+    <div class='col'>
+      <%= link_to hero_quest_new_character_sheet_path, class: 'hvr-grow-rotate' do %>
+        <%= image_tag('hero-quest-logo.png', size: '300x100') %>
+      <% end %>
     </div>
   </div>
 </div>

@@ -13,18 +13,20 @@
   </head>
 
   <body>
-    <nav class='navbar'>
-      <ul class='nav navbar-nav float-md-right'>
-        <li class='nav-item'>
-          <%= link_to 'Sign In / Register', 'void(0);', class: 'nav-link' %>
-        </li>
-      </ul>
-    </nav>
+    <header>
+      <nav class='navbar'>
+        <ul class='nav navbar-nav text-right'>
+          <li class='nav-item'>
+            <%= link_to 'Sign In / Register', 'void(0);', class: 'nav-link hvr-underline-from-left' %>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
     <%= yield %>
 
     <footer>
-      Footer
+      <%= render 'footer' %>
     </footer>
   </body>
 </html>

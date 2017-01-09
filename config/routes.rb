@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
   get 'general/index'
-  get 'export/:id', to: 'general#export_to_pdf', as: :export_to_pdf
+  # get 'export/:id', to: 'general#export_to_pdf', as: :export_to_pdf
+
+  resources :character_sheets do
+    get :export, on: :member
+    get 'fate', on: :new
+    get 'gurps', on: :new
+    get 'hero_quest', on: :new
+  end
 
   root 'general#index'
 

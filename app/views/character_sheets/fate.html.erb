@@ -1,0 +1,6 @@
+<%= form_for @character_sheet, as: :character_sheet, url: character_sheets_path(@character_sheet) do |f| %>
+  <%= hidden_field_tag :system, CharacterSheets::FateCore::SYSTEM_NAME %>
+  <%= f.text_field :name %>
+
+  <%= f.submit %>
+<% end%>

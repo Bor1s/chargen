@@ -1,4 +1,6 @@
 class CharacterSheets::FateCore < CharacterSheet
+  SYSTEM_NAME = 'fate'
+
   FIELDS_MAP = [
     name:                 'Name',
     description:          'Description',

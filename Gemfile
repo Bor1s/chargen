@@ -33,7 +33,8 @@ gem 'jbuilder', '~> 2.5'
 
 # Project related gems
 gem 'pg', '~> 0.18.4'
-gem 'bootstrap', '~> 4.0.0.alpha5'
+gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'hover-rails'
 gem 'dotenv-rails'
 gem 'pdf-forms'
 

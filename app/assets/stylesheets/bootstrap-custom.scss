@@ -6,23 +6,33 @@ html, body {
   display: flex;
   flex-direction: column;
   -webkit-flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  color: $black;
+  a, a:hover {
+    color: $black;
+  }
+
+  .hvr-underline-from-left:before {
+    background-color: $black;
+  }
 }
 
-#available-games {
-  // -webkit-flex: 4;
-  // flex: 4;
+#available-systems {
+  // Hack for Safari to center content vertically
+  // height: 100%;
 
-  // Hack for Safari to vertically center content
-  height: 70%;
+  -webkit-flex: 2;
+  flex: 2;
 
-  div.row {
-    height: 100%;
-    text-align: center;
+  .logos {
+    min-height: 250px;
   }
 }
 
 footer {
   -webkit-flex: 1;
-  flex: 1
+  flex: 1;
+  background-color: $black;
+  color: $white;
+  padding: 3rem;
 }
-
