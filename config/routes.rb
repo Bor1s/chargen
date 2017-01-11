@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :character_sheets do
     get :export, on: :member
+    post :export, on: :collection
     get 'fate', on: :new
     get 'gurps', on: :new
     get 'hero_quest', on: :new

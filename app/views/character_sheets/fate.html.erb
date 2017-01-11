@@ -1,6 +1,20 @@
-<%= form_for @character_sheet, as: :character_sheet, url: character_sheets_path(@character_sheet) do |f| %>
-  <%= hidden_field_tag :system, CharacterSheets::FateCore::SYSTEM_NAME %>
-  <%= f.text_field :name %>
+<div class='container'>
 
-  <%= f.submit %>
-<% end%>
+  <div class='row'>
+    <div class='col fate-logo my-5'>
+      <%= image_tag('fate-logo.png', size: '200x100', class: 'text-right') %>
+    </div>
+  </div>
+
+  <%= form_for @character_sheet, as: :character_sheet, url: export_character_sheets_path(@character_sheet), html: { target: '_blank' } do |f| %>
+
+    <%= render 'character_sheets/fate_core/form', f: f %>
+
+    <div class='row'>
+      <div class='col-4'>
+        <%= f.submit t('character_sheets.fate_core.form.create_character'), class: 'btn btn-md btn-success', id: 'submit_char', autocomplete: 'off' %>
+      </div>
+    </div>
+
+  <% end%>
+</div>

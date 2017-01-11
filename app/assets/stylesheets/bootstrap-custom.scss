@@ -17,6 +17,18 @@ html, body {
   }
 }
 
+.btn-success {
+  color: $green;
+  background-color: transparent;
+
+  &:hover {
+    color: $white;
+    background-color: $green;
+    cursor: pointer;
+  }
+}
+
+
 #available-systems {
   // Hack for Safari to center content vertically
   // height: 100%;
@@ -35,4 +47,43 @@ footer {
   background-color: $black;
   color: $white;
   padding: 3rem;
+  margin-top: 3rem;
+}
+
+// Fate Core Styles
+.fate-logo {
+  text-align: center;
+}
+
+.fate-id {
+  padding-left: 0.3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: black;
+  display: block;
+  margin-bottom: 1rem;
+  color: white;
+  border-top-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.mild::before, .mild2::before, .moderate::before, .severe::before {
+  display: block;
+  content: '2';
+  font-weight: bold;
+  font-size: 1.5rem;
+  left: 8px;
+  position: absolute;
+}
+
+.mild2::before {
+  opacity: 0.3;
+}
+
+.moderate::before {
+  content: '4';
+}
+
+.severe::before {
+  content: '6';
 }

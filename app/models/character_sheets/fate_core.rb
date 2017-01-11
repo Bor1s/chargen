@@ -1,5 +1,6 @@
 class CharacterSheets::FateCore < CharacterSheet
   SYSTEM_NAME = 'fate'
+  SKILLS = [:superb, :great, :good, :fair, :average]
 
   FIELDS_MAP = [
     name:                 'Name',

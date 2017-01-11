@@ -8,7 +8,7 @@
 #
 # In views, this is aliased to just `t`:
 #
-#     <%= t('hello') %>
+#     <%#= t('hello') %>
 #
 # To use a different locale, set it with `I18n.locale`:
 #
@@ -24,3 +24,31 @@ en:
     index:
       create_character_sheet: 'Create your character sheet:'
 
+  character_sheets:
+    fate_core:
+      form:
+        id: 'ID'
+        aspects: 'Aspects'
+        skills: 'Skills'
+        extras: 'Extras'
+        stunts: 'Stunts'
+        consequences: 'Consequences'
+
+        name: 'Name'
+        description: 'Description'
+        refresh: 'Refresh'
+        high_concept: 'High Concept'
+        trouble: 'Trouble'
+        first_adventure: 'First Adventure'
+        crossing_path_1: 'Crossing Paths'
+        crossing_path_2: 'Crossing Paths Again'
+        superb: 'Superb (+5)'
+        great: 'Great (+4)'
+        good: 'Good (+3)'
+        fair: 'Fair (+2)'
+        average: 'Average (+1)'
+        mild: 'Mild'
+        moderate: 'Moderate'
+        severe: 'Severe'
+
+        create_character: 'Create'

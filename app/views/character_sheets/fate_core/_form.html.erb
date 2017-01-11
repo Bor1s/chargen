@@ -1,0 +1,157 @@
+<%= hidden_field_tag :system, CharacterSheets::FateCore::SYSTEM_NAME %>
+
+<!-- ID section -->
+<div class='row'>
+  <div class='col'>
+    <span class='fate-id'><%= t('.id') %></span>
+  </div>
+</div>
+
+<div class='row'>
+  <div class='col-8'>
+    <div class='row'>
+      <div class='col'>
+        <div class='form-group'>
+          <%= f.text_field :name, class: 'form-control', placeholder: t('.name') %>
+        </div>
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class='col'>
+        <div class='form-group'>
+          <%= f.text_area :description, class: 'form-control', placeholder: t('.description') %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class='col-4'>
+    <div class='form-group'>
+      <%= f.text_area :refresh, class: 'form-control', placeholder: t('.refresh'), rows: 3 %>
+    </div>
+  </div>
+</div>
+<!-- END ID section -->
+
+<!-- Aspects section -->
+<div class='row'>
+  <div class='col'>
+    <span class='fate-id'><%= t('.aspects') %></span>
+  </div>
+</div>
+
+<div class='row'>
+  <div class='col-6'>
+    <div class='form-group'>
+      <%= f.text_field :high_concept, class: 'form-control', placeholder: t('.high_concept') %>
+    </div>
+
+    <div class='form-group'>
+      <%= f.text_field :trouble, class: 'form-control', placeholder: t('.trouble') %>
+    </div>
+
+    <div class='form-group'>
+      <%= f.text_field :first_adventure, class: 'form-control', placeholder: t('.first_adventure') %>
+    </div>
+
+    <div class='form-group'>
+      <%= f.text_field :crossing_path_1, class: 'form-control', placeholder: t('.crossing_path_1') %>
+    </div>
+
+    <div class='form-group'>
+      <%= f.text_field :crossing_path_2, class: 'form-control', placeholder: t('.crossing_path_2') %>
+    </div>
+  </div>
+</div>
+<!-- END Aspects section -->
+
+<!-- Skills section -->
+<div class='row'>
+  <div class='col'>
+    <span class='fate-id'><%= t('.skills') %></span>
+  </div>
+</div>
+
+<div class='row'>
+  <% CharacterSheets::FateCore::SKILLS.each do |skill| %>
+    <div class='col-2 col-form-label'>
+      <center><%= t(".#{skill}") %></center>
+    </div>
+
+    <% (1..5).each do |i| %>
+      <div class='col-2'>
+        <div class='form-group'>
+          <%= f.text_field "#{skill}_#{i}".to_sym, class: 'form-control' %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+<!-- END Skills section -->
+
+<!-- Extras and Stunts section -->
+<div class='row'>
+  <div class='col-6'>
+    <span class='fate-id'><%= t('.extras') %></span>
+  </div>
+
+  <div class='col-6'>
+    <span class='fate-id'><%= t('.stunts') %></span>
+  </div>
+</div>
+
+<div class='row'>
+  <div class='col-6'>
+    <div class='form-group'>
+      <%= f.text_area :extras, class: 'form-control', placeholder: t('.extras'), rows: 5 %>
+    </div>
+  </div>
+
+  <div class='col-6'>
+    <div class='form-group'>
+      <%= f.text_area :stunts, class: 'form-control', placeholder: t('.stunts'), rows: 5 %>
+    </div>
+  </div>
+</div>
+<!-- END Extras section -->
+
+<!-- Consequences section -->
+<div class='row'>
+  <div class='col'>
+    <span class='fate-id'><%= t('.consequences') %></span>
+  </div>
+</div>
+
+<div class='row'>
+  <div class='col-4'>
+    <div class='form-group'>
+      <span class='mild'></span><%= f.text_field :mild_consequence_1, class: 'form-control', placeholder: t('.mild') %>
+    </div>
+  </div>
+
+  <div class='col-4'>
+    <div class='form-group'>
+      <span class='mild2'></span><%= f.text_field :mild_consequence_2, class: 'form-control', placeholder: t('.mild') %>
+    </div>
+  </div>
+</div>
+
+<div class='row'>
+  <div class='col-4'>
+    <div class='form-group'>
+      <span class='moderate'></span><%= f.text_field :moderate_consequence, class: 'form-control', placeholder: t('.moderate') %>
+    </div>
+  </div>
+</div>
+
+<div class='row'>
+  <div class='col-4'>
+    <div class='form-group'>
+      <span class='severe'></span><%= f.text_field :severe_consequence, class: 'form-control', placeholder: t('.severe') %>
+    </div>
+  </div>
+</div>
+<!-- END Consequences section -->
+
+<hr />

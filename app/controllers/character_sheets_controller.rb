@@ -30,10 +30,11 @@ class CharacterSheetsController < ApplicationController
     # NOTE potential problem, any user can access
     # any character sheet!
     # TODO create some sort of protection
-    character_sheet = CharacterSheet.find(params[:id])
-    service = CharacterSheetService.new(character_sheet)
-    service.export_to_pdf!
-    send_file service.pdf_path, type: 'application/pdf', disposition: 'inline'
+    if params[:id].present?
+      export_saved_sheet
+    else
+      export_unsaved_sheet
+    end
   end
 
   private
@@ -44,5 +45,20 @@ class CharacterSheetsController < ApplicationController
 
   def system_params
     params.require(:system)
+  end
+
+  # TODO 
+  def export_saved_sheet
+    character_sheet = CharacterSheet.find(params[:id])
+    service = CharacterSheetService.new(character_sheet)
+    service.export_to_pdf!
+    send_file service.pdf_path, type: 'application/pdf', disposition: 'inline'
+  end
+
+  def export_unsaved_sheet
+    @character_sheet = CharacterSheetFactory.build(system_params, character_sheet_params)
+    service = CharacterSheetService.new(@character_sheet)
+    service.export_to_pdf!
+    send_file service.pdf_path, type: 'application/pdf', disposition: 'inline'
   end
 end
