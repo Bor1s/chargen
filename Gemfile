@@ -37,6 +37,7 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'hover-rails'
 gem 'dotenv-rails'
 gem 'pdf-forms'
+gem 'font-awesome-rails'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'

@@ -7,15 +7,42 @@ html, body {
   flex-direction: column;
   -webkit-flex-direction: column;
   font-family: 'Roboto', sans-serif;
-  color: $black;
+  font-size: 14px;
+  color: $grey;
   a, a:hover {
-    color: $black;
+    color: $dark-grey;
   }
 
   .hvr-underline-from-left:before {
-    background-color: $black;
+    background-color: $dark-grey;
   }
 }
+
+// Placeholders
+
+form .form-control::-webkit-input-placeholder, { /* Chrome/Opera/Safari */
+  opacity: $placeholder-opacity;
+}
+
+form .form-control::-moz-placeholder { /* Firefox 19+ */
+  opacity: $placeholder-opacity;
+}
+
+form .form-control:-ms-input-placeholder { /* IE 10+ */
+  opacity: $placeholder-opacity;
+}
+
+form .form-control:-moz-placeholder { /* Firefox 18- */
+  opacity: $placeholder-opacity;
+}
+
+// Navbar
+
+header {
+  margin-top: 1rem;
+}
+
+// Bootstrap btns
 
 .btn-success {
   color: $green;
@@ -28,29 +55,66 @@ html, body {
   }
 }
 
+// Front page body
 
-#available-systems {
+.available-systems {
   // Hack for Safari to center content vertically
   // height: 100%;
-
   -webkit-flex: 2;
   flex: 2;
+
+  font-weight: 200;
 
   .logos {
     min-height: 250px;
   }
 }
 
+.logo-image {
+  margin-top: 5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: 700;
+  font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+.logo-description {
+  font-weight: 200;
+}
+
+.circle-button {
+  color: $light-grey;
+  display: inline-block;
+  border: 1px solid;
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 100px;
+  top: 37px;
+  position: relative;
+  background-color: white;
+
+  i.fa-lg {
+    line-height: 0.98em;
+    vertical-align: -70%;
+  }
+}
+
+// Footer
+
 footer {
   -webkit-flex: 1;
   flex: 1;
-  background-color: $black;
+  font-weight: 100;
+  background-color: $dark-grey;
   color: $white;
   padding: 3rem;
   margin-top: 3rem;
 }
 
 // Fate Core Styles
+
 .fate-logo {
   text-align: center;
 }

@@ -22,7 +22,7 @@
 en:
   general:
     index:
-      create_character_sheet: 'Create your character sheet:'
+      create_character_sheet: 'One place to rule them all'
 
   character_sheets:
     fate_core:

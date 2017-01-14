@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Chargen</title>
+    <title>Character Sheets</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -14,13 +14,7 @@
 
   <body>
     <header>
-      <nav class='navbar'>
-        <ul class='nav navbar-nav text-right'>
-          <li class='nav-item'>
-            <%= link_to 'Sign In / Register', 'void(0);', class: 'nav-link hvr-underline-from-left' %>
-          </li>
-        </ul>
-      </nav>
+      <%= render 'header' %>
     </header>
 
     <%= yield %>
