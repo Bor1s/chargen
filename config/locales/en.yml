@@ -23,6 +23,15 @@ en:
   general:
     index:
       create_character_sheet: 'One place to rule them all'
+      #tip1-header: 'Simple storage for all your character sheets'
+      tip1-header: 'Keep them secret keep them safe'
+      tip1-description: 'Keep all your characters in one place available to you at any time from any device'
+
+      tip2-header: 'Manage your characters online'
+      tip2-description: 'Keep track and advance characters using your browser and later bring them to paper'
+
+      tip3-header: 'Be prepared for your game'
+      tip3-description: 'No more forgotten character sheets! Export your characters nicely in original or official PDFs provided by related game system and use them during your game'
 
   character_sheets:
     fate_core:

@@ -8,32 +8,70 @@
   <div class='row'>
     <div class='col text-center'>
       <h4 class='mt-5 logo-description'><%= t('.create_character_sheet') %></h4>
-      <div class='mt-5'>
-        <span class="circle-button">
-          <i class="fa fa-chevron-down fa-lg" aria-hidden="true"></i>
-        </span>
-        <hr />
-      </div>
+      <%= render 'separator' %>
     </div>
   </div>
 
   <div class='row align-items-center text-center logos'>
     <div class='col'>
       <%= link_to fate_new_character_sheet_path, class: 'hvr-grow-rotate' do %>
-        <%= image_tag('fate-logo.png', size: '150x80') %>
+        <%= image_tag('fate-logo.png', size: '150x73') %>
       <% end %>
     </div>
 
     <div class='col'>
       <%= link_to gurps_new_character_sheet_path, class: 'hvr-grow-rotate' do %>
-        <%= image_tag('gurps-logo.png', size: '200x80') %>
+        <%= image_tag('gurps-logo.png', size: '200x66') %>
       <% end %>
     </div>
 
     <div class='col'>
       <%= link_to hero_quest_new_character_sheet_path, class: 'hvr-grow-rotate' do %>
-        <%= image_tag('hero-quest-logo.png', size: '250x80') %>
+        <%= image_tag('hero-quest-logo.png', size: '300x65') %>
       <% end %>
     </div>
   </div>
+
+    <div class='row'>
+      <div class='col text-center'>
+        <%= render 'separator' %>
+      </div>
+    </div>
+
+  <div class='container tips'>
+    <div class='row'>
+      <div class='col-lg-6 col-md-6 col-sm-12 col-xs-12'>
+        <h3><%= t('.tip1-header') %></h3>
+        <p><%= t('.tip1-description') %></p>
+      </div>
+
+      <div class='col-lg-6 col-md-6 col-sm-12 col-xs-12'>
+        <!-- nice image here -->
+      </div>
+    </div>
+
+    <div class='row mt-5'>
+      <div class='col-lg-6 col-md-6 col-sm-12 col-xs-12'>
+        <!-- nice image here -->
+      </div>
+
+      <div class='col-lg-6 col-md-6 col-sm-12 col-xs-12'>
+        <h3><%= t('.tip2-header') %></h3>
+        <p><%= t('.tip2-description') %></p>
+      </div>
+    </div>
+
+    <div class='row mt-5'>
+      <div class='col-lg-6 col-md-6 col-sm-12 col-xs-12'>
+        <h3><%= t('.tip3-header') %></h3>
+        <p><%= t('.tip3-description') %></p>
+      </div>
+
+      <div class='col-lg-6 col-md-6 col-sm-12 col-xs-12'>
+        <!-- nice image here -->
+      </div>
+    </div>
+  </div>
 </div>
+
+
