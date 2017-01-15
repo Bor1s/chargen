@@ -13,6 +13,10 @@ html, body {
     color: $dark-grey;
   }
 
+  ul, ol {
+    list-style: none;
+  }
+
   .hvr-underline-from-left:before {
     background-color: $dark-grey;
   }
@@ -118,6 +122,17 @@ footer {
   color: $white;
   padding: 3rem;
   margin-top: 3rem;
+
+  li {
+    line-height: 2.5rem;
+    a, a:hover {
+      color: $white;
+    }
+  }
+}
+
+li.header {
+  font-weight: 400;
 }
 
 // Fate Core Styles
