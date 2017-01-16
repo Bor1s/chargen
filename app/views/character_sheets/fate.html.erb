@@ -6,7 +6,7 @@
     </div>
   </div>
 
-  <%= form_for @character_sheet, as: :character_sheet, url: export_character_sheets_path(@character_sheet), html: { target: '_blank' } do |f| %>
+  <%= form_for @character_sheet, as: :character_sheet, url: create_character_sheet_url, html: { target: '_blank' } do |f| %>
 
     <%= render 'character_sheets/fate_core/form', f: f %>
 

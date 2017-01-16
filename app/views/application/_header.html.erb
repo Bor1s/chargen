@@ -8,7 +8,12 @@
       <div class='col-9'>
         <ul class='nav navbar-nav mr-auto text-right'>
           <li class='nav-item'>
-            <%= link_to 'Sign In', 'void(0);', class: 'nav-link hvr-underline-from-left' %>
+            <% if user_signed_in? %>
+              <%= link_to 'Profile', root_path, class: 'nav-link hvr-underline-from-left' %>
+              <%= link_to 'Log Out', destroy_user_session_path, method: :delete, class: 'nav-link hvr-underline-from-left' %>
+            <% else %>
+              <%= link_to 'Sign In', new_user_session_path, class: 'nav-link hvr-underline-from-left' %>
+            <% end %>
           </li>
         </ul>
       </div>

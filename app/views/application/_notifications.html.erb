@@ -1,0 +1,11 @@
+<div class='row justify-content-center notifications'>
+  <div class='col-3 text-center'>
+    <% if alert %>
+      <section class='bg-danger text-white'><span><%= alert %></span></section>
+    <% end %>
+
+    <% if notice %>
+      <section class='bg-success text-white'><span><%= notice%></span></section>
+    <% end %>
+  </div>
+</div>

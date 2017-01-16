@@ -1,14 +1,20 @@
 class CharacterSheetsController < ApplicationController
+  before_action :authenticate_user!, except: [:export, :fate]
 
   def index
   end
 
   def fate
-    @character_sheet = CharacterSheets::FateCore.new
+    if user_signed_in?
+      @character_sheet = current_user.fate_core_character_sheets.build
+    else
+      @character_sheet = CharacterSheets::FateCore.new
+    end
   end
 
   def create
     @character_sheet = CharacterSheetFactory.build(system_params, character_sheet_params)
+    @character_sheet.user = current_user
 
     if @character_sheet.save
       redirect_to edit_character_sheet_path(@character_sheet)
@@ -30,7 +36,7 @@ class CharacterSheetsController < ApplicationController
     # NOTE potential problem, any user can access
     # any character sheet!
     # TODO create some sort of protection
-    if params[:id].present?
+    if user_signed_in?
       export_saved_sheet
     else
       export_unsaved_sheet

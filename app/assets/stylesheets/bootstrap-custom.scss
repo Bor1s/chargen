@@ -22,6 +22,28 @@ html, body {
   }
 }
 
+.text-muted {
+  opacity: 0.5;
+}
+
+// Notifications
+
+.notifications {
+  position: absolute;
+  width: 100%;
+  top: 0;
+
+  section {
+    height: 4rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    span {
+      display: inline-block;
+      margin-top: 1.2rem;
+    }
+  }
+}
+
 // Placeholders
 
 form .form-control::-webkit-input-placeholder, { /* Chrome/Opera/Safari */
@@ -44,6 +66,7 @@ form .form-control:-moz-placeholder { /* Firefox 18- */
 
 header {
   margin-top: 1rem;
+  margin-bottom: 5rem;
 }
 
 // Bootstrap btns
@@ -74,14 +97,19 @@ header {
   }
 }
 
-.logo-image {
-  margin-top: 5rem;
+.logo-image, .choose-wisely {
   padding-top: 2rem;
   padding-bottom: 2rem;
   font-size: 3rem;
   font-style: italic;
   font-weight: 700;
   font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+.choose-wisely {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
 }
 
 .logo-description {

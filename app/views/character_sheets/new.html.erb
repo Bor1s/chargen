@@ -1,2 +1,27 @@
-<h1>CharacterSheets#new</h1>
-<p>Find me in app/views/character_sheets/new.html.erb</p>
+<div class='available-systems'>
+  <div class='row justify-content-md-center'>
+    <div class='col-lg-4 text-center'>
+      <h2 class='choose-wisely'>Choose wisely!</h2>
+    </div>
+  </div>
+
+  <div class='row align-items-center text-center logos'>
+    <div class='col'>
+      <%= link_to fate_new_character_sheet_path, class: 'hvr-grow-rotate' do %>
+        <%= image_tag('fate-logo.png', size: '150x73') %>
+      <% end %>
+    </div>
+
+    <div class='col'>
+      <%= link_to gurps_new_character_sheet_path, class: 'hvr-grow-rotate' do %>
+        <%= image_tag('gurps-logo.png', size: '200x66') %>
+      <% end %>
+    </div>
+
+    <div class='col'>
+      <%= link_to hero_quest_new_character_sheet_path, class: 'hvr-grow-rotate' do %>
+        <%= image_tag('hero-quest-logo.png', size: '300x65') %>
+      <% end %>
+    </div>
+  </div>
+</div>

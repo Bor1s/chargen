@@ -1,0 +1,25 @@
+<%= render 'profile_navbar' %>
+
+<div class='container'>
+  <div class='row'>
+    <div class='col'>
+      <hr class='my-5' />
+
+      <div class='row'>
+        <div class='col-6'>
+          <section class='text-muted'>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a enim ligula. Vestibulum imperdiet eleifend nulla ut luctus. Morbi semper velit nulla, quis hendrerit velit blandit eu. Curabitur bibendum, dolor id iaculis interdum, ipsum purus commodo turpis, ut vestibulum velit nibh ut erat. Suspendisse placerat eu orci sit amet lobortis. Mauris condimentum odio sit amet massa auctor facilisis a ac lectus. Nulla eu sollicitudin erat.
+          </section>
+        </div>
+
+        <div class='col-6 text-right align-self-center'>
+          <%= link_to new_character_sheet_path, class: 'btn btn-success' do %>
+            <%= fa_icon 'plus', text: 'Create Character Sheet' %>
+          <% end %>
+        </div>
+      </div>
+
+      <hr class='my-5' />
+    </div>
+  </div>
+</div>
