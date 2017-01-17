@@ -1,2 +1,16 @@
-<h1>CharacterSheets#edit</h1>
-<p>Find me in app/views/character_sheets/edit.html.erb</p>
+<div class='container'>
+  <div class='row'>
+    <div class='col fate-logo my-5'>
+      <%= image_tag('fate-logo.png', size: '200x100', class: 'text-right') %>
+    </div>
+  </div>
+
+  <%= form_for @character_sheet, as: :character_sheet, url: character_sheet_path(@character_sheet), method: :put do |f| %>
+    <%= render 'character_sheets/form_resolver', f: f %>
+    <div class='row'>
+      <div class='col-4'>
+        <%= f.submit t('.update'), class: 'btn btn-md btn-success' %>
+      </div>
+    </div>
+  <% end%>
+</div>

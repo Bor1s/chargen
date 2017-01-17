@@ -5,5 +5,6 @@ class ProfilesController < ApplicationController
   end
 
   def character_sheets
+    @character_sheets = current_user.character_sheets
   end
 end

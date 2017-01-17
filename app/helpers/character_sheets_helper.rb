@@ -6,4 +6,12 @@ module CharacterSheetsHelper
       export_character_sheets_path(@character_sheet)
     end
   end
+
+  def html_options
+    if user_signed_in?
+      {}
+    else
+      { target: '_blank' }
+    end
+  end
 end

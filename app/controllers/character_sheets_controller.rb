@@ -17,6 +17,7 @@ class CharacterSheetsController < ApplicationController
     @character_sheet.user = current_user
 
     if @character_sheet.save
+      flash.notice = 'Character sheet created'
       redirect_to edit_character_sheet_path(@character_sheet)
     else
       render system_params
@@ -24,18 +25,31 @@ class CharacterSheetsController < ApplicationController
   end
 
   def edit
+    @character_sheet = current_user.character_sheets.find(params[:id])
   end
 
   def update
+    @character_sheet = current_user.character_sheets.find(params[:id])
+    if @character_sheet.update_attributes(character_sheet_params)
+      flash.notice = t('flashes.character_sheets.updated')
+      redirect_to edit_character_sheet_path(@character_sheet)
+    else
+      render :edit
+    end
   end
 
   def destroy
+    @character_sheet = current_user.character_sheets.find(params[:id])
+    if @character_sheet.destroy
+      flash.notice = t('flashes.character_sheets.deleted')
+    else
+      flash.alert = t('flashes.character_sheets.not_deleted')
+    end
+
+    redirect_to character_sheets_profile_path
   end
 
   def export
-    # NOTE potential problem, any user can access
-    # any character sheet!
-    # TODO create some sort of protection
     if user_signed_in?
       export_saved_sheet
     else
@@ -53,9 +67,8 @@ class CharacterSheetsController < ApplicationController
     params.require(:system)
   end
 
-  # TODO 
   def export_saved_sheet
-    character_sheet = CharacterSheet.find(params[:id])
+    character_sheet = current_user.character_sheets.find(params[:id])
     service = CharacterSheetService.new(character_sheet)
     service.export_to_pdf!
     send_file service.pdf_path, type: 'application/pdf', disposition: 'inline'

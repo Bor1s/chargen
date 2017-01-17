@@ -82,6 +82,39 @@ header {
   }
 }
 
+.btn-warning {
+  color: $yellow;
+  background-color: transparent;
+
+  &:hover {
+    color: $white;
+    background-color: $yellow;
+    cursor: pointer;
+  }
+}
+
+.btn-primary {
+  color: $blue;
+  background-color: transparent;
+
+  &:hover {
+    color: $white;
+    background-color: $blue;
+    cursor: pointer;
+  }
+}
+
+.btn-danger {
+  color: $red;
+  background-color: transparent;
+
+  &:hover {
+    color: $white;
+    background-color: $red;
+    cursor: pointer;
+  }
+}
+
 // Front page body
 
 .available-systems {
@@ -200,4 +233,10 @@ li.header {
 
 .severe::before {
   content: '6';
+}
+
+// Profile
+
+.character-sheet-row:nth-of-type(2n+1) {
+  background-color: $super-light-grey;
 }

@@ -4,5 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  has_many :character_sheets, dependent: :destroy
   has_many :fate_core_character_sheets, dependent: :destroy, class_name: 'CharacterSheets::FateCore'
 end

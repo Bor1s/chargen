@@ -20,6 +20,11 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  flashes:
+    character_sheets:
+      updated: 'Character sheet updated'
+      deleted: 'Character sheet has been deleted'
+      not_deleted: 'Character sheet has not been deleted!'
   general:
     index:
       create_character_sheet: 'One place to rule them all'
@@ -34,7 +39,9 @@ en:
       tip3-description: 'No more forgotten character sheets! Export your characters nicely in original or official PDFs provided by related game system and use them during your game'
 
   character_sheets:
-    fate_core:
+    edit:
+      update: 'Update'
+    fate_cores:
       form:
         id: 'ID'
         aspects: 'Aspects'
