@@ -20,6 +20,18 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  profiles:
+    profile_navbar:
+      my_sheets: 'My Sheets'
+      settings: 'Settings'
+  application:
+    header:
+      sign_in: 'Sign In'
+      log_out: 'Log Out'
+      profile: 'Profile'
+    footer:
+      faq: 'FAQ'
+      about: 'About'
   flashes:
     character_sheets:
       updated: 'Character sheet updated'

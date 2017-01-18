@@ -1,23 +1,24 @@
-<nav class='navbar'>
-  <div class='container'>
-    <div class='row'>
-      <div class='col-3'>
-        <%= link_to 'Character Sheets', root_path %>
-      </div>
+<div class='container navbar navbar-toggleable-md'>
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <%= fa_icon 'minus' %>
+  </button>
+  <%= link_to 'Character Sheets', root_path, class: 'navbar-brand' %>
 
-      <div class='col-9'>
-        <ul class='nav navbar-nav mr-auto text-right'>
-          <li class='nav-item'>
-            <% if user_signed_in? %>
-              <%= link_to 'Profile', root_path, class: 'nav-link hvr-underline-from-left' %>
-              <%= link_to 'Log Out', destroy_user_session_path, method: :delete, class: 'nav-link hvr-underline-from-left' %>
-            <% else %>
-              <%= link_to 'Sign In', new_user_session_path, class: 'nav-link hvr-underline-from-left' %>
-            <% end %>
-          </li>
-        </ul>
-      </div>
-    </div>
+  <div class='collapse navbar-collapse' id='navbarSupportedContent'>
+    <ul class='navbar-nav ml-auto'>
+    <% if user_signed_in? %>
+      <li class='nav-item'>
+        <%= link_to t('.profile'), root_path, class: "nav-link #{active_for(['registrations#edit', 'profiles#character_sheets'])}" %>
+      </li>
 
+      <li class='nav-item'>
+        <%= link_to t('.log_out'), destroy_user_session_path, method: :delete, class: 'nav-link' %>
+      </li>
+    <% else %>
+      <li class='nav-item'>
+        <%= link_to t('.sign_in'), new_user_session_path, class: 'nav-link' %>
+      </li>
+    <% end %>
+    </ul>
   </div>
-</nav>
+</div>

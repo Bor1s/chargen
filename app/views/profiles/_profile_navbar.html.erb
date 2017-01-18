@@ -1,10 +1,11 @@
 <div class='container'>
-  <div class='row'>
-    <div class='col'>
-      <nav class="nav flex-column flex-sm-row">
-        <%= link_to 'Character Sheets', character_sheets_profile_path, class: 'flex-sm-fill text-sm-center nav-link active' %>
-        <%= link_to 'Settings', edit_user_registration_path, class: 'flex-sm-fill text-sm-center nav-link' %>
-      </nav>
-    </div>
-  </div>
+  <ul class='nav'>
+    <li class='nav-item'>
+      <%= link_to t('.my_sheets'), character_sheets_profile_path, class: "flex-sm-fill text-sm-center nav-link #{active_for(['profiles#character_sheets'])}" %>
+    </li>
+
+    <li class='nav-item'>
+      <%= link_to t('.settings'), edit_user_registration_path, class: "flex-sm-fill text-sm-center nav-link #{active_for(['registrations#edit'])}" %>
+    </li>
+  </ul>
 </div>

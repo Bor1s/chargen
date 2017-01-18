@@ -1,0 +1,9 @@
+.character-sheet-row:nth-of-type(2n+1) {
+  background-color: $super-light-grey;
+}
+
+.actions {
+  a {
+    margin-left: 1rem;
+  }
+}

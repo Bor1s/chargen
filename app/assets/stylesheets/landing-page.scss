@@ -1,0 +1,53 @@
+.available-systems {
+  // Hack for Safari to center content vertically
+  // height: 100%;
+  -webkit-flex: 2;
+  flex: 2;
+
+  font-weight: 200;
+
+  .logos {
+    min-height: 250px;
+  }
+}
+
+.logo-image, .choose-wisely {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: 700;
+  font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+.choose-wisely {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.logo-description {
+  font-weight: 200;
+}
+
+.circle-button {
+  color: $light-grey;
+  display: inline-block;
+  border: 1px solid;
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 100px;
+  top: 37px;
+  position: relative;
+  background-color: white;
+
+  i.fa-lg {
+    line-height: 0.98em;
+    vertical-align: -70%;
+  }
+}
+
+.tips {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}

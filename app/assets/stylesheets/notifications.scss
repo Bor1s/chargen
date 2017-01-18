@@ -1,0 +1,15 @@
+.notifications {
+  position: absolute;
+  width: 100%;
+  top: 0;
+
+  section {
+    height: 4rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    span {
+      display: inline-block;
+      margin-top: 1.2rem;
+    }
+  }
+}
