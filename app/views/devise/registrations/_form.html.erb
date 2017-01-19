@@ -16,7 +16,7 @@
         <%= f.password_field :password, autocomplete: "off", placeholder: t('.password'), class: 'form-control' %>
         <% if @minimum_password_length %>
           <br />
-          <em><%= @minimum_password_length %> characters minimum</em>
+          <em class='text-muted'><%= @minimum_password_length %> <%= t('.minimum_characters') %></em>
         <% end %>
       </div>
 
@@ -34,8 +34,8 @@
     <% end %>
 
     <hr />
-    <h4 class='text-danger'>Cancel my account</h4>
+    <h4 class='text-danger'><%= t('.cancel_account') %></h4>
 
-    <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-danger' %></p>
+    <p>Unhappy? <%= button_to t('.cancel_account'), registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-danger' %></p>
   </div>
 </div>

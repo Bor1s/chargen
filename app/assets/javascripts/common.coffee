@@ -1,9 +1,10 @@
 $(document).ready ->
-  setTimeout slideNotifications, 2000
+  setTimeout slideNotifications, 3000
 
 $(document).on 'page:load', ->
-  setTimeout slideNotifications, 2000
+  setTimeout slideNotifications, 3000
 
 slideNotifications = ->
   if $('.notifications').length > 0
-    $('.notifications').slideUp('slow')
+    $('.notifications section').slideUp('slow')
+    $('.notifications').slideUp()

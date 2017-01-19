@@ -1,15 +1,34 @@
 <div class='container'>
   <div class='row'>
     <div class='col-6'>
-      <h3>Logo goes here</h3>
-      &copy; 2017 Character Sheets | Online storage for character sheets
+      <h3>Character Sheets</h3>
+      <p>2017 Character Sheets | Online processor and storage for your characters.</p>
+      <p>
+        <small>
+          Fate™ is a trademark of Evil Hat Productions, LLC. The Powered by Fate logo is © Evil Hat Productions, LLC and is used with permission.<br />
+          The Fate Core font is &copy; Evil Hat Productions, LLC and is used with permission. The Four Actions icons were designed by Jeremy Keller.
+        </small>
+      </p>
+
+      <p>
+        <small>
+          <a href="http://www.sjgames.com/gurps/"><b><i>GURPS</i></b></a> is a registered trademark of Steve Jackson Games, and the art here is copyrighted by Steve Jackson Games. All rights are reserved by SJ Games. This material is used here in accordance with the SJ Games <a href="http://www.sjgames.com/general/online_policy.html">online policy</a>.
+          GURPS is a trademark of Steve Jackson Games, and its rules and art are copyrighted by Steve Jackson Games. All rights are reserved by Steve Jackson Games. This game aid is the original creation of Character Sheets project and is released for free distribution, and not for resale, under the permissions granted in the <a href="http://www.sjgames.com/general/online_policy.html">Steve Jackson Games Online Policy</a>.
+        </small>
+      </p>
+
+      <p>
+        <small>
+          This website uses trademarks and/or copyrights owned by Moon Design Publications LLC, which are used under Moon Design Publications’s Fan Material Policy. We are expressly prohibited from charging you to use or access this content. This website is not published, endorsed, or specifically approved by Moon Design Publishing. For more information about Moon Design Publications and Moon Design Publications products, please visit glorantha.com.
+        </small>
+      </p>
     </div>
 
     <div class='col-3'>
       <ul>
         <li class='header'>Resources</li>
-        <li><%= link_to t('.about'), 'javascript:void(0);' %></li>
-        <li><%= link_to t('.faq'), 'javascript:void(0);' %></li>
+        <li><%= link_to t('.about'), general_about_path %></li>
+        <li><%= link_to t('.faq'), general_faq_path %></li>
       </ul>
     </div>
 

@@ -10,6 +10,7 @@
     <div class='row'>
       <div class='col-4'>
         <%= f.submit t('.update'), class: 'btn btn-md btn-success' %>
+        <%= link_to t('.export'), export_character_sheet_path(@character_sheet), target: '_blank', class: 'btn btn-md btn-primary' %>
       </div>
     </div>
   <% end%>

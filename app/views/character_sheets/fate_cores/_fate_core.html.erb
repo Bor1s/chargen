@@ -16,7 +16,7 @@
       <%= fa_icon 'file-pdf-o', text: 'Export' %>
     <% end %>
 
-    <%= link_to character_sheet_path(fate_core), method: :delete, class: 'btn btn-sm btn-danger' do %>
+    <%= link_to character_sheet_path(fate_core), method: :delete, class: 'btn btn-sm btn-danger', data: { confirm: 'Are you sure?' } do %>
       <%= fa_icon 'trash-o', text: 'Delete' %>
     <% end %>
   </div>

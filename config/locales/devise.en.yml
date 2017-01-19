@@ -2,6 +2,13 @@
 
 en:
   devise:
+    shared:
+      links:
+        log_in: 'Log in'
+        sign_up: 'Sign up'
+        forgot_password: 'Forgot your password?'
+        didnt_receive_confirm: "Didn't receive confirmation instructions?"
+        didnt_receive_unlock: "Didn't receive unlock instructions?"
     confirmations:
       confirmed: "Your email address has been successfully confirmed."
       send_instructions: "You will receive an email with instructions for how to confirm your email address in a few minutes."
@@ -39,6 +46,8 @@ en:
       edit:
         new_password: 'New password'
         password_confirmation: 'Password Confirmation'
+        change_password: "Change my password"
+        minimum_characters: 'characters minimum'
 
     registrations:
       destroyed: "Bye! Your account has been successfully cancelled. We hope to see you again soon."
@@ -58,9 +67,10 @@ en:
         minimum_characters: 'characters minimum'
         sign_up: 'Sign Up'
         password: 'Password (leave blank to avoid changing)'
-        current_password: 'Your current password (to confirm your changes)'
+        current_password: 'Your current password (to confirm changes)'
         password_confirmation: 'Password Confirmation'
         email: 'Email'
+        cancel_account: "Cancel my account"
     sessions:
       signed_in: "Signed in successfully."
       signed_out: "Signed out successfully."
@@ -69,6 +79,7 @@ en:
         log_in: 'Log In'
         email: 'Email'
         password: 'Password'
+        remember_me: 'Remember me'
     unlocks:
       send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
       send_paranoid_instructions: "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes."

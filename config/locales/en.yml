@@ -21,6 +21,8 @@
 
 en:
   profiles:
+    character_sheets:
+      new_character_sheet: 'New Character Sheet'
     profile_navbar:
       my_sheets: 'My Sheets'
       settings: 'Settings'
@@ -53,6 +55,7 @@ en:
   character_sheets:
     edit:
       update: 'Update'
+      export: 'Export to PDF'
     fate_cores:
       form:
         id: 'ID'

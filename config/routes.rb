@@ -26,4 +26,7 @@ Rails.application.routes.draw do
   resource :profile, only: [:show] do
     get :character_sheets, on: :collection
   end
+
+  get 'general/about'
+  get 'general/faq'
 end

@@ -131,12 +131,12 @@ footer {
   color: $white;
   padding: 3rem;
   margin-top: 3rem;
+  a, a:hover {
+    color: $white;
+  }
 
   li {
     line-height: 2.5rem;
-    a, a:hover {
-      color: $white;
-    }
   }
 }
 
@@ -156,4 +156,9 @@ li.header {
     color: red;
     border-radius: 5px;
   }
+}
+
+.page-summary {
+  color: $black;
+  margin-bottom: 3rem;
 }
