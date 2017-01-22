@@ -12,7 +12,6 @@ Rails.application.routes.draw do
     end
   end
 
-  # get 'export/:id', to: 'general#export_to_pdf', as: :export_to_pdf
   get 'general/index'
 
   resources :character_sheets do

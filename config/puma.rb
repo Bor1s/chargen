@@ -1,6 +1,6 @@
 # Puma can serve each request in a thread from an internal thread pool.
-# The `threads` method setting takes two numbers a minimum and maximum.
 # Any libraries that use thread pools should be configured to match
+# The `threads` method setting takes two numbers a minimum and maximum.
 # the maximum value specified for Puma. Default is set to 5 threads for minimum
 # and maximum, this matches the default thread size of Active Record.
 #
@@ -30,7 +30,7 @@ environment ENV.fetch("RAILS_ENV") { "development" }
 # you need to make sure to reconnect any threads in the `on_worker_boot`
 # block.
 #
-# preload_app!
+preload_app!
 
 # The code in the `on_worker_boot` will be called if you are using
 # clustered mode by specifying a number of `workers`. After each worker
@@ -39,9 +39,9 @@ environment ENV.fetch("RAILS_ENV") { "development" }
 # or connections that may have been created at application boot, Ruby
 # cannot share connections between processes.
 #
-# on_worker_boot do
-#   ActiveRecord::Base.establish_connection if defined?(ActiveRecord)
-# end
+on_worker_boot do
+  ActiveRecord::Base.establish_connection if defined?(ActiveRecord)
+end
 
 # Allow puma to be restarted by `rails restart` command.
 plugin :tmp_restart
