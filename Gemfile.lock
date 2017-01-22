@@ -63,6 +63,9 @@ GEM
     capistrano-rails (1.2.2)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
+    capistrano-rbenv (2.1.0)
+      capistrano (~> 3.1)
+      sshkit (~> 1.3)
     capistrano3-puma (1.2.1)
       capistrano (~> 3.0)
       puma (>= 2.6)
@@ -218,7 +221,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.3.12)
     sshkit (1.11.5)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
@@ -252,6 +254,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap (~> 4.0.0.alpha6)
   capistrano-rails
+  capistrano-rbenv
   capistrano3-puma
   coffee-rails (~> 4.2)
   devise
@@ -273,7 +276,6 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
-  sqlite3
   therubyracer
   turbolinks (~> 5)
   tzinfo-data
