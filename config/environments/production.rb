@@ -84,5 +84,23 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+# Mailer
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.gmail.com',
+    port:                 587,
+    domain:               'example.com',
+    user_name:            'noreply.charactersheets@gmail.com',
+    password:             'd3c0mpr3ss10n',
+    authentication:       'plain',
+    enable_starttls_auto: true }
+
+  config.middleware.use ExceptionNotification::Rack,
+  :email => {
+    :email_prefix => "",
+    :sender_address => %{"notifier" <noreply.charactersheets@gmail.com>},
+    :exception_recipients => %w{boris.bbk@gmail.com}
+  }
+
+  config.action_mailer.default_url_options = { host: '207.154.201.242' }
 end

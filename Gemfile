@@ -27,6 +27,8 @@ gem 'dotenv-rails'
 gem 'pdf-forms'
 gem 'font-awesome-rails'
 gem 'devise'
+gem 'exception_notification'
+gem 'newrelic_rpm'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
