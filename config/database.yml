@@ -9,10 +9,10 @@ default: &default
   pool: 5
   timeout: 5000
   port: 5432
-  host: <%= ENV['CHARGEN_DB_HOST'] %>
-  database: <%= ENV['CHARGEN_DB_NAME'] %>
-  username: <%= ENV['CHARGEN_DB_USER'] %>
-  password: <%= ENV['CHARGEN_DB_PASS'] %>
+  host: <%= ENV['CS_DB_HOST'] %>
+  database: <%= ENV['CS_DB_NAME'] %>
+  username: <%= ENV['CS_DB_USER'] %>
+  password: <%= ENV['CS_DB_PASS'] %>
 
 development:
   <<: *default
