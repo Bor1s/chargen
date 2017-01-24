@@ -2,17 +2,17 @@
 
   <div class='row'>
     <div class='col game-system-logo my-5'>
-      <%= image_tag('fate-logo.png', size: '200x100', class: 'text-right') %>
+      <%= image_tag('hero-quest-logo.png', size: '300x65', class: 'text-right') %>
     </div>
   </div>
 
   <%= form_for @character_sheet, as: :character_sheet, url: create_character_sheet_url, html: html_options do |f| %>
 
-    <%= render 'character_sheets/fate_cores/form', f: f %>
+    <%= render 'character_sheets/hero_quests/form', f: f %>
 
     <div class='row'>
       <div class='col-4'>
-        <%= f.submit t('character_sheets.fate_cores.form.create_character'), class: 'btn btn-md btn-success', id: 'submit_char', autocomplete: 'off' %>
+        <%= f.submit t('character_sheets.hero_quests.form.create_character'), class: 'btn btn-md btn-success', id: 'submit_char', autocomplete: 'off' %>
       </div>
     </div>
 

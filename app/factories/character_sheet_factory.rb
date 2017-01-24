@@ -12,6 +12,8 @@ class CharacterSheetFactory
       case factory_name
       when CharacterSheets::FateCore::SYSTEM_NAME
         CharacterSheets::FateCore
+      when CharacterSheets::HeroQuest::SYSTEM_NAME
+        CharacterSheets::HeroQuest
       else
         CharacterSheets::Null
       end

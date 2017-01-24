@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   has_many :character_sheets, dependent: :destroy
   has_many :fate_core_character_sheets, dependent: :destroy, class_name: 'CharacterSheets::FateCore'
+  has_many :hero_quest_character_sheets, dependent: :destroy, class_name: 'CharacterSheets::HeroQuest'
 end

@@ -36,13 +36,12 @@ en:
       about: 'About'
   flashes:
     character_sheets:
-      updated: 'Character sheet updated'
+      updated: 'Character sheet has been updated'
       deleted: 'Character sheet has been deleted'
       not_deleted: 'Character sheet has not been deleted!'
   general:
     index:
       create_character_sheet: 'One place to rule them all'
-      #tip1-header: 'Simple storage for all your character sheets'
       tip1-header: 'Keep them secret keep them safe'
       tip1-description: 'Keep all your characters in one place available to you at any time from any device'
 
@@ -81,5 +80,27 @@ en:
         mild: 'Mild'
         moderate: 'Moderate'
         severe: 'Severe'
+
+        create_character: 'Create'
+
+    # Hero Quest
+    hero_quests:
+      form:
+        character_name: 'Character'
+        game_name: 'Game'
+        player_name: 'Player'
+        description: 'Description'
+        abilities: 'Abilities'
+        ability: 'Ability'
+        ability_num: '0'
+        flaws: 'Flaws'
+        flaw: 'Flaw'
+        flaw_num: '0'
+        benefits: 'Lingering Benefits/Penalties'
+        benefit: 'Benefit/Penalty'
+        benefit_num: '0'
+        hero_points: 'Hero Points'
+        hero_points_num: '0'
+        notes: 'Notes'
 
         create_character: 'Create'

@@ -1,5 +1,5 @@
 class CharacterSheetsController < ApplicationController
-  before_action :authenticate_user!, except: [:export, :fate]
+  before_action :authenticate_user!, except: [:export, :fate, :hero_quest]
 
   def index
   end
@@ -9,6 +9,14 @@ class CharacterSheetsController < ApplicationController
       @character_sheet = current_user.fate_core_character_sheets.build
     else
       @character_sheet = CharacterSheets::FateCore.new
+    end
+  end
+
+  def hero_quest
+    if user_signed_in?
+      @character_sheet = current_user.hero_quest_character_sheets.build
+    else
+      @character_sheet = CharacterSheets::HeroQuest.new
     end
   end
 

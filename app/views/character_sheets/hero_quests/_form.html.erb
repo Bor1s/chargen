@@ -1,0 +1,136 @@
+<%= hidden_field_tag :system, CharacterSheets::HeroQuest::SYSTEM_NAME %>
+
+<!-- General section -->
+<div class='row'>
+  <div class='col-4'>
+    <div class='form-group'>
+      <%= f.text_field :character_name, class: 'form-control', placeholder: t('.character_name') %>
+    </div>
+  </div>
+
+  <div class='col-4'>
+    <div class='form-group'>
+      <%= f.text_field :game_name, class: 'form-control', placeholder: t('.game_name') %>
+    </div>
+  </div>
+
+  <div class='col-4'>
+    <div class='form-group'>
+      <%= f.text_field :player_name, class: 'form-control', placeholder: t('.player_name') %>
+    </div>
+  </div>
+</div>
+<!-- END General section -->
+
+<!-- Description section -->
+<div class='row'>
+  <div class='col'>
+    <div class='form-group'>
+      <%= f.text_area :description, class: 'form-control', placeholder: t('.description'), rows: 5 %>
+    </div>
+  </div>
+</div>
+<!-- END Description section -->
+
+<div class='row'>
+  <!-- Abilities section -->
+  <div class='col-xs-12 col-sm-12 col-md-6 col-lg-4'>
+    <div class='row'>
+      <div class='col-2'>
+        <h4><%= t('.abilities') %></h4>
+      </div>
+    </div>
+
+    <% 1.upto CharacterSheets::HeroQuest::ABILITIES do |i| %>
+      <div class='row'>
+        <div class='col-9'>
+          <div class='form-group'>
+            <%= f.text_field "ability#{i}".to_sym, placeholder: t('.ability'), class: 'form-control' %>
+          </div>
+        </div>
+
+        <div class='col-3'>
+          <div class='form-group'>
+            <%= f.text_field "ability_num#{i}".to_sym, placeholder: t('.ability_num'), class: 'form-control text-center' %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <!-- END Abilities section -->
+
+  <!-- Flaws section -->
+  <div class='col-xs-12 col-sm-12 col-md-6 col-lg-4'>
+    <div class='row'>
+      <div class='col-2'>
+        <h4><%= t('.flaws') %></h4>
+      </div>
+    </div>
+    <% 1.upto CharacterSheets::HeroQuest::FLAWS do |i| %>
+      <div class='row'>
+        <div class='col-9'>
+          <div class='form-group'>
+            <%= f.text_field "flaw#{i}".to_sym, placeholder: t('.flaw'), class: 'form-control' %>
+          </div>
+        </div>
+
+        <div class='col-3'>
+          <div class='form-group'>
+            <%= f.text_field "flaw_num#{i}".to_sym, placeholder: t('.flaw_num'), class: 'form-control text-center' %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
+    <div class='row'>
+      <div class='col'>
+        <h4 class='text-center'><%= t('.hero_points') %></h4>
+      </div>
+    </div>
+
+    <div class='row justify-content-center'>
+      <div class='col-4'>
+        <div class='form-group'>
+          <%= f.text_field :hero_points, placeholder: t('.hero_points_num'), class: 'form-control text-center' %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END Flaws section -->
+
+  <!-- Benefits/penalties section -->
+  <div class='col-xs-12 col-sm-12 col-md-6 col-lg-4'>
+    <div class='row'>
+      <div class='col-12'>
+        <h4><%= t('.benefits') %></h4>
+      </div>
+    </div>
+    <% 1.upto CharacterSheets::HeroQuest::BENEFITS do |i| %>
+      <div class='row'>
+        <div class='col-9'>
+          <div class='form-group'>
+            <%= f.text_field "benefit#{i}".to_sym, placeholder: t('.benefit'), class: 'form-control' %>
+          </div>
+        </div>
+
+        <div class='col-3'>
+          <div class='form-group'>
+            <%= f.text_field "benefit_num#{i}".to_sym, placeholder: t('.benefit_num'), class: 'form-control text-center' %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <!-- END Flaws section -->
+</div>
+
+<!-- Notes section -->
+<div class='row'>
+  <div class='col'>
+    <div class='form-group'>
+      <%= f.text_area :notes, class: 'form-control', placeholder: t('.notes'), rows: 5 %>
+    </div>
+  </div>
+</div>
+<!-- END Notes section -->
+<hr />
