@@ -1,4 +1,5 @@
 class CharacterSheets::HeroQuest< CharacterSheet
+
   SYSTEM_NAME = 'hero_quest'
   HUMAN_SYSTEM_NAME = 'Hero Quest'
   ABILITIES = 15
