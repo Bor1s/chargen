@@ -79,13 +79,13 @@ class CharacterSheetsController < ApplicationController
     character_sheet = current_user.character_sheets.find(params[:id])
     service = CharacterSheetService.new(character_sheet)
     service.export_to_pdf!
-    send_file service.pdf_path, type: 'application/pdf', disposition: 'inline'
+    send_file service.pdf_path, type: 'application/pdf', disposition: 'attachment'
   end
 
   def export_unsaved_sheet
     @character_sheet = CharacterSheetFactory.build(system_params, character_sheet_params)
     service = CharacterSheetService.new(@character_sheet)
     service.export_to_pdf!
-    send_file service.pdf_path, type: 'application/pdf', disposition: 'inline'
+    send_file service.pdf_path, type: 'application/pdf', disposition: 'attachment'
   end
 end
