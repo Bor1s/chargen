@@ -3,21 +3,9 @@
     <%= fate_core.name %>
   </div>
 
-  <div class='col'>
+  <div class='col-3'>
     <%= fate_core.class::HUMAN_SYSTEM_NAME %>
   </div>
 
-  <div class='col text-right actions'>
-    <%= link_to edit_character_sheet_path(fate_core), class: 'btn btn-sm btn-secondary' do %>
-      <%= fa_icon 'pencil', text: 'Edit' %>
-    <% end %>
-
-    <%= link_to export_character_sheet_path(fate_core), target: '_blank', class: 'btn btn-sm btn-primary' do %>
-      <%= fa_icon 'file-pdf-o', text: 'Export' %>
-    <% end %>
-
-    <%= link_to character_sheet_path(fate_core), method: :delete, class: 'btn btn-sm btn-danger', data: { confirm: 'Are you sure?' } do %>
-      <%= fa_icon 'trash-o', text: 'Delete' %>
-    <% end %>
-  </div>
+  <%= render 'character_sheets/actions', object: fate_core %>
 </div>

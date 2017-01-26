@@ -1,17 +1,25 @@
 .notifications {
-  position: absolute;
-  width: 100%;
-  top: 0;
-
   section {
-    min-height: 4rem;
     padding-right: 2rem;
     padding-left: 2rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    color: $green;
+    border: 1px solid $green;
+
     span {
       z-index: 1;
       display: inline-block;
     }
+  }
+
+  .border-success {
+    border: 1px solid $green;
+    background-color: $light-green;
+  }
+
+  .border-danger {
+    border: 1px solid $red;
+    background-color: $light-red;
   }
 }

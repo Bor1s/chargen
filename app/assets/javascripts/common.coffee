@@ -6,5 +6,4 @@ $(document).on 'page:load', ->
 
 slideNotifications = ->
   if $('.notifications').length > 0
-    $('.notifications section').slideUp('slow')
-    $('.notifications').slideUp()
+    $('.notifications section').fadeOut('slow')

@@ -1,11 +1,13 @@
-<div class='row justify-content-center notifications'>
-  <div class='col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center'>
-    <% if alert %>
-      <section class='bg-danger text-white'><span><%= alert %></span></section>
-    <% end %>
+<div class='container-fluid'>
+  <div class='row justify-content-center notifications'>
+    <div class='col text-center'>
+      <% if alert %>
+        <section class='border-1 rounded border-danger text-danger'><span><%= alert %></span></section>
+      <% end %>
 
-    <% if notice %>
-      <section class='bg-success text-white'><span><%= notice%></span></section>
-    <% end %>
+      <% if notice %>
+        <section class='border-1 rounded border-success text-success'><span><%= notice%></span></section>
+      <% end %>
+    </div>
   </div>
 </div>

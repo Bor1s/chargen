@@ -27,4 +27,6 @@ Rails.application.routes.draw do
 
   get 'general/about'
   get 'general/faq'
+
+  get '*path', to: 'general#not_found'
 end
