@@ -22,7 +22,7 @@
 en:
   profiles:
     character_sheets:
-      new_character_sheet: 'New Character Sheet'
+      new_character_sheet: 'New Character'
     profile_navbar:
       my_sheets: 'My Sheets'
       settings: 'Settings'

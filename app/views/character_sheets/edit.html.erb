@@ -6,9 +6,11 @@
   </div>
 
   <%= form_for @character_sheet, as: :character_sheet, url: character_sheet_path(@character_sheet), method: :put do |f| %>
+
     <%= render 'character_sheets/form_resolver', f: f %>
+
     <div class='row'>
-      <div class='col-4'>
+      <div class='col'>
         <%= f.submit t('.update'), class: 'btn btn-md btn-success' %>
         <%= link_to t('.export'), export_character_sheet_path(@character_sheet), target: '_blank', class: 'btn btn-md btn-primary' %>
         <%= link_to t('.back'), character_sheets_profile_path, class: 'btn btn-md btn-secondary' %>

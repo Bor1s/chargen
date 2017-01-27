@@ -1,0 +1,54 @@
+@include media-breakpoint-down(md) {
+  header {
+    a {
+      &:hover {
+        border-bottom: 2px solid transparent !important;
+      }
+    }
+
+    a.active {
+      border-bottom: 2px solid transparent !important;
+    }
+
+    .navbar-toggler {
+      cursor: pointer;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  header {
+    a {
+      &:hover {
+        border-bottom: 2px solid transparent !important;
+      }
+    }
+
+    a.active {
+      border-bottom: 2px solid transparent !important;
+    }
+
+    .navbar-toggler {
+      cursor: pointer;
+    }
+  }
+
+  footer {
+    ul {
+      padding-left: 0;
+    }
+
+    .site-info {
+      padding-top: 3rem;
+      order: 1;
+    }
+
+    .site-links {
+      order: -1;
+    }
+
+    .commutinty {
+      order: 0;
+    }
+  }
+}
