@@ -172,3 +172,33 @@ li.header {
 .game-system-logo {
   text-align: center;
 }
+
+.border {
+  border-bottom: 1px solid $black;
+}
+
+.hero-quest-header {
+  color: $black;
+  font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+.grid-row {
+  div.row {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    background-clip: content-box;
+  }
+
+  div.row:nth-of-type(2n+2) {
+    background-color: $super-light-grey;
+  }
+
+  p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+a.moray {
+  color: $moray;
+}

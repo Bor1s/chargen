@@ -1,0 +1,7 @@
+<% if character_sheet.is_a?(CharacterSheets::FateCore) %>
+  <%= render 'character_sheets/fate_cores/sheet', character_sheet: character_sheet %>
+<% elsif character_sheet.is_a?(CharacterSheets::HeroQuest) %>
+  <%= render 'character_sheets/hero_quests/sheet', character_sheet: character_sheet %>
+<% else %>
+  <!-- Other game systems -->
+<% end %>

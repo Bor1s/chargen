@@ -4,6 +4,7 @@ class CharacterSheetsController < ApplicationController
   def index
   end
 
+  # New Fate
   def fate
     if user_signed_in?
       @character_sheet = current_user.fate_core_character_sheets.build
@@ -12,6 +13,7 @@ class CharacterSheetsController < ApplicationController
     end
   end
 
+  # New Hero Quest
   def hero_quest
     if user_signed_in?
       @character_sheet = current_user.hero_quest_character_sheets.build
@@ -30,6 +32,10 @@ class CharacterSheetsController < ApplicationController
     else
       render system_params
     end
+  end
+
+  def show
+    @character_sheet = current_user.character_sheets.find(params[:id])
   end
 
   def edit
