@@ -9,6 +9,7 @@
 
   <div class='row'>
     <div class='col'>
+      <%= link_to t('.edit'), edit_character_sheet_path(@character_sheet), class: 'btn btn-md btn-success' %>
       <%= link_to t('.export'), export_character_sheet_path(@character_sheet), target: '_blank', class: 'btn btn-md btn-primary' %>
       <%= link_to t('.back'), character_sheets_profile_path, class: 'btn btn-md btn-secondary' %>
     </div>

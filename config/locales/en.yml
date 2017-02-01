@@ -54,7 +54,13 @@ en:
   character_sheets:
     edit:
       update: 'Update'
+      view: 'View'
       export: 'Export to PDF'
+      back: 'Back'
+    show:
+      edit: 'Edit'
+      export: 'Export to PDF'
+      back: 'Back'
     fate_cores:
       form:
         id: 'ID'
@@ -85,6 +91,12 @@ en:
 
     # Hero Quest
     hero_quests:
+      sheet:
+        abilities: 'Abilities'
+        flaws: 'Flaws'
+        benefits: 'Lingering Benefits/Penalties'
+        hero_points: 'Hero Points'
+
       form:
         character_name: 'Character'
         game_name: 'Game'
