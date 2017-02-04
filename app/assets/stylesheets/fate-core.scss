@@ -30,3 +30,29 @@
 .severe::before {
   content: '6';
 }
+
+.mild-show::before, .mild2-show::before, .moderate-show::before, .severe-show::before {
+  display: block;
+  content: '2';
+  font-weight: bold;
+  font-size: 1.5rem;
+  position: absolute;
+  top: -10px;
+}
+
+.mild2-show::before {
+  opacity: 0.3;
+}
+
+.moderate-show::before {
+  content: '4';
+}
+
+.severe-show::before {
+  content: '6';
+}
+
+.fate-label {
+  font-weight: bold;
+  color: $light-grey;
+}

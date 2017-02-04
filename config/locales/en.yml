@@ -20,12 +20,14 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+
   profiles:
     character_sheets:
       new_character_sheet: 'New Character'
     profile_navbar:
       my_sheets: 'My Sheets'
       settings: 'Settings'
+
   application:
     header:
       sign_in: 'Sign In'
@@ -34,11 +36,13 @@ en:
     footer:
       faq: 'FAQ'
       about: 'About'
+
   flashes:
     character_sheets:
       updated: 'Character sheet has been updated'
       deleted: 'Character sheet has been deleted'
       not_deleted: 'Character sheet has not been deleted!'
+
   general:
     index:
       create_character_sheet: 'One place to rule them all'
@@ -57,19 +61,21 @@ en:
       view: 'View'
       export: 'Export to PDF'
       back: 'Back'
+
     show:
       edit: 'Edit'
       export: 'Export to PDF'
       back: 'Back'
+
+    # Fate Core
     fate_cores:
-      form:
+      fate_translations: &fate_translations
         id: 'ID'
         aspects: 'Aspects'
         skills: 'Skills'
         extras: 'Extras'
         stunts: 'Stunts'
         consequences: 'Consequences'
-
         name: 'Name'
         description: 'Description'
         refresh: 'Refresh'
@@ -86,18 +92,16 @@ en:
         mild: 'Mild'
         moderate: 'Moderate'
         severe: 'Severe'
-
         create_character: 'Create'
+
+      form:
+        <<: *fate_translations
+      sheet:
+        <<: *fate_translations
 
     # Hero Quest
     hero_quests:
-      sheet:
-        abilities: 'Abilities'
-        flaws: 'Flaws'
-        benefits: 'Lingering Benefits/Penalties'
-        hero_points: 'Hero Points'
-
-      form:
+      hero_quest_translations: &hero_quest_translations
         character_name: 'Character'
         game_name: 'Game'
         player_name: 'Player'
@@ -114,5 +118,10 @@ en:
         hero_points: 'Hero Points'
         hero_points_num: '0'
         notes: 'Notes'
-
         create_character: 'Create'
+
+      sheet:
+        <<: *hero_quest_translations
+      form:
+        <<: *hero_quest_translations
+

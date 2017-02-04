@@ -42,7 +42,7 @@
 </div>
 
 <div class='row'>
-  <div class='col-6'>
+  <div class='col-12 col-sm-12 col-md-6 col-lg-6'>
     <div class='form-group'>
       <%= f.text_field :high_concept, class: 'form-control', placeholder: t('.high_concept') %>
     </div>
@@ -75,12 +75,12 @@
 
 <div class='row'>
   <% CharacterSheets::FateCore::SKILLS.each do |skill| %>
-    <div class='col-2 col-form-label'>
+    <div class='col-12 col-sm-12 col-md-2 col-lg-2 text-center col-form-label'>
       <center><%= t(".#{skill}") %></center>
     </div>
 
     <% (1..5).each do |i| %>
-      <div class='col-2'>
+      <div class='col-12 col-sm-12 col-md-2 col-lg-2'>
         <div class='form-group'>
           <%= f.text_field "#{skill}_#{i}".to_sym, class: 'form-control' %>
         </div>
@@ -124,13 +124,13 @@
 </div>
 
 <div class='row'>
-  <div class='col-4'>
+  <div class='col-12 col-sm-12 col-md-4 col-lg-4'>
     <div class='form-group'>
       <span class='mild'></span><%= f.text_field :mild_consequence_1, class: 'form-control', placeholder: t('.mild') %>
     </div>
   </div>
 
-  <div class='col-4'>
+  <div class='col-12 col-sm-12 col-md-4 col-lg-4'>
     <div class='form-group'>
       <span class='mild2'></span><%= f.text_field :mild_consequence_2, class: 'form-control', placeholder: t('.mild') %>
     </div>
@@ -138,7 +138,7 @@
 </div>
 
 <div class='row'>
-  <div class='col-4'>
+  <div class='col-12 col-sm-12 col-md-4 col-lg-4'>
     <div class='form-group'>
       <span class='moderate'></span><%= f.text_field :moderate_consequence, class: 'form-control', placeholder: t('.moderate') %>
     </div>
@@ -146,7 +146,7 @@
 </div>
 
 <div class='row'>
-  <div class='col-4'>
+  <div class='col-12 col-sm-12 col-md-4 col-lg-4'>
     <div class='form-group'>
       <span class='severe'></span><%= f.text_field :severe_consequence, class: 'form-control', placeholder: t('.severe') %>
     </div>

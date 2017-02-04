@@ -1,0 +1,189 @@
+<!-- ID section -->
+<div class='row'>
+  <div class='col'>
+    <span class='fate-id'><%= t('.id') %></span>
+  </div>
+</div>
+
+<div class='row'>
+  <div class='col-8'>
+    <div class='row'>
+      <div class='col-2 hidden-sm-down'>
+        <p class='fate-label'><%= t('.name') %></p>
+      </div>
+
+      <div class='col-10'>
+        <p><%= character_sheet.name %></p>
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class='col-2 hidden-sm-down'>
+        <p class='fate-label'><%= t('.description') %></p>
+      </div>
+
+      <div class='col-10'>
+        <p><%= character_sheet.description %></p>
+      </div>
+    </div>
+  </div>
+
+  <div class='col-1 hidden-sm-down'>
+    <p class='fate-label'><%= t('.refresh') %></p>
+  </div>
+
+  <div class='col-3'>
+    <h4><%= character_sheet.refresh %></h4>
+  </div>
+</div>
+<!-- END ID section -->
+
+<!-- Aspects section -->
+<div class='row'>
+  <div class='col'>
+    <span class='fate-id'><%= t('.aspects') %></span>
+  </div>
+</div>
+
+<div class='row'>
+  <div class='col-4 col-sm-3 col-md-3 col-lg-2'>
+    <p class='fate-label'><%= t('.high_concept') %></p>
+  </div>
+
+  <div class='col-8 col-sm-9 col-md-9 col-lg-10'>
+    <p><%= character_sheet.high_concept %></p>
+  </div>
+</div>
+
+<div class='row'>
+  <div class='col-4 col-sm-3 col-md-3 col-lg-2'>
+    <p class='fate-label'><%= t('.trouble') %></p>
+  </div>
+
+  <div class='col-8 col-sm-9 col-md-9 col-lg-10'>
+    <p><%= character_sheet.trouble %></p>
+  </div>
+</div>
+
+<div class='row'>
+  <div class='col-4 col-sm-3 col-md-3 col-lg-2'>
+    <p class='fate-label'><%= t('.first_adventure') %></p>
+  </div>
+
+  <div class='col-8 col-sm-9 col-md-9 col-lg-10'>
+    <p><%= character_sheet.first_adventure %></p>
+  </div>
+</div>
+
+<div class='row'>
+  <div class='col-4 col-sm-3 col-md-3 col-lg-2'>
+    <p class='fate-label'><%= t('.crossing_path_1') %></p>
+  </div>
+
+  <div class='col-8 col-sm-9 col-md-9 col-lg-10'>
+    <p><%= character_sheet.crossing_path_1 %></p>
+  </div>
+</div>
+
+<div class='row'>
+  <div class='col-4 col-sm-3 col-md-3 col-lg-2'>
+    <p class='fate-label'><%= t('.crossing_path_2') %></p>
+  </div>
+
+  <div class='col-8 col-sm-9 col-md-9 col-lg-10'>
+    <p><%= character_sheet.crossing_path_2 %></p>
+  </div>
+</div>
+<!-- END Aspects section -->
+
+<!-- Skills section -->
+<div class='row'>
+  <div class='col'>
+    <span class='fate-id'><%= t('.skills') %></span>
+  </div>
+</div>
+
+<div class='row'>
+  <% CharacterSheets::FateCore::SKILLS.each do |skill| %>
+    <div class='col-12 col-sm-12 col-md-2 col-lg-2 text-center'>
+      <p class='fate-label'><%= t(".#{skill}") %></p>
+    </div>
+
+    <% (1..5).each do |i| %>
+      <div class='col-12 col-sm-12 col-md-2 col-lg-2'>
+        <p><%= character_sheet.send("#{skill}_#{i}") %></p>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+<!-- END Skills section -->
+
+<!-- Extras and Stunts section -->
+<div class='row'>
+  <div class='col-6'>
+    <span class='fate-id'><%= t('.extras') %></span>
+  </div>
+
+  <div class='col-6'>
+    <span class='fate-id'><%= t('.stunts') %></span>
+  </div>
+</div>
+
+<div class='row'>
+  <div class='col-6'>
+    <p><%= character_sheet.extras %></p>
+  </div>
+
+  <div class='col-6'>
+    <p><%= character_sheet.stunts %></p>
+  </div>
+</div>
+<!-- END Extras section -->
+
+<!-- Consequences section -->
+<div class='row'>
+  <div class='col'>
+    <span class='fate-id'><%= t('.consequences') %></span>
+  </div>
+</div>
+
+<div class='row'>
+  <div class='col-12 col-sm-12 col-md-4 col-lg-4'>
+    <span class='mild-show'></span>
+    <p class='pl-3'>
+      <sup class='fate-label'><%= t('.mild') %></sup>
+      <span class='pl-3'><%= character_sheet.mild_consequence_1 %></span>
+    </p>
+  </div>
+
+  <div class='col-12 col-sm-12 col-md-4 col-lg-4'>
+    <span class='mild-show'></span>
+    <p class='pl-3'>
+      <sup class='fate-label'><%= t('.mild') %></sup>
+      <span class='pl-3'><%= character_sheet.mild_consequence_2 %></span>
+    </p>
+  </div>
+</div>
+
+<div class='row'>
+  <div class='col-12 col-sm-12 col-md-4 col-lg-4'>
+    <span class='moderate-show'></span>
+    <p class='pl-3'>
+      <sup class='fate-label'><%= t('.moderate') %></sup>
+      <span class='pl-3'><%= character_sheet.moderate_consequence %></span>
+    </p>
+  </div>
+</div>
+
+<div class='row'>
+  <div class='col-12 col-sm-12 col-md-4 col-lg-4'>
+    <span class='severe-show'></span>
+    <p class='pl-3'>
+      <sup class='fate-label'><%= t('.severe') %></sup>
+      <span class='pl-3'><%= character_sheet.severe_consequence %></span>
+    </p>
+  </div>
+</div>
+<!-- END Consequences section -->
+
+<hr />
