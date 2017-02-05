@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170116171948) do
+ActiveRecord::Schema.define(version: 20170205134719) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,15 @@ ActiveRecord::Schema.define(version: 20170116171948) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "user_id"
+  end
+
+  create_table "shareable_links", force: :cascade do |t|
+    t.integer  "character_sheet_id"
+    t.string   "token"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.index ["character_sheet_id"], name: "index_shareable_links_on_character_sheet_id", using: :btree
+    t.index ["token"], name: "index_shareable_links_on_token", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -40,4 +49,5 @@ ActiveRecord::Schema.define(version: 20170116171948) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "shareable_links", "character_sheets"
 end

@@ -1,6 +1,16 @@
-<div class='col text-right actions hidden-md-up'>
+<div class='col text-right actions-icons hidden-lg-up'>
   <%= link_to edit_character_sheet_path(object), class: 'text-secondary' do %>
     <%= fa_icon 'pencil' %>
+  <% end %>
+
+  <%= link_to 'javascript:void(0)',
+    class: 'text-success',
+    tabindex: 0,
+    role: 'button',
+    title: t('.share'),
+    data: { toggle: 'popover', placement: 'top', 'content-id': dom_id(object)} do %>
+    <%= fa_icon 'link' %>
+    <%= fa_icon 'caret-down' %>
   <% end %>
 
   <%= link_to export_character_sheet_path(object), target: '_blank', class: 'text-primary' do %>
@@ -12,9 +22,19 @@
   <% end %>
 </div>
 
-<div class='col text-right actions hidden-sm-down'>
+<div class='col text-right actions hidden-md-down'>
   <%= link_to edit_character_sheet_path(object), class: 'btn btn-sm btn-secondary' do %>
     <%= fa_icon 'pencil', text: 'Edit' %>
+  <% end %>
+
+  <%= link_to 'javascript:void(0)',
+    class: 'btn btn-sm btn-success',
+    tabindex: 0,
+    role: 'button',
+    title: t('.share'),
+    data: { toggle: 'popover', placement: 'top', 'content-id': dom_id(object)} do %>
+    <%= fa_icon 'link', text: 'Share' %>
+    <%= fa_icon 'caret-down' %>
   <% end %>
 
   <%= link_to export_character_sheet_path(object), target: '_blank', class: 'btn btn-sm btn-primary' do %>
@@ -25,3 +45,5 @@
     <%= fa_icon 'trash-o', text: 'Delete' %>
   <% end %>
 </div>
+
+<%= render 'popover_content', object: object %>

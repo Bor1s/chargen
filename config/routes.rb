@@ -25,6 +25,8 @@ Rails.application.routes.draw do
     get :character_sheets, on: :collection
   end
 
+  resources :shareable_links, only: [:show], param: :token
+
   get 'general/about'
   get 'general/faq'
 

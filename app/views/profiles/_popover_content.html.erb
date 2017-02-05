@@ -1,0 +1,11 @@
+<div id="<%= dom_id(object) %>" class='hidden'>
+  <p>Copy this link and share it with your friends. They will have <b>read only</b> access.</p>
+
+  <div class="input-group">
+    <input type="text" class="form-control" value='<%= share_link(object) %>'>
+
+    <span class="input-group-btn">
+      <button type='button' class="btn btn-secondary copy-button" data-clipboard-text="<%= share_link(object) %>"><%= fa_icon 'floppy-o' %></button>
+    </span>
+  </div>
+</div>

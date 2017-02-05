@@ -28,6 +28,7 @@ gem 'pdf-forms'
 gem 'font-awesome-rails'
 gem 'devise'
 gem 'newrelic_rpm'
+gem 'clipboard-rails'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'

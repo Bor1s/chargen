@@ -92,6 +92,11 @@ header {
   }
 }
 
+.btn-success.focus {
+  color: $white;
+  background-color: $green;
+}
+
 .btn-warning {
   color: $yellow;
   background-color: transparent;
@@ -201,4 +206,12 @@ li.header {
 
 a.moray {
   color: $moray;
+}
+
+.hidden {
+  display: none;
+}
+
+.copy-button {
+  cursor: pointer;
 }

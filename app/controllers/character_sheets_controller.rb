@@ -23,13 +23,13 @@ class CharacterSheetsController < ApplicationController
   end
 
   def create
-    @character_sheet = CharacterSheetFactory.build(system_params, character_sheet_params)
-    @character_sheet.user = current_user
+    service = CreateCharacterSheetService.new(current_user, system_params, character_sheet_params)
 
-    if @character_sheet.save
-      flash.notice = 'Character sheet created'
-      redirect_to edit_character_sheet_path(@character_sheet)
+    if service.save
+      service.generate_shareable_link
+      redirect_to edit_character_sheet_path(service.character_sheet), notice: t('.character_sheet_created')
     else
+      @character_sheet = service.character_sheet
       render system_params
     end
   end

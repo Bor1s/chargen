@@ -56,6 +56,12 @@ en:
       tip3-description: 'No more forgotten character sheets! Export your characters nicely in original or official PDFs provided by related game system and use them during your game'
 
   character_sheets:
+    create:
+      character_sheet_created: 'Character sheet has been created'
+
+    actions:
+      share: 'Copy link'
+
     edit:
       update: 'Update'
       view: 'View'

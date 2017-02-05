@@ -1,0 +1,16 @@
+<div class='container'>
+  <div class='row'>
+    <div class='col game-system-logo my-5'>
+      <%= render 'character_sheets/logo_resolver', character_sheet: @character_sheet %>
+    </div>
+  </div>
+
+  <%= render 'character_sheets/show_resolver', character_sheet: @character_sheet %>
+
+  <div class='row'>
+    <div class='col'>
+      <%= link_to t('.back'), character_sheets_profile_path, class: 'btn btn-md btn-secondary' %>
+    </div>
+  </div>
+</div>
+

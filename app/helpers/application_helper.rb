@@ -4,4 +4,12 @@ module ApplicationHelper
       'active'
     end
   end
+
+  def share_link(record)
+    if record.shareable_link&.token
+      shareable_link_url(record.shareable_link&.token)
+    else
+      'No link found'
+    end
+  end
 end
