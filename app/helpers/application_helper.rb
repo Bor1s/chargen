@@ -9,7 +9,7 @@ module ApplicationHelper
     if record.shareable_link&.token
       shareable_link_url(record.shareable_link&.token)
     else
-      'No link found'
+      t('helpers.no_link')
     end
   end
 end

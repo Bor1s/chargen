@@ -25,10 +25,10 @@ Rails.application.routes.draw do
     get :character_sheets, on: :collection
   end
 
-  resources :shareable_links, only: [:show], param: :token
+  resources :shareable_links, only: [:show, :create, :destroy], param: :token
 
   get 'general/about'
   get 'general/faq'
 
-  get '*path', to: 'general#not_found'
+  get '*path', to: 'application#not_found'
 end

@@ -46,25 +46,27 @@ unfocusPopoverLink = ->
 
 enableCopyButton = ->
   clipboard = new Clipboard('.copy-button')
-  clipboard.on 'success', (e)->
-    setTooltip(e.trigger, 'Copied!')
-    hideTooltip(e.trigger)
 
-  clipboard.on 'error', (e)->
-    setTooltip(e.trigger, 'Failed!')
-    hideTooltip(e.trigger)
+  # TODO
+  # https://github.com/twbs/bootstrap/issues/21607
+  # clipboard.on 'success', (e)->
+  #   setTooltip(e.trigger, 'Copied!')
+  #   hideTooltip(e.trigger)
+  #
+  # clipboard.on 'error', (e)->
+  #   setTooltip(e.trigger, 'Failed!')
+  #   hideTooltip(e.trigger)
 
 # Tooltip
-enableTooltip = ->
-  $('.copy-button').tooltip
-    trigger: 'click'
-
-setTooltip = (btn, message)->
-  $(btn)
-    .tooltip('hide')
-    .attr('data-original-title', message)
-    .tooltip('show')
-
-hideTooltip = (btn)->
-  setTimeout (-> $(btn).tooltip('hide')), 1000
-
+# enableTooltip = ->
+#   $('.copy-button').tooltip
+#     trigger: 'click'
+#
+# setTooltip = (btn, message)->
+#   $(btn)
+#     .tooltip('hide')
+#     .attr('data-original-title', message)
+#     .tooltip('show')
+#
+# hideTooltip = (btn)->
+#   setTimeout (-> $(btn).tooltip('hide')), 1000
