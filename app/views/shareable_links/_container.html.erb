@@ -1,0 +1,20 @@
+<% if object.shareable_link.present? %>
+  <p class='JS_remove_link_<%= object.id %>'>
+  <%= link_to t('helpers.remove_link'),
+    shareable_link_path(character_sheet_id: object.id, token: object.shareable_link.token),
+    remote: true,
+    method: :delete,
+    data: { confirm: 'Are you sure?' },
+    class: 'text-danger' %>
+  </p>
+<% end %>
+
+<div class="input-group">
+  <input type="text" class="form-control JS_input_<%= object.id%>" value='<%= share_link(object) %>' />
+
+  <span class="input-group-btn">
+    <button type='button' class="btn btn-secondary copy-button JS_button_<%= object.id %>" data-clipboard-text="<%= share_link(object) %>">
+      <%= fa_icon 'floppy-o' %>
+    </button>
+  </span>
+</div>

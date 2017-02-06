@@ -131,3 +131,7 @@ en:
       form:
         <<: *hero_quest_translations
 
+  helpers:
+    no_link: 'No link has been generated'
+    create_link: 'Create link'
+    remove_link: 'Remove link'
