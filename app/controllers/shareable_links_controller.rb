@@ -11,7 +11,7 @@ class ShareableLinksController < ApplicationController
   end
 
   def show
-    link = ShareableLink.find_by_token!(params[:token])
+    link = ShareableLink.find_by_token!(token_params)
     @character_sheet = link.character_sheet
   end
 
@@ -22,5 +22,11 @@ class ShareableLinksController < ApplicationController
         @character_sheet.shareable_link.destroy
       end
     end
+  end
+
+  private
+
+  def token_params
+    params.require(:token)
   end
 end
