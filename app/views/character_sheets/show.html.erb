@@ -9,9 +9,20 @@
 
   <div class='row'>
     <div class='col'>
-      <%= link_to t('.edit'), edit_character_sheet_path(@character_sheet), class: 'btn btn-md btn-success' %>
-      <%= link_to t('.export'), export_character_sheet_path(@character_sheet), target: '_blank', class: 'btn btn-md btn-primary' %>
-      <%= link_to t('.back'), character_sheets_profile_path, class: 'btn btn-md btn-secondary' %>
+      <%= link_to t('.edit'), edit_character_sheet_path(@character_sheet), class: 'btn btn-success' %>
+      <%= link_to t('.export'), export_character_sheet_path(@character_sheet), target: '_blank', class: 'btn btn-primary' %>
+      <%= link_to 'javascript:void(0)',
+        class: 'btn btn-secondary',
+        tabindex: 0,
+        role: 'button',
+        title: t('character_sheets.actions.share'),
+        data: { toggle: 'popover', placement: 'top', 'content-id': dom_id(@character_sheet)} do %>
+        <%= fa_icon 'link', text: 'Share' %>
+        <%= fa_icon 'caret-down' %>
+      <% end %>
+      <%= link_to t('.back'), character_sheets_profile_path, class: 'btn btn-secondary' %>
     </div>
   </div>
 </div>
+
+<%= render 'popover_content', object: @character_sheet %>
