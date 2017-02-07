@@ -7,15 +7,13 @@ RSpec.describe CharacterSheetService, type: :service do
     let(:unexisting_sheet) { FactoryGirl.create(:character_sheet) }
     subject { described_class.new(fate_core_sheet) }
 
-    it 'creates PDF file' do
-      expect(subject.export_to_pdf!).to make_pdf_file(subject.pdf_path)
-    end
-
-    context '' do
-      subject { described_class.new(unexisting_sheet) }
+    describe 'creating PDF' do
+      it 'creates PDF file' do
+        expect(subject.export_to_pdf!).to make_pdf_file(subject.pdf_path)
+      end
 
       it 'raises NoTemplateError' do
-        expect { subject.export_to_pdf! }.to raise_error(CharacterSheetService::NoTemplateError)
+        expect { described_class.new(unexisting_sheet) }.to raise_error(CharacterSheetService::NoTemplateError)
       end
     end
   end

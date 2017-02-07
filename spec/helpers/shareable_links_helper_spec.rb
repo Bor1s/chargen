@@ -1,15 +1,14 @@
 require 'rails_helper'
 
-# Specs in this file have access to a helper object that includes
-# the ShareableLinksHelper. For example:
-#
-# describe ShareableLinksHelper do
-#   describe "string concat" do
-#     it "concats two strings with spaces" do
-#       expect(helper.concat_strings("this","that")).to eq("this that")
-#     end
-#   end
-# end
 RSpec.describe ShareableLinksHelper, type: :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let(:character_sheet) { FactoryGirl.create(:fate_core_sheet, :with_shareable_link) }
+  let(:character_sheet_with_no_share) { FactoryGirl.create(:fate_core_sheet) }
+
+  it 'returns share_link' do
+    expect(helper.share_link(character_sheet)).to start_with('http://')
+  end
+
+  it 'returns I18n message' do
+    expect(helper.share_link(character_sheet_with_no_share)).to eq t('helpers.no_link')
+  end
 end
