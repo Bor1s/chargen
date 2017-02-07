@@ -16,4 +16,7 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require clipboard
-//= require_tree .
+//= require app
+//= require init
+//
+// require_tree .

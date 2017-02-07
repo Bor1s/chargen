@@ -1,12 +1,6 @@
 <div id="<%= dom_id(object) %>" class='hidden'>
   <p>Copy this link and share it with your friends. They will have <b>read only</b> access.</p>
-  <p>
-    <%= link_to t('helpers.create_link'),
-      shareable_links_path(character_sheet_id: object.id),
-      remote: true,
-      method: :post,
-      class: 'text-success' %>
-  </p>
+  <p>You can also <b>remove link</b>, thus noone you shared link with before will be able to use it.</p>
 
   <div class='JS_shareable_container_<%= object.id %>'>
     <%= render 'shareable_links/container', object: object %>

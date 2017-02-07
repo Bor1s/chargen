@@ -8,7 +8,7 @@
     tabindex: 0,
     role: 'button',
     title: t('.share'),
-    data: { toggle: 'popover', placement: 'top', 'content-id': dom_id(object)} do %>
+    data: { toggle: 'popover', placement: 'left', 'content-id': dom_id(object)} do %>
     <%= fa_icon 'link' %>
     <%= fa_icon 'caret-down' %>
   <% end %>
@@ -31,8 +31,8 @@
     class: 'btn btn-sm btn-success',
     tabindex: 0,
     role: 'button',
-    title: t('.share'),
-    data: { toggle: 'popover', placement: 'top', 'content-id': dom_id(object)} do %>
+    title: t('character_sheets.actions.share'),
+    data: { toggle: 'popover', animation: false, placement: 'top', 'content-id': dom_id(object)} do %>
     <%= fa_icon 'link', text: 'Share' %>
     <%= fa_icon 'caret-down' %>
   <% end %>

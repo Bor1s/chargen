@@ -1,9 +1,19 @@
-<div class="input-group">
-  <input type="text" class="form-control JS_input_<%= object.id %>" value='<%= t('helpers.no_link') %>' />
+<p>
+  <div class="input-group">
+    <input type="text" class="form-control JS_input_<%= object.id %>" value='<%= t('helpers.no_link') %>' />
 
-  <span class="input-group-btn">
-    <button type='button' class="btn btn-secondary copy-button JS_button_<%= object.id %>">
-      <%= fa_icon 'floppy-o' %>
-    </button>
-  </span>
-</div>
+    <span class="input-group-btn">
+      <button type='button' class="btn btn-secondary copy-button">
+        <%= fa_icon 'floppy-o' %>
+      </button>
+    </span>
+  </div>
+</p>
+
+<p>
+  <%= link_to t('helpers.create_link'),
+    shareable_links_path(character_sheet_id: object.id),
+    remote: true,
+    method: :post,
+    class: 'text-success' %>
+</p>

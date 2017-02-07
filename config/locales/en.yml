@@ -60,7 +60,7 @@ en:
       character_sheet_created: 'Character sheet has been created'
 
     actions:
-      share: 'Copy link'
+      share: 'Share character sheet'
 
     edit:
       update: 'Update'
@@ -133,5 +133,6 @@ en:
 
   helpers:
     no_link: 'No link has been generated'
-    create_link: 'Create link'
+    create_link: 'Generate link'
     remove_link: 'Remove link'
+    remove_share_confirmation: 'Removing share link will make it unavailable to use for everyone you have shared link with. Are you sure?'
