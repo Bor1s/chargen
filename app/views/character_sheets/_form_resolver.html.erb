@@ -1,7 +1,1 @@
-<% if f.object.is_a?(CharacterSheets::FateCore) %>
-  <%= render 'character_sheets/fate_cores/form', f: f %>
-<% elsif f.object.is_a?(CharacterSheets::HeroQuest) %>
-  <%= render 'character_sheets/hero_quests/form', f: f %>
-<% else %>
-  <!-- Other game systems -->
-<% end %>
+<%= render form_template_path(f.object), f: f %>

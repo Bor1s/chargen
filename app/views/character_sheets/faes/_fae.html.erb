@@ -1,0 +1,11 @@
+<div class='row p-3 character-sheet-row'>
+  <div class='col'>
+    <%= link_to fae.name, character_sheet_path(fae), class: 'moray' %>
+  </div>
+
+  <div class='col-3'>
+    <%= fae.class::HUMAN_SYSTEM_NAME %>
+  </div>
+
+  <%= render 'character_sheets/actions', object: fae %>
+</div>

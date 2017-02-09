@@ -8,11 +8,11 @@
 
   <%= form_for @character_sheet, as: :character_sheet, url: create_character_sheet_url, html: html_options do |f| %>
 
-    <%= render 'character_sheets/fate_cores/form', f: f %>
+    <%= render 'character_sheets/faes/form', f: f %>
 
     <div class='row'>
       <div class='col-4'>
-        <%= f.submit t('character_sheets.fate_cores.form.create_character'), class: 'btn btn-md btn-success', id: 'submit_char', autocomplete: 'off' %>
+        <%= f.submit t('character_sheets.faes.form.create_character'), class: 'btn btn-md btn-success', id: 'submit_char', autocomplete: 'off' %>
       </div>
     </div>
 

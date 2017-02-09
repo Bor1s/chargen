@@ -14,4 +14,19 @@ module CharacterSheetsHelper
       { target: '_blank' }
     end
   end
+
+  def show_template_path(object)
+    "character_sheets/#{path_resolver(object)}/sheet"
+  end
+
+  def form_template_path(object)
+    "character_sheets/#{path_resolver(object)}/form"
+  end
+
+  private
+
+  def path_resolver(object)
+    return 'faes' if object.is_a?(CharacterSheets::FateAccelerated)
+    object.class.name.demodulize.underscore.pluralize
+  end
 end

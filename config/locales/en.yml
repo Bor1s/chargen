@@ -131,6 +131,39 @@ en:
       form:
         <<: *hero_quest_translations
 
+    # Fate Accelerated
+    faes:
+      fate_translations: &fae_translations
+        id: 'ID'
+        aspects: 'Aspects'
+        approaches: 'Approaches'
+        stunts: 'Stunts'
+        consequences: 'Consequences'
+        name: 'Name'
+        description: 'Description'
+        refresh: 'Refresh'
+        current_fate_points: 'Current Fate Points'
+        high_concept: 'High Concept'
+        trouble: 'Trouble'
+        aspect3: 'Aspect'
+        aspect4: 'Aspect'
+        aspect5: 'Aspect'
+        careful: 'Careful'
+        clever: 'Clever'
+        flashy: 'Flashy'
+        forceful: 'Forceful'
+        quick: 'Quick'
+        sneaky: 'Sneaky'
+        mild: 'Mild'
+        moderate: 'Moderate'
+        severe: 'Severe'
+        create_character: 'Create'
+
+      form:
+        <<: *fae_translations
+      sheet:
+        <<: *fae_translations
+
   helpers:
     no_link: 'No link has been generated'
     create_link: 'Generate link'

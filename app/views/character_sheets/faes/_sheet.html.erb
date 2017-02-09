@@ -1,0 +1,206 @@
+<!-- ID section -->
+<div class='row'>
+  <div class='col'>
+    <span class='fate-id'><%= t('.id') %></span>
+  </div>
+</div>
+
+<div class='row'>
+  <div class='col-8'>
+    <div class='row'>
+      <div class='col-2 hidden-sm-down'>
+        <p class='fate-label'><%= t('.name') %></p>
+      </div>
+
+      <div class='col-10'>
+        <p><b><%= character_sheet.name %></b></p>
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class='col-2 hidden-sm-down'>
+        <p class='fate-label'><%= t('.description') %></p>
+      </div>
+
+      <div class='col-10'>
+        <p><%= character_sheet.description %></p>
+      </div>
+    </div>
+  </div>
+
+  <div class='col-12 col-sm-12 col-md-2 col-lg-2 text-center'>
+    <p class='fate-label'><%= t('.refresh') %></p>
+    <p><h4><b><%= character_sheet.refresh %></b></h4></p>
+  </div>
+
+  <div class='col-12 col-sm-12 col-md-2 col-lg-2 text-center'>
+    <p class='fate-label'><%= t('.current_fate_points') %></p>
+    <p><h4><b><%= character_sheet.current_fate_points %></b></h4></p>
+  </div>
+</div>
+<!-- END ID section -->
+
+<div class='row'>
+  <!-- Aspects section -->
+  <div class='col-12 col-sm-12 col-md-6 col-lg-6'>
+    <div class='row'>
+      <div class='col'>
+        <span class='fate-id'><%= t('.aspects') %></span>
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class='col'>
+        <div class='form-group'>
+          <p><%= character_sheet.high_concept %></p>
+        </div>
+
+        <div class='form-group'>
+          <p><%= character_sheet.trouble %></p>
+        </div>
+
+        <div class='form-group'>
+          <p><%= character_sheet.aspect3 %></p>
+        </div>
+
+        <div class='form-group'>
+          <p><%= character_sheet.aspect4 %></p>
+        </div>
+
+        <div class='form-group'>
+          <p><%= character_sheet.aspect5 %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END Aspects section -->
+
+  <!-- Approaches section -->
+  <div class='col-12 col-sm-12 col-md-6 col-lg-6'>
+    <div class='row'>
+      <div class='col'>
+        <span class='fate-id'><%= t('.approaches') %></span>
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class='col'>
+
+        <div class='row'>
+          <div class='col-4'>
+            <p class='fate-label'><%= t('.careful') %></p>
+          </div>
+
+          <div class='col-8'>
+            <p><b><%= character_sheet.careful %></b></p>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class='col-4'>
+            <p class='fate-label'><%= t('.clever') %></p>
+          </div>
+
+          <div class='col-8'>
+            <p><b><%= character_sheet.clever %></b></p>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class='col-4'>
+            <p class='fate-label'><%= t('.flashy') %></p>
+          </div>
+
+          <div class='col-8'>
+            <p><b><%= character_sheet.flashy %></b></p>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class='col-4'>
+            <p class='fate-label'><%= t('.forceful') %></p>
+          </div>
+
+          <div class='col-8'>
+            <p><b><%= character_sheet.forceful %></b></p>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class='col-4'>
+            <p class='fate-label'><%= t('.quick') %></p>
+          </div>
+
+          <div class='col-8 form-label'>
+            <p><b><%= character_sheet.quick %></b></p>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class='col-4'>
+            <p class='fate-label'><%= t('.sneaky') %></p>
+          </div>
+
+          <div class='col-8'>
+            <p><b><%= character_sheet.sneaky %></b></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END Approaches section -->
+</div>
+
+<!-- Stunts section -->
+<div class='row'>
+  <div class='col-12'>
+    <span class='fate-id'><%= t('.stunts') %></span>
+  </div>
+</div>
+
+<div class='row'>
+  <div class='col-12'>
+    <p><%= character_sheet.stunts %></p>
+  </div>
+</div>
+<!-- END Stunts section -->
+
+<!-- Consequences section -->
+<div class='row'>
+  <div class='col'>
+    <span class='fate-id'><%= t('.consequences') %></span>
+  </div>
+</div>
+
+<div class='row'>
+  <div class='col-12 col-sm-12 col-md-4 col-lg-4'>
+    <span class='mild-show'></span>
+    <p class='pl-3'>
+      <sup class='fate-label'><%= t('.mild') %></sup>
+      <span class='pl-3'><%= character_sheet.mild %></span>
+    </p>
+  </div>
+</div>
+
+<div class='row'>
+  <div class='col-12 col-sm-12 col-md-4 col-lg-4'>
+    <span class='moderate-show'></span>
+    <p class='pl-3'>
+      <sup class='fate-label'><%= t('.moderate') %></sup>
+      <span class='pl-3'><%= character_sheet.moderate %></span>
+    </p>
+  </div>
+</div>
+
+<div class='row'>
+  <div class='col-12 col-sm-12 col-md-4 col-lg-4'>
+    <span class='severe-show'></span>
+    <p class='pl-3'>
+      <sup class='fate-label'><%= t('.severe') %></sup>
+      <span class='pl-3'><%= character_sheet.severe %></span>
+    </p>
+  </div>
+</div>
+<!-- END Consequences section -->
+
+<hr />

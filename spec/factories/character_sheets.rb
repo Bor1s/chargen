@@ -5,6 +5,10 @@ FactoryGirl.define do
       data_fields({ 'CharacterName' => 'Frodo' })
     end
 
+    factory :fate_accelerated_sheet, class: CharacterSheets::FateAccelerated do
+      data_fields({ 'name' => 'Frodo' })
+    end
+
     factory :hero_quest_sheet, class: CharacterSheets::HeroQuest do
       data_fields({ 'character_name' => 'Frodo' })
     end

@@ -1,0 +1,214 @@
+<%= hidden_field_tag :system, CharacterSheets::FateAccelerated::SYSTEM_NAME %>
+
+<!-- ID section -->
+<div class='row'>
+  <div class='col'>
+    <span class='fate-id'><%= t('.id') %></span>
+  </div>
+</div>
+
+<div class='row'>
+  <div class='col-12 col-sm-6 col-md-6 col-lg-6'>
+    <div class='row'>
+      <div class='col'>
+        <div class='form-group'>
+          <%= f.text_field :name, class: 'form-control', placeholder: t('.name') %>
+        </div>
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class='col'>
+        <div class='form-group'>
+          <%= f.text_area :description, class: 'form-control', placeholder: t('.description'), rows: 8 %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class='col-12 col-sm-3 col-md-3 col-lg-3'>
+    <div class='form-group'>
+      <%= f.text_area :refresh, class: 'form-control', placeholder: t('.refresh'), rows: 3 %>
+    </div>
+  </div>
+
+  <div class='col-12 col-sm-3 col-md-3 col-lg-3'>
+    <div class='form-group'>
+      <%= f.text_area :current_fate_points, class: 'form-control', placeholder: t('.current_fate_points'), rows: 3 %>
+    </div>
+  </div>
+</div>
+<!-- END ID section -->
+
+<div class='row'>
+  <!-- Aspects section -->
+  <div class='col-12 col-sm-12 col-md-6 col-lg-6'>
+    <div class='row'>
+      <div class='col'>
+        <span class='fate-id'><%= t('.aspects') %></span>
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class='col'>
+        <div class='form-group'>
+          <%= f.text_field :high_concept, class: 'form-control', placeholder: t('.high_concept') %>
+        </div>
+
+        <div class='form-group'>
+          <%= f.text_field :trouble, class: 'form-control', placeholder: t('.trouble') %>
+        </div>
+
+        <div class='form-group'>
+          <%= f.text_field :aspect3, class: 'form-control', placeholder: t('.aspect3') %>
+        </div>
+
+        <div class='form-group'>
+          <%= f.text_field :aspect4, class: 'form-control', placeholder: t('.aspect4') %>
+        </div>
+
+        <div class='form-group'>
+          <%= f.text_field :aspect5, class: 'form-control', placeholder: t('.aspect5') %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END Aspects section -->
+
+  <!-- Approaches section -->
+  <div class='col-12 col-sm-12 col-md-6 col-lg-6'>
+    <div class='row'>
+      <div class='col'>
+        <span class='fate-id'><%= t('.approaches') %></span>
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class='col'>
+
+        <div class='row'>
+          <div class='col-4 col-form-label'>
+            <%= t('.careful') %>
+          </div>
+
+          <div class='col-8 form-label'>
+            <div class='form-group'>
+              <%= f.text_field :careful, class: 'form-control', placeholder: t('.careful') %>
+            </div>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class='col-4 col-form-label'>
+            <%= t('.clever') %>
+          </div>
+
+          <div class='col-8 form-label'>
+            <div class='form-group'>
+              <%= f.text_field :clever, class: 'form-control', placeholder: t('.clever') %>
+            </div>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class='col-4 col-form-label'>
+            <%= t('.flashy') %>
+          </div>
+
+          <div class='col-8 form-label'>
+            <div class='form-group'>
+              <%= f.text_field :flashy, class: 'form-control', placeholder: t('.flashy') %>
+            </div>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class='col-4 col-form-label'>
+            <%= t('.forceful') %>
+          </div>
+
+          <div class='col-8 form-label'>
+            <div class='form-group'>
+              <%= f.text_field :forceful, class: 'form-control', placeholder: t('.forceful') %>
+            </div>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class='col-4 col-form-label'>
+            <%= t('.quick') %>
+          </div>
+
+          <div class='col-8 form-label'>
+            <div class='form-group'>
+              <%= f.text_field :quick, class: 'form-control', placeholder: t('.quick') %>
+            </div>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class='col-4 col-form-label'>
+            <%= t('.sneaky') %>
+          </div>
+
+          <div class='col-8 form-label'>
+            <div class='form-group'>
+              <%= f.text_field :sneaky, class: 'form-control', placeholder: t('.sneaky') %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END Approaches section -->
+</div>
+
+<!-- Stunts section -->
+<div class='row'>
+  <div class='col-12'>
+    <span class='fate-id'><%= t('.stunts') %></span>
+  </div>
+</div>
+
+<div class='row'>
+  <div class='col-12'>
+    <div class='form-group'>
+      <%= f.text_area :stunts, class: 'form-control', placeholder: t('.stunts'), rows: 15 %>
+    </div>
+  </div>
+</div>
+<!-- END Stunts section -->
+
+<!-- Consequences section -->
+<div class='row'>
+  <div class='col'>
+    <span class='fate-id'><%= t('.consequences') %></span>
+  </div>
+</div>
+
+<div class='row'>
+  <div class='col-12 col-sm-12 col-md-4 col-lg-4'>
+    <div class='form-group'>
+      <span class='mild'></span><%= f.text_field :mild, class: 'form-control', placeholder: t('.mild') %>
+    </div>
+  </div>
+</div>
+
+<div class='row'>
+  <div class='col-12 col-sm-12 col-md-4 col-lg-4'>
+    <div class='form-group'>
+      <span class='moderate'></span><%= f.text_field :moderate, class: 'form-control', placeholder: t('.moderate') %>
+    </div>
+  </div>
+</div>
+
+<div class='row'>
+  <div class='col-12 col-sm-12 col-md-4 col-lg-4'>
+    <div class='form-group'>
+      <span class='severe'></span><%= f.text_field :severe, class: 'form-control', placeholder: t('.severe') %>
+    </div>
+  </div>
+</div>
+<!-- END Consequences section -->
+
+<hr />

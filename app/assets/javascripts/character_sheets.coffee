@@ -3,8 +3,3 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 #
 #
-# Hack to make form button enable again
-# after target: blank submission
-$(window).focus ->
-  if $('#submit_char').length > 0
-    $('#submit_char').removeProp('disabled')
