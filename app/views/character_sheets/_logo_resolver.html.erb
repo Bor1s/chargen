@@ -2,6 +2,8 @@
   <%= image_tag('fate-logo.png', size: '200x100', class: 'text-right') %>
 <% elsif character_sheet.is_a?(CharacterSheets::HeroQuest) %>
   <%= image_tag('hero-quest-logo.png', size: '300x65', class: 'text-right') %>
+<% elsif character_sheet.is_a?(CharacterSheets::FateAccelerated) %>
+  <%= image_tag('fae-logo.png', size: '200x100', class: 'text-right') %>
 <% else %>
   <!-- Other game systems -->
 <% end %>

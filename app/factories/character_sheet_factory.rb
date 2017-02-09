@@ -14,6 +14,8 @@ class CharacterSheetFactory
         CharacterSheets::FateCore
       when CharacterSheets::HeroQuest::SYSTEM_NAME
         CharacterSheets::HeroQuest
+      when CharacterSheets::FateAccelerated::SYSTEM_NAME
+        CharacterSheets::FateAccelerated
       else
         CharacterSheets::Null
       end

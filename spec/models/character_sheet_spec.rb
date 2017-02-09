@@ -26,4 +26,12 @@ RSpec.describe CharacterSheet, type: :model do
     it { expect(fate_core.class::HUMAN_SYSTEM_NAME).to eq 'Fate Core' }
     it { expect(fate_core.class::SKILLS).to eq [:superb, :great, :good, :fair, :average] }
   end
+
+  describe 'FateAccelerated' do
+    let(:fae) { FactoryGirl.create(:fate_accelerated_sheet) }
+
+    it { expect(fae.to_partial_path).to eq 'character_sheets/faes/fae' }
+    it { expect(fae.class::SYSTEM_NAME).to eq 'fae' }
+    it { expect(fae.class::HUMAN_SYSTEM_NAME).to eq 'Fate Accelerated' }
+  end
 end

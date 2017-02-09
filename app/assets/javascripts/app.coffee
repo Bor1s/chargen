@@ -7,6 +7,7 @@ App.init = ->
   this.unfocusPopoverLink()
   this.managePopoverCloseOnClick()
   this.enableCopyButton()
+  this.enableCreateCSbutton()
 
 App.fadeNotifications = ->
   if $('.notifications').length > 0
@@ -64,3 +65,10 @@ App._setTooltip = (btn, message)->
 
 App._hideTooltip = (btn)->
   setTimeout (-> $(btn).tooltip('hide')), 1000
+
+App.enableCreateCSbutton = ->
+  # Hack to make form button enable again
+  # after target: blank submission
+  $(window).focus ->
+    if $('#submit_char').length > 0
+      $('#submit_char').removeProp('disabled')
