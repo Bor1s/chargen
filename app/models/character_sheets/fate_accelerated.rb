@@ -28,4 +28,20 @@ class CharacterSheets::FateAccelerated < CharacterSheet
   def to_partial_path
     'character_sheets/faes/fae'
   end
+
+  def refresh=(amount)
+    super(amount.to_i)
+  end
+
+  def refresh
+    super.to_i
+  end
+
+  def current_fate_points=(amount)
+    super(amount.to_i)
+  end
+
+  def current_fate_points
+    super.to_i
+  end
 end

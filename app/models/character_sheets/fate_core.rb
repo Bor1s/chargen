@@ -45,4 +45,12 @@ class CharacterSheets::FateCore < CharacterSheet
   ]
 
   store_accessor :data_fields, *FIELDS_MAP.first.keys
+
+  def refresh=(amount)
+    super(amount.to_i)
+  end
+
+  def refresh
+    super.to_i
+  end
 end

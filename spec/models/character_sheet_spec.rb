@@ -17,6 +17,10 @@ RSpec.describe CharacterSheet, type: :model do
     it { expect(hero_quest.class::ABILITIES).to eq 15 }
     it { expect(hero_quest.class::FLAWS).to eq 3 }
     it { expect(hero_quest.class::BENEFITS).to eq 12 }
+
+    it 'has 0 hero points by default' do
+      expect(hero_quest.hero_points).to eq 0
+    end
   end
 
   describe 'FateCore' do
@@ -25,6 +29,10 @@ RSpec.describe CharacterSheet, type: :model do
     it { expect(fate_core.class::SYSTEM_NAME).to eq 'fate' }
     it { expect(fate_core.class::HUMAN_SYSTEM_NAME).to eq 'Fate Core' }
     it { expect(fate_core.class::SKILLS).to eq [:superb, :great, :good, :fair, :average] }
+
+    it 'has 0 refresh by default' do
+      expect(fate_core.refresh).to eq 0
+    end
   end
 
   describe 'FateAccelerated' do
@@ -33,5 +41,13 @@ RSpec.describe CharacterSheet, type: :model do
     it { expect(fae.to_partial_path).to eq 'character_sheets/faes/fae' }
     it { expect(fae.class::SYSTEM_NAME).to eq 'fae' }
     it { expect(fae.class::HUMAN_SYSTEM_NAME).to eq 'Fate Accelerated' }
+
+    it 'has 0 refresh by default' do
+      expect(fae.refresh).to eq 0
+    end
+
+    it 'has 0 current_fate_points by default' do
+      expect(fae.current_fate_points).to eq 0
+    end
   end
 end
