@@ -21,7 +21,7 @@
 <!-- Description section -->
 <div class='row'>
   <div class='col'>
-    <p class='mt-4'><%= character_sheet.description %></p>
+    <p class='mt-4 wrap'><%= character_sheet.description %></p>
   </div>
 </div>
 <!-- END Description section -->
@@ -42,7 +42,7 @@
 
 <div class='row'>
   <!-- Abilities section -->
-  <div class='grid-row col-xs-12 col-sm-12 col-md-6 col-lg-4'>
+  <div class='grid-row col-12 col-sm-12 col-md-6 col-lg-4'>
     <div class='row'>
       <div class='col-2'>
         <p class='mt-4'>
@@ -54,11 +54,11 @@
     <% 1.upto CharacterSheets::HeroQuest::ABILITIES do |i| %>
       <% if character_sheet.send("ability#{i}").present? %>
         <div class='row'>
-          <div class='col-9 col-xs-10 col-sm-10'>
+          <div class='col-9 col-sm-8 col-md-8 col-lg-8'>
             <p><%= character_sheet.send("ability#{i}") %></p>
           </div>
 
-          <div class='col-3 col-xs-2 col-sm-2'>
+          <div class='col-3 col-sm-4 col-md-4 col-lg-4'>
             <p class='text-center'><b><%= character_sheet.send("ability_num#{i}") %></b></p>
           </div>
         </div>
@@ -68,7 +68,7 @@
   <!-- END Abilities section -->
 
   <!-- Flaws section -->
-  <div class='grid-row col-xs-12 col-sm-12 col-md-6 col-lg-4'>
+  <div class='grid-row col-12 col-sm-12 col-md-6 col-lg-4'>
     <div class='row'>
       <div class='col-2'>
         <p class='mt-4'>
@@ -79,11 +79,11 @@
     <% 1.upto CharacterSheets::HeroQuest::FLAWS do |i| %>
       <% if character_sheet.send("flaw#{i}").present? %>
         <div class='row'>
-          <div class='col-9 col-xs-10 col-sm-10'>
+          <div class='col-9 col-sm-8 col-md-8 col-lg-8'>
             <p><%= character_sheet.send("flaw#{i}") %></p>
           </div>
 
-          <div class='col-3 col-xs-2 col-sm-2'>
+          <div class='col-3 col-sm-4 col-md-4 col-lg-4'>
             <p class='text-center'><b><%= character_sheet.send("flaw_num#{i}") %></b></p>
           </div>
         </div>
@@ -93,7 +93,7 @@
   <!-- END Flaws section -->
 
   <!-- Benefits/penalties section -->
-  <div class='grid-row col-xs-12 col-sm-12 col-md-6 col-lg-4'>
+  <div class='grid-row col-12 col-sm-12 col-md-6 col-lg-4'>
     <div class='row'>
       <div class='col-12'>
         <p class='mt-4'>
@@ -104,11 +104,11 @@
     <% 1.upto CharacterSheets::HeroQuest::BENEFITS do |i| %>
       <% if character_sheet.send("benefit#{i}").present? %>
         <div class='row'>
-          <div class='col-9 col-xs-10 col-sm-10'>
+          <div class='col-9 col-sm-8 col-md-8 col-lg-8'>
             <p><%= character_sheet.send("benefit#{i}") %></p>
           </div>
 
-          <div class='col-3 col-xs-2 col-sm-2'>
+          <div class='col-3 col-sm-4 col-md-4 col-lg-4'>
             <p class='text-center'><b><%= character_sheet.send("benefit_num#{i}") %></b></p>
           </div>
         </div>
@@ -122,7 +122,7 @@
 <div class='row mt-4'>
   <div class='col'>
     <div class='form-group'>
-      <p><%= character_sheet.notes %></p>
+      <p class='wrap'><%= character_sheet.notes %></p>
     </div>
   </div>
 </div>

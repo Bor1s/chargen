@@ -27,7 +27,7 @@
       </div>
 
       <div class='col-10'>
-        <p><%= character_sheet.description %></p>
+        <p class='wrap'><%= character_sheet.description %></p>
       </div>
     </div>
   </div>
@@ -164,7 +164,7 @@
 
 <div class='row'>
   <div class='col-12'>
-    <p><%= character_sheet.stunts %></p>
+    <p class='wrap'><%= character_sheet.stunts %></p>
   </div>
 </div>
 <!-- END Stunts section -->
@@ -177,7 +177,7 @@
 </div>
 
 <div class='row'>
-  <div class='col-12 col-sm-12 col-md-4 col-lg-4'>
+  <div class='col'>
     <span class='mild-show'></span>
     <p class='pl-3'>
       <sup class='fate-label'><%= t('.mild') %></sup>
@@ -187,7 +187,7 @@
 </div>
 
 <div class='row'>
-  <div class='col-12 col-sm-12 col-md-4 col-lg-4'>
+  <div class='col'>
     <span class='moderate-show'></span>
     <p class='pl-3'>
       <sup class='fate-label'><%= t('.moderate') %></sup>
@@ -197,7 +197,7 @@
 </div>
 
 <div class='row'>
-  <div class='col-12 col-sm-12 col-md-4 col-lg-4'>
+  <div class='col'>
     <span class='severe-show'></span>
     <p class='pl-3'>
       <sup class='fate-label'><%= t('.severe') %></sup>
