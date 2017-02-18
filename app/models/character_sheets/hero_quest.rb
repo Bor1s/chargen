@@ -75,4 +75,12 @@ class CharacterSheets::HeroQuest< CharacterSheet
   ]
 
   store_accessor :data_fields, *FIELDS_MAP.first.keys
+
+  def hero_points=(amount)
+    super(amount.to_i)
+  end
+
+  def hero_points
+    super.to_i
+  end
 end

@@ -25,7 +25,7 @@ class CharacterSheetService
 
   def save_character_sheet_fields_data
     data = character_sheet.class.stored_attributes[:data_fields].map do |human_field_name|
-      "#{character_sheet.class::FIELDS_MAP.first[human_field_name]} #{escape_unsafe(character_sheet.data_fields[human_field_name])}"
+      "#{character_sheet.class::FIELDS_MAP.first[human_field_name]} #{escape_unsafe(character_sheet.data_fields[human_field_name].to_s)}"
     end
 
     f = File.open(@pdf_tmp_fields_path, 'w')
