@@ -29,6 +29,8 @@ gem 'font-awesome-rails'
 gem 'devise'
 gem 'newrelic_rpm'
 gem 'clipboard-rails'
+gem 'exception_notification'
+gem 'slack-notifier'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'

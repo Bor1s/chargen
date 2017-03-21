@@ -75,7 +75,7 @@ Rails.application.configure do
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
-  if ENV["RAILS_LOG_TO_STDOUT"].present?
+  if ENV['RAILS_LOG_TO_STDOUT'].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter
     config.logger = ActiveSupport::TaggedLogging.new(logger)
@@ -98,4 +98,14 @@ Rails.application.configure do
   }
 
   config.action_mailer.default_url_options = { host: 'charactersheets.org' }
+
+  # Slack webhook integration
+  Rails.application.config.middleware.use ExceptionNotification::Rack,
+  :slack => {
+    :webhook_url => ENV['CS_SLACK_WEBHOOK'],
+    :channel => '#exceptions',
+    :additional_parameters => {
+      :mrkdwn => true
+    }
+  }
 end
