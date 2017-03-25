@@ -1,12 +1,16 @@
 <div class='container-fluid'>
   <div class='row justify-content-center notifications'>
-    <div class='col text-center'>
+    <div class='col alert text-center'>
       <% if alert %>
-        <section class='border-1 rounded border-danger text-danger'><span><%= alert %></span></section>
+        <section class='border-1 rounded border-danger text-danger'>
+          <span><%= alert %></span>
+        </section>
       <% end %>
 
       <% if notice %>
-        <section class='border-1 rounded border-success text-success'><span><%= notice%></span></section>
+        <section class='border-1 rounded border-success text-success'>
+          <span><%= notice%></span>
+        </section>
       <% end %>
     </div>
   </div>
