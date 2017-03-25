@@ -35,16 +35,16 @@ App.enableCopyButton = ->
   clipboard = new Clipboard('.copy-button')
 
   # NOTE: https://github.com/twbs/bootstrap/issues/21607
-  # $('.copy-button').tooltip
-  #   trigger: 'click'
+  $('.copy-button').tooltip
+    trigger: 'click'
 
-  # clipboard.on 'success', (e)->
-    # App._setTooltip(e.trigger, 'Copied!')
-    # App._hideTooltip(e.trigger)
-  #
-  # clipboard.on 'error', (e)->
-  #   App._setTooltip(e.trigger, 'Failed!')
-  #   App._hideTooltip(e.trigger)
+  clipboard.on 'success', (e)->
+    App._setTooltip(e.trigger, 'Copied!')
+    App._hideTooltip(e.trigger)
+
+  clipboard.on 'error', (e)->
+    App._setTooltip(e.trigger, 'Failed!')
+    App._hideTooltip(e.trigger)
 
 App.managePopoverCloseOnClick = ->
   $(document).on 'click touchstart', (e)->
