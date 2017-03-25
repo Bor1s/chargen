@@ -67,6 +67,7 @@ en:
       view: 'View'
       export: 'Export to PDF'
       back: 'Back'
+      jump_to: 'Jump To'
 
     show:
       edit: 'Edit'

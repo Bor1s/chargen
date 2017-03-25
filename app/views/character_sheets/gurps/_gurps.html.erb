@@ -1,0 +1,11 @@
+<div class='row p-3 character-sheet-row'>
+  <div class='col'>
+    <%= link_to gurps.name, character_sheet_path(gurps), class: 'moray' %>
+  </div>
+
+  <div class='col-3'>
+    <%= gurps.class::HUMAN_SYSTEM_NAME %>
+  </div>
+
+  <%= render 'character_sheets/actions', object: gurps %>
+</div>

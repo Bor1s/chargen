@@ -1,0 +1,58 @@
+<fieldset id='move' class='form-group row'>
+  <legend><%= t('.move') %></legend>
+  <div class='col-12'>
+    <div class='row'>
+      <div class='col-12 col-md-6 col-lg-6'>
+        <div class='row'>
+          <div class='col-6'>
+            <p class='font-weight-bold'>BM x 1</p>
+          </div>
+          <div class='col-6'>
+            <p id='GURPS_bmnone'><%= f.object.basic_move %></p>
+            <%= f.hidden_field :bmnone %>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class='col-6'>
+            <p class='font-weight-bold'>BM x 0.8</p>
+          </div>
+          <div class='col-6'>
+            <p id='GURPS_bmlight'><%= (f.object.basic_move.to_f * 0.8).to_i %></p>
+            <%= f.hidden_field :bmlight %>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class='col-6'>
+            <p class='font-weight-bold'>BM x 0.6</p>
+          </div>
+          <div class='col-6'>
+            <p id='GURPS_bmmedium'><%= (f.object.basic_move.to_f * 0.6).to_i %></p>
+            <%= f.hidden_field :bmmedium %>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class='col-6'>
+            <p class='font-weight-bold'>BM x 0.4</p>
+          </div>
+          <div class='col-6'>
+            <p id='GURPS_bmheavy'><%= (f.object.basic_move.to_f * 0.4).to_i %></p>
+            <%= f.hidden_field :bmheavy %>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class='col-6'>
+            <p class='font-weight-bold'>BM x 0.2</p>
+          </div>
+          <div class='col-6'>
+            <p id='GURPS_bmxheavy'><%= (f.object.basic_move.to_f * 0.2).to_i %></p>
+            <%= f.hidden_field :bmxheavy %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</fieldset>

@@ -1,0 +1,17 @@
+<fieldset id='block' class='form-group row'>
+  <legend><%= t('.block') %></legend>
+    <div class='col-12'>
+
+      <div class='row'>
+        <div class='col-12 col-md-5 col-lg-5'>
+          <div class='form-group row'>
+            <%= f.label :block, t('.block'), class: 'col-form-label col-2 font-weight-bold' %>
+            <div class='col-5'>
+              <%= f.text_field :block, class: 'form-control', placeholder: t('.block'), title: t('.block_recipe'), data: {toggle: 'tooltip', placement: 'top'} %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+</fieldset>

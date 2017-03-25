@@ -1,0 +1,18 @@
+<fieldset id='disadvantages' class='form-group row'>
+  <legend><%= t('.disadvantages') %></legend>
+    <div class='col-12'>
+
+      <% 0.upto(12) do |i| %>
+        <div class='row'>
+          <div class='col-8 col-md-8 col-lg-8'>
+            <p><%= sheet.send(:"disadvantages_#{i}")%></p>
+          </div>
+
+          <div class='col-4 col-md-4 col-lg-4'>
+            <p><%= sheet.send(:"disadcost_#{i}")%></p>
+          </div>
+        </div>
+      <% end %>
+
+    </div>
+</fieldset>

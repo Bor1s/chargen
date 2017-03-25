@@ -1,0 +1,28 @@
+<fieldset id='skills' class='form-group row'>
+  <legend><%= t('.skills') %></legend>
+    <div class='col-12'>
+
+      <% 0.upto(24) do |i| %>
+        <% if sheet.send(:"skill_#{i}").present? %>
+          <div class='row'>
+            <div class='col-4 col-md-4 col-lg-4'>
+              <p><%= sheet.send(:"skill_#{i}") %></p>
+            </div>
+
+            <div class='col-2 col-md-2 col-lg-2'>
+              <p><%= sheet.send(:"level_#{i}") %></p>
+            </div>
+
+            <div class='col-3 col-md-3 col-lg-3'>
+              <p><%= sheet.send(:"rellevel_#{i}") %></p>
+            </div>
+
+            <div class='col-3 col-md-3 col-lg-3'>
+              <p><%= sheet.send(:"skcost_#{i}") %></p>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+
+    </div>
+</fieldset>

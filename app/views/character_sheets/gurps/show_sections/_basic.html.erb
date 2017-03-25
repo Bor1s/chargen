@@ -1,0 +1,120 @@
+<fieldset id='basics' class='form-group row'>
+  <legend><%= t('.basic') %></legend>
+  <div class='col-12'>
+    <div class='row'>
+      <div class='col-sm-12 col-md-4 col-lg-4'>
+        <div class='row'>
+          <div class='col-4 col-md-4 col-lg-3'>
+            <p class='font-weight-bold'>Name</p>
+          </div>
+
+          <div class='col-8 col-md-8 col-lg-9'>
+            <p><%= sheet.name %></p>
+          </div>
+        </div>
+      </div>
+
+      <div class='col-sm-12 col-md-4 col-lg-4'>
+        <div class='row'>
+          <div class='col-4 col-md-4 col-lg-3'>
+            <p class='font-weight-bold'>Player</p>
+          </div>
+
+          <div class='col-8 col-md-8 col-lg-9'>
+            <%= sheet.player %>
+          </div>
+        </div>
+      </div>
+
+      <div class='col-sm-12 col-md-4 col-lg-4'>
+        <div class='row'>
+          <div class='col-4 col-md-6 col-lg-5'>
+            <p class='font-weight-bold'>Total Points</p>
+          </div>
+
+          <div class='col-8 col-md-6 col-lg-7'>
+            <%= sheet.point_total %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class='col-sm-12 col-md-4 col-lg-4'>
+        <div class='row'>
+          <div class='col-4 col-md-4 col-lg-3'>
+            <p class='font-weight-bold'>Height</p>
+          </div>
+
+          <div class='col-8 col-md-8 col-lg-9'>
+            <%= sheet.height %>
+          </div>
+        </div>
+      </div>
+
+      <div class='col-sm-12 col-md-4 col-lg-4'>
+        <div class='row'>
+          <div class='col-4 col-md-4 col-lg-3'>
+            <p class='font-weight-bold'>Weight</p>
+          </div>
+
+          <div class='col-8 col-md-8 col-lg-9'>
+            <%= sheet.weight %>
+          </div>
+        </div>
+      </div>
+
+      <div class='col-sm-12 col-md-4 col-lg-4'>
+        <div class='row'>
+          <div class='col-4 col-md-6 col-lg-5'>
+            <p class='font-weight-bold'>Size Modifier</p>
+          </div>
+
+          <div class='col-8 col-md-6 col-lg-7'>
+            <%= sheet.size_modifier %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class='col-sm-12 col-md-4 col-lg-4'>
+        <div class='row'>
+          <div class='col-4 col-md-4 col-lg-3'>
+            <p class='font-weight-bold'>Age</p>
+          </div>
+
+          <div class='col-8 col-md-8 col-lg-9'>
+            <%= sheet.age %>
+          </div>
+        </div>
+      </div>
+
+      <div class='col-sm-12 col-md-4 col-lg-4'>
+        <div class='form-group row'>
+          <div class='col-4 col-md-7 col-lg-5'>
+            <p class='font-weight-bold'>Unspent Points</p>
+          </div>
+
+          <div class='col-8 col-md-5 col-lg-7'>
+            <%= sheet.unspent_points %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class='col-12'>
+        <div class='row'>
+          <div class='col-4 col-md-4 col-lg-2'>
+            <p class='font-weight-bold'>Appearance</p>
+          </div>
+
+          <div class='col-8 col-md-8 col-lg-10'>
+            <%= sheet.appearance %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</fieldset>

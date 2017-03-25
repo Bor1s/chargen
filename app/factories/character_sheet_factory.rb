@@ -16,6 +16,8 @@ class CharacterSheetFactory
         CharacterSheets::HeroQuest
       when CharacterSheets::FateAccelerated::SYSTEM_NAME
         CharacterSheets::FateAccelerated
+      when CharacterSheets::Gurps::SYSTEM_NAME
+        CharacterSheets::Gurps
       else
         CharacterSheets::Null
       end

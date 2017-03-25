@@ -8,4 +8,5 @@ class User < ApplicationRecord
   has_many :fate_core_character_sheets, dependent: :destroy, class_name: 'CharacterSheets::FateCore'
   has_many :fate_accelerated_character_sheets, dependent: :destroy, class_name: 'CharacterSheets::FateAccelerated'
   has_many :hero_quest_character_sheets, dependent: :destroy, class_name: 'CharacterSheets::HeroQuest'
+  has_many :gurps_character_sheets, dependent: :destroy, class_name: 'CharacterSheets::Gurps'
 end

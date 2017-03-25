@@ -1,0 +1,26 @@
+<fieldset id='reaction_modifiers' class='form-group row'>
+  <legend><%= t('.reaction_modifiers') %></legend>
+  <div class='col-12'>
+
+    <div class='row form-group'>
+      <div class='col-12 col-md-6 col-lg-6'>
+        <%= f.text_field :appearancereaction, class: 'form-control', placeholder: t('.appearance_reaction') %>
+      </div>
+    </div>
+
+    <div class='row form-group'>
+      <div class='col-12 col-md-6 col-lg-6'>
+        <%= f.text_field :status, class: 'form-control', placeholder: t('.status') %>
+      </div>
+    </div>
+
+    <% 0.upto(4) do |i| %>
+      <div class='row form-group'>
+        <div class='col-12 col-md-6 col-lg-6'>
+          <%= f.text_field "reputation_#{i}".to_sym, class: 'form-control', placeholder: t('.reputation') %>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+</fieldset>

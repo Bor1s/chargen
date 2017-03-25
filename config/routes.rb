@@ -20,6 +20,7 @@ Rails.application.routes.draw do
     get 'gurps', on: :new
     get 'hero_quest', on: :new
     get 'fae', on: :new
+    get 'gurps', on: :new
   end
 
   resource :profile, only: [:show] do

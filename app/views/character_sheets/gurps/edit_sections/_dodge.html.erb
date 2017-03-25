@@ -1,0 +1,58 @@
+<fieldset id='dodge' class='form-group row'>
+  <legend><%= t('.dodge') %></legend>
+  <div class='col-12'>
+    <div class='row'>
+      <div class='col-12 col-md-6 col-lg-6'>
+        <div class='row'>
+          <div class='col-6'>
+            <p class='font-weight-bold'>Dodge (Basic Speed + 3)</p>
+          </div>
+          <div class='col-6'>
+            <p id='GURPS_dodgenone'><%= f.object.basic_speed.to_i + 3 %></p>
+            <%= f.hidden_field :dodgenone %>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class='col-6'>
+            <p class='font-weight-bold'>Dodge - 1</p>
+          </div>
+          <div class='col-6'>
+            <p id='GURPS_dodgelight'><%= f.object.basic_speed.to_i + 3 - 1 %></p>
+            <%= f.hidden_field :dodgelight %>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class='col-6'>
+            <p class='font-weight-bold'>Dodge - 2</p>
+          </div>
+          <div class='col-6'>
+            <p id='GURPS_dodgemedium'><%= f.object.basic_speed.to_i + 3 - 2 %></p>
+            <%= f.hidden_field :dodgemedium %>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class='col-6'>
+            <p class='font-weight-bold'>Dodge - 3</p>
+          </div>
+          <div class='col-6'>
+            <p id='GURPS_dodgeheavy'><%= f.object.basic_speed.to_i + 3 - 3 %></p>
+            <%= f.hidden_field :dodgeheavy %>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class='col-6'>
+            <p class='font-weight-bold'>Dodge - 4</p>
+          </div>
+          <div class='col-6'>
+            <p id='GURPS_dodgexheavy'><%= f.object.basic_speed.to_i + 3 - 4 %></p>
+            <%= f.hidden_field :dodgexheavy %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</fieldset>

@@ -1,0 +1,126 @@
+<fieldset id='stats' class='form-group row'>
+  <legend><%= t('.stats') %></legend>
+    <div class='col-12'>
+
+      <div class='row'>
+        <div class='col-12 col-md-6 col-lg-6'>
+          <div class='form-group row'>
+            <%= f.label :st, t('.st'), class: 'col-form-label col-3 font-weight-bold' %>
+            <div class='col-4'>
+              <%= f.number_field :st, class: 'form-control', placeholder: t('.st') %>
+            </div>
+
+            <div class='col-4'>
+              <%= f.number_field :stcost, class: 'form-control', placeholder: t('.stcost'), title: t('.stcost'), data: {toggle: 'tooltip', placement: 'top'} %>
+            </div>
+          </div>
+        </div>
+
+        <div class='col-12 col-md-6 col-lg-6'>
+          <div class='form-group row'>
+            <%= f.label :hp, t('.hp'), class: 'col-form-label col-3 font-weight-bold' %>
+            <div class='col-3'>
+              <%= f.number_field :hp, class: 'form-control', placeholder: t('.st') %>
+            </div>
+
+            <div class='col-3'>
+              <%= f.number_field :hpcurrent, class: 'form-control', placeholder: t('.hpcurrent'), title: t('.hpcurrent'), data: {toggle: 'tooltip', placement: 'top'} %>
+            </div>
+
+            <div class='col-3'>
+              <%= f.number_field :hpcost, class: 'form-control', placeholder: t('.hpcost'), title: t('.hpcost'), data: {toggle: 'tooltip', placement: 'top'} %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class='row'>
+        <div class='col-12 col-md-6 col-lg-6'>
+          <div class='form-group row'>
+            <%= f.label :dx, t('.dx'), class: 'col-form-label col-3 font-weight-bold' %>
+            <div class='col-4'>
+              <%= f.number_field :dx, class: 'form-control', placeholder: t('.dx') %>
+            </div>
+
+            <div class='col-4'>
+              <%= f.number_field :dxcost, class: 'form-control', placeholder: t('.dxcost'), title: t('.dxcost'), data: {toggle: 'tooltip', placement: 'top'} %>
+            </div>
+          </div>
+        </div>
+
+        <div class='col-12 col-md-6 col-lg-6'>
+          <div class='form-group row'>
+            <%= f.label :will, class: 'col-form-label col-3 font-weight-bold' %>
+            <div class='col-3'>
+              <%= f.number_field :will, class: 'form-control', placeholder: t('.will') %>
+            </div>
+
+            <div class='col-3 offset-3'>
+              <%= f.number_field :willcost, class: 'form-control', placeholder: t('.willcost'), title: t('.willcost'), data: {toggle: 'tooltip', placement: 'top'} %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class='row'>
+        <div class='col-12 col-md-6 col-lg-6'>
+          <div class='form-group row'>
+            <%= f.label :iq, t('.iq'), class: 'col-form-label col-3 font-weight-bold' %>
+            <div class='col-4'>
+              <%= f.number_field :iq, class: 'form-control', placeholder: t('.iq') %>
+            </div>
+
+            <div class='col-4'>
+              <%= f.number_field :iqcost, class: 'form-control', placeholder: t('.iqcost'), title: t('.iqcost'), data: {toggle: 'tooltip', placement: 'top'} %>
+            </div>
+          </div>
+        </div>
+
+        <div class='col-12 col-md-6 col-lg-6'>
+          <div class='form-group row'>
+            <%= f.label :perception, t('.per'), class: 'col-form-label col-3 font-weight-bold' %>
+            <div class='col-3'>
+              <%= f.number_field :perception, class: 'form-control', placeholder: t('.per') %>
+            </div>
+
+            <div class='col-3 offset-3'>
+              <%= f.number_field :percost, class: 'form-control', placeholder: t('.percost'), title: t('.percost'), data: {toggle: 'tooltip', placement: 'top'} %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class='row'>
+        <div class='col-12 col-md-6 col-lg-6'>
+          <div class='form-group row'>
+            <%= f.label :ht, t('.ht'), class: 'col-form-label col-3 font-weight-bold' %>
+            <div class='col-4'>
+              <%= f.number_field :ht, class: 'form-control', placeholder: t('.ht') %>
+            </div>
+
+            <div class='col-4'>
+              <%= f.number_field :htcost, class: 'form-control', placeholder: t('.htcost'), title: t('.htcost'), data: {toggle: 'tooltip', placement: 'top'} %>
+            </div>
+          </div>
+        </div>
+
+        <div class='col-12 col-md-6 col-lg-6'>
+          <div class='form-group row'>
+            <%= f.label :fp, t('.fp'), class: 'col-form-label col-3 font-weight-bold' %>
+            <div class='col-3'>
+              <%= f.number_field :fp, class: 'form-control', placeholder: t('.fp') %>
+            </div>
+
+            <div class='col-3'>
+              <%= f.number_field :fpcurrent, class: 'form-control', placeholder: t('.fpcurrent'), title: t('.fpcurrent'), data: {toggle: 'tooltip', placement: 'top'} %>
+            </div>
+
+            <div class='col-3'>
+              <%= f.number_field :fpcost, class: 'form-control', placeholder: t('.fpcost'), title: t('.fpcost'), data: {toggle: 'tooltip', placement: 'top'} %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+</fieldset>

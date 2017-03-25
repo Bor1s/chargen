@@ -1,0 +1,21 @@
+<fieldset id='tl' class='form-group row'>
+  <legend><%= t('.tl') %></legend>
+    <div class='col-12'>
+
+      <div class='row'>
+        <div class='col-12 col-md-7 col-lg-5'>
+          <div class='form-group row'>
+            <%= f.label :techlevel, t('.techlevel'), class: 'col-form-label col-2 font-weight-bold' %>
+            <div class='col-5'>
+              <%= f.text_field :techlevel, class: 'form-control', placeholder: t('.techlevel') %>
+            </div>
+
+            <div class='col-5'>
+              <%= f.text_field :tlcost, class: 'form-control', placeholder: t('.tlcost'), title: t('.tlcost'), data: {toggle: 'tooltip', placement: 'top'} %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+</fieldset>

@@ -1,0 +1,151 @@
+<fieldset id='stats' class='form-group row'>
+  <legend><%= t('.stats') %></legend>
+    <div class='col-12'>
+
+      <div class='row'>
+        <div class='col-12 col-md-6 col-lg-6'>
+          <div class='row'>
+            <div class='col-3'>
+              <p class='font-weight-bold'>ST</p>
+            </div>
+
+            <div class='col-4'>
+              <p><%= sheet.st %></p>
+            </div>
+
+            <div class='col-4'>
+              <p title="<%= t('.stcost') %>" data-toggle='tooltip' data-placement='left'><%= sheet.stcost %></p>
+            </div>
+          </div>
+        </div>
+
+        <div class='col-12 col-md-6 col-lg-6'>
+          <div class='row'>
+            <div class='col-3'>
+              <p class='font-weight-bold'>HP</p>
+            </div>
+
+            <div class='col-3'>
+              <p><%= sheet.hp %></p>
+            </div>
+
+            <div class='col-3'>
+              <p title="<%= t('.hpcurrent') %>" data-toggle='tooltip' data-placement='left'><%= sheet.hpcurrent %></p>
+            </div>
+
+            <div class='col-3'>
+              <p title="<%= t('.hpcost') %>" data-toggle='tooltip' data-placement='left'><%= sheet.hpcost %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class='row'>
+        <div class='col-12 col-md-6 col-lg-6'>
+          <div class='row'>
+            <div class='col-3'>
+              <p class='font-weight-bold'>DX</p>
+            </div>
+
+            <div class='col-4'>
+              <p><%= sheet.dx %></p>
+            </div>
+
+            <div class='col-4'>
+              <p title="<%= t('.dxcost') %>" data-toggle='tooltip' data-placement='left'><%= sheet.dxcost %></p>
+            </div>
+          </div>
+        </div>
+
+        <div class='col-12 col-md-6 col-lg-6'>
+          <div class='row'>
+            <div class='col-3'>
+              <p class='font-weight-bold'>Will</p>
+            </div>
+
+            <div class='col-3'>
+              <p><%= sheet.will %></p>
+            </div>
+
+            <div class='col-3 offset-3'>
+              <p title="<%= t('.willcost') %>" data-toggle='tooltip' data-placement='left'><%= sheet.willcost %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class='row'>
+        <div class='col-12 col-md-6 col-lg-6'>
+          <div class='row'>
+            <div class='col-3'>
+              <p class='font-weight-bold'>IQ</p>
+            </div>
+
+            <div class='col-4'>
+              <p><%= sheet.iq %></p>
+            </div>
+
+            <div class='col-4'>
+              <p title="<%= t('.iqcost') %>" data-toggle='tooltip' data-placement='left'><%= sheet.iqcost %></p>
+            </div>
+          </div>
+        </div>
+
+        <div class='col-12 col-md-6 col-lg-6'>
+          <div class='row'>
+            <div class='col-3'>
+              <p class='font-weight-bold'>Per</p>
+            </div>
+
+            <div class='col-3'>
+              <p><%= sheet.perception %></p>
+            </div>
+
+            <div class='col-3'>
+              <p title="<%= t('.percost') %>" data-toggle='tooltip' data-placement='left'><%= sheet.percost %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class='row'>
+        <div class='col-12 col-md-6 col-lg-6'>
+          <div class='row'>
+            <div class='col-3'>
+              <p class='font-weight-bold'>HT</p>
+            </div>
+
+            <div class='col-4'>
+              <p><%= sheet.ht %></p>
+            </div>
+
+            <div class='col-4'>
+              <p title="<%= t('.htcost') %>" data-toggle='tooltip' data-placement='left'><%= sheet.htcost %></p>
+            </div>
+          </div>
+        </div>
+
+        <div class='col-12 col-md-6 col-lg-6'>
+          <div class='row'>
+
+            <div class='col-3'>
+              <p class='font-weight-bold'>FP</p>
+            </div>
+
+            <div class='col-3'>
+              <p><%= sheet.fp %></p>
+            </div>
+
+            <div class='col-3'>
+              <p title="<%= t('.fpcurrent') %>" data-toggle='tooltip' data-placement='left'><%= sheet.fpcurrent %></p>
+            </div>
+
+            <div class='col-3'>
+              <p title="<%= t('.fpcost') %>" data-toggle='tooltip' data-placement='left'><%= sheet.fpcost %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+</fieldset>

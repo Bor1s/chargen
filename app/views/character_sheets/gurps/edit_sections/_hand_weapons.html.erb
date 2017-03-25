@@ -1,0 +1,56 @@
+<fieldset id='hand_weapons' class='form-group row'>
+  <legend><%= t('.hand_weapons') %></legend>
+    <div class='col-12'>
+
+      <% 0.upto(4) do |i| %>
+        <div class='row'>
+          <div class='col-12 col-md-6 col-lg-2'>
+            <div class='form-group'>
+              <%= f.text_field "hwname_#{i}".to_sym, class: 'form-control', placeholder: t('.hand_weapon') %>
+            </div>
+          </div>
+
+          <div class='col-12 col-md-6 col-lg-2'>
+            <div class='form-group'>
+              <%= f.text_field "hwdamage_#{i}".to_sym, class: 'form-control', placeholder: t('.damage'), title: t('.damage'), data: {toggle: 'tooltip', placement: 'top'} %>
+            </div>
+          </div>
+
+          <div class='col-12 col-md-2 col-lg-1'>
+            <div class='form-group'>
+              <%= f.text_field "hwreach_#{i}".to_sym, class: 'form-control', placeholder: t('.reach'), title: t('.reach'), data: {toggle: 'tooltip', placement: 'top'} %>
+            </div>
+          </div>
+
+          <div class='col-12 col-md-2 col-lg-1'>
+            <div class='form-group'>
+              <%= f.text_field "hwparry_#{i}".to_sym, class: 'form-control', placeholder: t('.parry'), title: t('.parry'), data: {toggle: 'tooltip', placement: 'top'} %>
+            </div>
+          </div>
+
+          <div class='col-12 col-md-4 col-lg-2'>
+            <div class='form-group'>
+              <%= f.text_field "hwnotes_#{i}".to_sym, class: 'form-control', placeholder: t('.notes'), title: t('.notes'), data: {toggle: 'tooltip', placement: 'top'} %>
+            </div>
+          </div>
+
+          <div class='col-12 col-md-2 col-lg-2'>
+            <div class='form-group'>
+              <%= f.number_field "hwcost_#{i}".to_sym, class: 'form-control', placeholder: t('.cost'), title: t('.cost'), data: {cost: true, toggle: 'tooltip', placement: 'top'} %>
+            </div>
+          </div>
+
+          <div class='col-12 col-md-2 col-lg-2'>
+            <div class='form-group'>
+              <%= f.number_field "hwweight_#{i}".to_sym, class: 'form-control', placeholder: t('.weight'), title: t('.weight'), data: {weight: true, toggle: 'tooltip', placement: 'top'} %>
+            </div>
+          </div>
+
+          <div class='col-12 hidden-lg-up mb-3'>
+            <hr />
+          </div>
+        </div>
+      <% end %>
+
+    </div>
+</fieldset>

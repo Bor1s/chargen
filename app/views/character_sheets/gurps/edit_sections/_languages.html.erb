@@ -1,0 +1,26 @@
+<fieldset id='languages' class='form-group row'>
+  <legend><%= t('.languages') %></legend>
+  <div class='col-12'>
+
+    <% 0.upto(4) do |i| %>
+      <div class='row form-group'>
+        <div class='col-4'>
+          <%= f.text_field "language_#{i}".to_sym, class: 'form-control', placeholder: t('.language') %>
+        </div>
+
+        <div class='col-3'>
+          <%= f.text_field "spoken_#{i}".to_sym, class: 'form-control', placeholder: t('.spoken') %>
+        </div>
+
+        <div class='col-3'>
+          <%= f.text_field "written_#{i}".to_sym, class: 'form-control', placeholder: t('.written') %>
+        </div>
+
+        <div class='col-2'>
+          <%= f.text_field "langcost_#{i}".to_sym, class: 'form-control', placeholder: t('.language_cost'), title: t('.language_cost'), data: {toggle: 'tooltip', placement: 'left'} %>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+</fieldset>

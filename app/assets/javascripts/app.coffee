@@ -8,6 +8,8 @@ App.init = ->
   this.managePopoverCloseOnClick()
   this.enableCopyButton()
   this.enableCreateCSbutton()
+  this.enableInputFieldsTooltips()
+  Gurps.init()
 
 App.fadeNotifications = ->
   if $('.notifications').length > 0
@@ -72,3 +74,6 @@ App.enableCreateCSbutton = ->
   $(window).focus ->
     if $('#submit_char').length > 0
       $('#submit_char').removeProp('disabled')
+
+App.enableInputFieldsTooltips = ()->
+  $('p,input,textarea').tooltip();

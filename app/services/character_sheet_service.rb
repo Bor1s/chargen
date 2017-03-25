@@ -1,19 +1,17 @@
 class CharacterSheetService
-
   NoTemplateError = Class.new(StandardError)
 
   attr_reader :pdf_path, :character_sheet
 
   def initialize(character_sheet)
     @character_sheet = character_sheet
-    @game_system     = character_sheet.class.name.demodulize
+    @game_system     = character_sheet.class::SYSTEM_NAME
     @base_path       = Rails.root
-    @template_path   = @base_path.join('tmp', 'pdf_templates', "ORIGINAL-#{@game_system}-Character-Sheet.pdf")
+    @template_path   = @base_path.join('tmp', 'pdf_templates', "#{@game_system}.pdf")
     check_if_pdf_template_exist!
 
     @pdf_path        = generate_character_sheet_pdf_name
     @pdf_tmp_fields_path = generate_character_sheet_pdf_tmp_fields_name(pdf_path)
-    @pdftk           = PdfForms.new(ENV['PDFTK_PATH'], data_format: 'XFdf', utf8_fields: true)
   end
 
   def export_to_pdf!
@@ -24,8 +22,10 @@ class CharacterSheetService
   private
 
   def save_character_sheet_fields_data
-    data = character_sheet.class.stored_attributes[:data_fields].map do |human_field_name|
-      "#{character_sheet.class::FIELDS_MAP.first[human_field_name]} #{escape_unsafe(character_sheet.data_fields[human_field_name].to_s)}"
+    data = character_sheet.class.stored_attributes[:data_fields].map do |field_name|
+      original_field_name = character_sheet.class.fields_map[field_name] # Field name as defined in character sheet
+      field_value = escape_unsafe(character_sheet.data_fields[field_name].to_s)
+      "#{original_field_name} #{field_value}"
     end
 
     f = File.open(@pdf_tmp_fields_path, 'w')

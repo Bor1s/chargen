@@ -1,0 +1,29 @@
+<%= render 'jump_to_sections', character_sheet: character_sheet %>
+
+<% content_for :title do %>
+  <%= character_sheet.name %>
+<% end %>
+
+<%= render 'character_sheets/gurps/show_sections/basic', sheet: character_sheet %>
+<%= render 'character_sheets/gurps/show_sections/stats', sheet: character_sheet %>
+<%= render 'character_sheets/gurps/show_sections/movement_and_damage', sheet: character_sheet %>
+<%= render 'character_sheets/gurps/show_sections/encumbrance', sheet: character_sheet %>
+<%= render 'character_sheets/gurps/show_sections/move', sheet: character_sheet %>
+<%= render 'character_sheets/gurps/show_sections/dodge', sheet: character_sheet %>
+<%= render 'character_sheets/gurps/show_sections/languages', sheet: character_sheet %>
+<%= render 'character_sheets/gurps/show_sections/dr', sheet: character_sheet %>
+<%= render 'character_sheets/gurps/show_sections/tl', sheet: character_sheet %>
+<%= render 'character_sheets/gurps/show_sections/cultural_familiarities', sheet: character_sheet %>
+<%= render 'character_sheets/gurps/show_sections/parry', sheet: character_sheet %>
+<%= render 'character_sheets/gurps/show_sections/block', sheet: character_sheet %>
+<%= render 'character_sheets/gurps/show_sections/reaction_modifiers', sheet: character_sheet %>
+<%= render 'character_sheets/gurps/show_sections/advantages', sheet: character_sheet %>
+<%= render 'character_sheets/gurps/show_sections/disadvantages', sheet: character_sheet %>
+<%= render 'character_sheets/gurps/show_sections/skills', sheet: character_sheet %>
+<%= render 'character_sheets/gurps/show_sections/hand_weapons', sheet: character_sheet %>
+<%= render 'character_sheets/gurps/show_sections/ranged_weapons', sheet: character_sheet %>
+<%= render 'character_sheets/gurps/show_sections/armor_and_posessions', sheet: character_sheet %>
+<%= render 'character_sheets/gurps/show_sections/notes', sheet: character_sheet %>
+<%= render 'character_sheets/gurps/show_sections/points', sheet: character_sheet %>
+
+<hr />

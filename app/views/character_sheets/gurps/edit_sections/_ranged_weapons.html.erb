@@ -1,0 +1,92 @@
+<fieldset id='ranged_weapons' class='form-group row'>
+  <legend><%= t('.ranged_weapons') %></legend>
+    <div class='col-12'>
+
+      <% 0.upto(9) do |i| %>
+        <div class='row'>
+          <div class='col-12 col-md-6 col-lg-2'>
+            <div class='form-group'>
+              <%= f.text_field "rwname_#{i}".to_sym, class: 'form-control', placeholder: t('.ranged_weapon') %>
+            </div>
+          </div>
+
+          <div class='col-12 col-md-6 col-lg-2'>
+            <div class='form-group'>
+              <%= f.text_field "rwdamage_#{i}".to_sym, class: 'form-control', placeholder: t('.damage'), title: t('.damage'), data: {toggle: 'tooltip', placement: 'top'} %>
+            </div>
+          </div>
+
+          <div class='col-12 col-md-2 col-lg-1'>
+            <div class='form-group'>
+              <%= f.text_field "rwacc_#{i}".to_sym, class: 'form-control', placeholder: t('.acc'), title: t('.acc'), data: {toggle: 'tooltip', placement: 'top'} %>
+            </div>
+          </div>
+
+          <div class='col-12 col-md-2 col-lg-2'>
+            <div class='form-group'>
+              <%= f.text_field "rwrange_#{i}".to_sym, class: 'form-control', placeholder: t('.range'), title: t('.range'), data: {toggle: 'tooltip', placement: 'top'} %>
+            </div>
+          </div>
+
+          <div class='col-12 col-md-4 col-lg-1'>
+            <div class='form-group'>
+              <%= f.text_field "rwrof_#{i}".to_sym, class: 'form-control', placeholder: t('.rof'), title: t('.rof'), data: {toggle: 'tooltip', placement: 'top'} %>
+            </div>
+          </div>
+
+          <div class='col-12 col-md-2 col-lg-2'>
+            <div class='form-group'>
+              <%= f.text_field "rwshots_#{i}".to_sym, class: 'form-control', placeholder: t('.shots'), title: t('.shots'), data: {toggle: 'tooltip', placement: 'top'} %>
+            </div>
+          </div>
+
+          <div class='col-12 col-md-2 col-lg-1'>
+            <div class='form-group'>
+              <%= f.text_field "rwst_#{i}".to_sym, class: 'form-control', placeholder: t('.st'), title: t('.st'), data: {toggle: 'tooltip', placement: 'top'} %>
+            </div>
+          </div>
+
+          <div class='col-12 col-md-2 col-lg-1'>
+            <div class='form-group'>
+              <%= f.text_field "rwbulk_#{i}".to_sym, class: 'form-control', placeholder: t('.bulk'), title: t('.bulk'), data: {toggle: 'tooltip', placement: 'top'} %>
+            </div>
+          </div>
+
+          <div class='col-12 col-md-2 col-lg-1'>
+            <div class='form-group'>
+              <%= f.text_field "rwrcl_#{i}".to_sym, class: 'form-control', placeholder: t('.rcl'), title: t('.rcl'), data: {toggle: 'tooltip', placement: 'top'} %>
+            </div>
+          </div>
+
+          <div class='col-12 col-md-2 col-lg-1'>
+            <div class='form-group'>
+              <%= f.text_field "rwlc_#{i}".to_sym, class: 'form-control', placeholder: t('.lc'), title: t('.lc'), data: {toggle: 'tooltip', placement: 'top'} %>
+            </div>
+          </div>
+
+          <div class='col-12 col-md-2 col-lg-2'>
+            <div class='form-group'>
+              <%= f.text_field "rwnotes_#{i}".to_sym, class: 'form-control', placeholder: t('.notes'), title: t('.notes'), data: {toggle: 'tooltip', placement: 'top'} %>
+            </div>
+          </div>
+
+          <div class='col-12 col-md-2 col-lg-1'>
+            <div class='form-group'>
+              <%= f.number_field "rwcost_#{i}".to_sym, class: 'form-control', placeholder: t('.cost'), title: t('.cost'), data: {cost: true, toggle: 'tooltip', placement: 'top'} %>
+            </div>
+          </div>
+
+          <div class='col-12 col-md-2 col-lg-1'>
+            <div class='form-group'>
+              <%= f.number_field "rwweight_#{i}".to_sym, class: 'form-control', placeholder: t('.weight'), title: t('.weight'), data: {weight: true, toggle: 'tooltip', placement: 'top'} %>
+            </div>
+          </div>
+
+          <div class='col-12 mb-3'>
+            <hr />
+          </div>
+        </div>
+      <% end %>
+
+    </div>
+</fieldset>

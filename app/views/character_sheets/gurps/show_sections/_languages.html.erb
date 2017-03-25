@@ -1,0 +1,26 @@
+<fieldset id='languages' class='form-group row'>
+  <legend><%= t('.languages') %></legend>
+  <div class='col-12'>
+
+    <% 0.upto(4) do |i| %>
+      <div class='row form-group'>
+        <div class='col-4'>
+          <p title="<%= t('.language') %>" data-toggle='tooltip' data-placement='left'><%= sheet.send(:"language_#{i}") %></p>
+        </div>
+
+        <div class='col-3'>
+          <p title="<%= t('.spoken') %>" data-toggle='tooltip' data-placement='left'><%= sheet.send(:"spoken_#{i}") %></p>
+        </div>
+
+        <div class='col-3'>
+          <p title="<%= t('.written') %>" data-toggle='tooltip' data-placement='left'><%= sheet.send(:"written_#{i}") %></p>
+        </div>
+
+        <div class='col-2'>
+          <p title="<%= t('.language_cost') %>" data-toggle='tooltip' data-placement='left'><%= sheet.send(:"langcost_#{i}") %></p>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+</fieldset>

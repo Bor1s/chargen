@@ -1,0 +1,68 @@
+<fieldset id='ranged_weapons' class='form-group row'>
+  <legend><%= t('.ranged_weapons') %></legend>
+    <div class='col-12'>
+
+      <% 0.upto(9) do |i| %>
+        <% if sheet.send(:"rwname_#{i}").present? %>
+          <div class='row'>
+            <div class='col-12 col-md-6 col-lg-2'>
+              <p title="<%= t('.ranged_weapon') %>" data-toggle='tooltip' data-placement='top'><%= sheet.send(:"rwname_#{i}") %></p>
+            </div>
+
+            <div class='col-12 col-md-6 col-lg-2'>
+              <p title="<%= t('.damage') %>" data-toggle='tooltip' data-placement='top'><%= sheet.send(:"rwdamage_#{i}") %></p>
+            </div>
+
+            <div class='col-12 col-md-2 col-lg-1'>
+              <p title="<%= t('.acc') %>" data-toggle='tooltip' data-placement='top'><%= sheet.send(:"rwacc_#{i}") %></p>
+            </div>
+
+            <div class='col-12 col-md-2 col-lg-2'>
+              <p title="<%= t('.range') %>" data-toggle='tooltip' data-placement='top'><%= sheet.send(:"rwrange_#{i}") %></p>
+            </div>
+
+            <div class='col-12 col-md-4 col-lg-1'>
+              <p title="<%= t('.rof') %>" data-toggle='tooltip' data-placement='top'><%= sheet.send(:"rwrof_#{i}") %></p>
+            </div>
+
+            <div class='col-12 col-md-2 col-lg-2'>
+              <p title="<%= t('.shots') %>" data-toggle='tooltip' data-placement='top'><%= sheet.send(:"rwshots_#{i}") %></p>
+            </div>
+
+            <div class='col-12 col-md-2 col-lg-1'>
+              <p title="<%= t('.st') %>" data-toggle='tooltip' data-placement='top'><%= sheet.send(:"rwst_#{i}") %></p>
+            </div>
+
+            <div class='col-12 col-md-2 col-lg-1'>
+              <p title="<%= t('.bulk') %>" data-toggle='tooltip' data-placement='top'><%= sheet.send(:"rwbulk_#{i}") %></p>
+            </div>
+
+            <div class='col-12 col-md-2 col-lg-1'>
+              <p title="<%= t('.rcl') %>" data-toggle='tooltip' data-placement='top'><%= sheet.send(:"rwrcl_#{i}") %></p>
+            </div>
+
+            <div class='col-12 col-md-2 col-lg-1'>
+              <p title="<%= t('.lc') %>" data-toggle='tooltip' data-placement='top'><%= sheet.send(:"rwlc_#{i}") %></p>
+            </div>
+
+            <div class='col-12 col-md-2 col-lg-2'>
+              <p title="<%= t('.notes') %>" data-toggle='tooltip' data-placement='top'><%= sheet.send(:"rwnotes_#{i}") %></p>
+            </div>
+
+            <div class='col-12 col-md-2 col-lg-1'>
+              <p title="<%= t('.cost') %>" data-toggle='tooltip' data-placement='top'><%= sheet.send(:"rwcost_#{i}") %></p>
+            </div>
+
+            <div class='col-12 col-md-2 col-lg-1'>
+              <p title="<%= t('.weight') %>" data-toggle='tooltip' data-placement='top'><%= sheet.send(:"rwweight_#{i}") %></p>
+            </div>
+
+            <div class='col-12 mb-3'>
+              <hr />
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+
+    </div>
+</fieldset>

@@ -1,0 +1,58 @@
+<fieldset id='encumbrance' class='form-group row'>
+  <legend><%= t('.encumbrance') %></legend>
+  <div class='col-12'>
+    <div class='row'>
+      <div class='col-12 col-md-6 col-lg-6'>
+        <div class='row'>
+          <div class='col-6'>
+            <p class='font-weight-bold'>None (0) = BL</p>
+          </div>
+          <div class='col-6'>
+            <p id='GURPS_enc_none'><%= f.object.basic_lift %></p>
+            <%= f.hidden_field :enc_none %>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class='col-6'>
+            <p class='font-weight-bold'>Light (1) = 2 x BL</p>
+          </div>
+          <div class='col-6'>
+            <p id='GURPS_enc_light'><%= f.object.basic_lift.to_i * 2 %></p>
+            <%= f.hidden_field :enc_light %>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class='col-6'>
+            <p class='font-weight-bold'>Medium (2) = 3 x BL</p>
+          </div>
+          <div class='col-6'>
+            <p id='GURPS_enc_medium'><%= f.object.basic_lift.to_i * 3 %></p>
+            <%= f.hidden_field :enc_medium %>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class='col-6'>
+            <p class='font-weight-bold'>Heavy (3) = 6 x BL</p>
+          </div>
+          <div class='col-6'>
+            <p id='GURPS_enc_heavy'><%= f.object.basic_lift.to_i * 6 %></p>
+            <%= f.hidden_field :enc_heavy %>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class='col-6'>
+            <p class='font-weight-bold'>X-Heavy (4) = 10 x BL</p>
+          </div>
+          <div class='col-6'>
+            <p id='GURPS_enc_xheavy'><%= f.object.basic_lift.to_i * 10 %></p>
+            <%= f.hidden_field :enc_xheavy %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</fieldset>

@@ -9,8 +9,7 @@ RSpec.describe CharacterSheetService, type: :service do
     let(:fae_sheet_with_zero_numbers) { FactoryGirl.create(:fate_accelerated_sheet, refresh: 0) }
     let(:hero_quest_sheet) { FactoryGirl.create(:hero_quest_sheet, hero_points: '0') }
     let(:hero_quest_sheet_with_zero_numbers) { FactoryGirl.create(:hero_quest_sheet, hero_points: 0) }
-    let(:unexisting_sheet) { FactoryGirl.create(:character_sheet) }
-
+    let(:unexisting_sheet) { FactoryGirl.build(:unexisting_sheet) }
 
     describe 'creating PDF' do
 

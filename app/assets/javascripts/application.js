@@ -16,6 +16,13 @@
 //= require turbolinks
 //= require bootstrap
 //= require clipboard
+//= require ScrollMagic.min
+//= require ScrollToPlugin.min
+//= require TweenMax.min
+//= require stickyfill.min
+
+//= require gurps
+
 //= require app
 //= require init
 //

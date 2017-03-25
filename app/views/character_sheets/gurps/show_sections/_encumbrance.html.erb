@@ -1,0 +1,53 @@
+<fieldset id='encumbrance' class='form-group row'>
+  <legend><%= t('.encumbrance') %></legend>
+  <div class='col-12'>
+    <div class='row'>
+      <div class='col-12 col-md-6 col-lg-6'>
+        <div class='row'>
+          <div class='col-6'>
+            <p class='font-weight-bold'>None (0) = BL</p>
+          </div>
+          <div class='col-6'>
+            <p><%= sheet.enc_none %></p>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class='col-6'>
+            <p class='font-weight-bold'>Light (1) = 2 x BL</p>
+          </div>
+          <div class='col-6'>
+            <p><%= sheet.enc_light %></p>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class='col-6'>
+            <p class='font-weight-bold'>Medium (2) = 3 x BL</p>
+          </div>
+          <div class='col-6'>
+            <p><%= sheet.enc_medium %></p>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class='col-6'>
+            <p class='font-weight-bold'>Heavy (3) = 6 x BL</p>
+          </div>
+          <div class='col-6'>
+            <p><%= sheet.enc_heavy %></p>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class='col-6'>
+            <p class='font-weight-bold'>X-Heavy (4) = 10 x BL</p>
+          </div>
+          <div class='col-6'>
+            <p><%= sheet.enc_xheavy %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</fieldset>

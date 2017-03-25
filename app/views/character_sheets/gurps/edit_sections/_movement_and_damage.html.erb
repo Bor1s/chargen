@@ -1,0 +1,61 @@
+<fieldset id='movement_and_damage' class='form-group row'>
+  <legend><%= t('.movement_and_damage') %></legend>
+  <div class='col-12'>
+    <div class='row'>
+      <div class='col-sm-12 col-md-12 col-lg-4'>
+        <div class='form-group row'>
+          <%= f.label :basic_lift, t('.basic_lift'), class: 'col-form-label col-6 font-weight-bold' %>
+          <div class='col-6'>
+            <%= f.number_field :basic_lift, class: 'form-control', placeholder: t('.basic_lift'), title: t('.basic_lift_info'), data: {toggle: 'tooltip', placement: 'top'} %>
+          </div>
+        </div>
+      </div>
+
+      <div class='col-sm-12 col-md-12 col-lg-4'>
+        <div class='form-group row'>
+          <%= f.label :thrust, t('.thrust'), class: 'col-form-label col-6 font-weight-bold' %>
+          <div class='col-6'>
+            <%= f.text_field :thrust, class: 'form-control', placeholder: t('.thrust'), title: t('.thrust_info'), data: {toggle: 'tooltip', placement: 'top'} %>
+          </div>
+        </div>
+      </div>
+
+      <div class='col-sm-12 col-md-12 col-lg-4'>
+        <div class='form-group row'>
+          <%= f.label :swing, t('.swing'), class: 'col-form-label col-6 font-weight-bold' %>
+          <div class='col-6'>
+            <%= f.text_field :swing, class: 'form-control', placeholder: t('.swing'), title: t('.swing_info'), data: {toggle: 'tooltip', placement: 'top'} %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class='col-sm-12 col-md-12 col-lg-6'>
+        <div class='form-group row'>
+          <%= f.label :basic_speed, t('.basic_speed'), class: 'col-form-label col-4 font-weight-bold' %>
+          <div class='col-4'>
+            <%= f.number_field :basic_speed, step: '0.01', class: 'form-control', placeholder: t('.basic_speed'), title: t('.basic_speed_info'), data: {toggle: 'tooltip', placement: 'top'} %>
+          </div>
+
+          <div class='col-4'>
+            <%= f.number_field :bscost, class: 'form-control', placeholder: t('.basic_speed_cost'), title: t('.basic_speed_cost'), data: {toggle: 'tooltip', placement: 'top'} %>
+          </div>
+        </div>
+      </div>
+
+      <div class='col-sm-12 col-md-12 col-lg-6'>
+        <div class='form-group row'>
+          <%= f.label :basic_move, t('.basic_move'), class: 'col-form-label col-4 font-weight-bold' %>
+          <div class='col-4'>
+            <%= f.number_field :basic_move, class: 'form-control', placeholder: t('.basic_move'), title: t('.basic_move_info'), data: {toggle: 'tooltip', placement: 'top'} %>
+          </div>
+
+          <div class='col-4'>
+            <%= f.number_field :bmcost, class: 'form-control', placeholder: t('.basic_move_cost'), title: t('.basic_move_cost'), data: {toggle: 'tooltip', placement: 'top'} %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</fieldset>

@@ -1,0 +1,93 @@
+<fieldset id='basics' class='form-group row'>
+  <legend><%= t('.basic') %></legend>
+  <div class='col-12'>
+    <div class='row'>
+      <div class='col-sm-12 col-md-4 col-lg-4'>
+        <div class='form-group row'>
+          <%= f.label :name, class: 'col-form-label col-4 col-md-3 col-lg-3 font-weight-bold' %>
+          <div class='col-8 col-md-9 col-lg-9'>
+            <%= f.text_field :name, class: 'form-control', placeholder: t('.name') %>
+          </div>
+        </div>
+      </div>
+
+      <div class='col-sm-12 col-md-4 col-lg-4'>
+        <div class='form-group row'>
+          <%= f.label :player, class: 'col-form-label col-4 col-md-3 col-lg-3 font-weight-bold' %>
+          <div class='col-8 col-md-9 col-lg-9'>
+            <%= f.text_field :player, class: 'form-control', placeholder: t('.player') %>
+          </div>
+        </div>
+      </div>
+
+      <div class='col-sm-12 col-md-4 col-lg-4'>
+        <div class='form-group row'>
+          <%= f.label :point_total, class: 'col-form-label col-4 col-md-4 col-lg-4 font-weight-bold' %>
+          <div class='col-8 col-md-8 col-lg-8'>
+            <%= f.text_field :point_total, class: 'form-control', placeholder: t('.point_total') %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class='col-sm-12 col-md-4 col-lg-4'>
+        <div class='form-group row'>
+          <%= f.label :height, class: 'col-form-label col-4 col-md-3 col-lg-3 font-weight-bold' %>
+          <div class='col-8 col-md-9 col-lg-9'>
+            <%= f.text_field :height, class: 'form-control', placeholder: t('.height') %>
+          </div>
+        </div>
+      </div>
+
+      <div class='col-sm-12 col-md-4 col-lg-4'>
+        <div class='form-group row'>
+          <%= f.label :weight, class: 'col-form-label col-4 col-md-3 col-lg-3 font-weight-bold' %>
+          <div class='col-8 col-md-9 col-lg-9'>
+            <%= f.text_field :weight, class: 'form-control', placeholder: t('.weight') %>
+          </div>
+        </div>
+      </div>
+
+      <div class='col-sm-12 col-md-4 col-lg-4'>
+        <div class='form-group row'>
+          <%= f.label :size_modifier, class: 'col-form-label col-4 col-md-4 col-lg-4 font-weight-bold' %>
+          <div class='col-8 col-md-8 col-lg-8'>
+            <%= f.text_field :size_modifier, class: 'form-control', placeholder: t('.size_modifier') %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class='col-sm-12 col-md-4 col-lg-4'>
+        <div class='form-group row'>
+          <%= f.label :age, class: 'col-form-label col-4 col-md-3 col-lg-3 font-weight-bold' %>
+          <div class='col-8 col-md-9 col-lg-9'>
+            <%= f.text_field :age, class: 'form-control', placeholder: t('.age') %>
+          </div>
+        </div>
+      </div>
+
+      <div class='col-sm-12 col-md-4 col-lg-4'>
+        <div class='form-group row'>
+          <%= f.label :unspent_points, class: 'col-form-label col-4 col-md-7 col-lg-5 font-weight-bold' %>
+          <div class='col-8 col-md-5 col-lg-7'>
+            <%= f.number_field :unspent_points, class: 'form-control', placeholder: t('.unspent_points') %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class='col-12'>
+        <div class='form-group row'>
+          <%= f.label :appearance, class: 'col-form-label col-3 col-md-2 col-lg-1 font-weight-bold' %>
+          <div class='col-9 col-md-10 col-lg-11'>
+            <%= f.text_field :appearance, class: 'form-control', placeholder: t('.appearance') %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</fieldset>

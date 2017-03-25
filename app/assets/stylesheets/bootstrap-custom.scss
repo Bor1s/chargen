@@ -224,3 +224,60 @@ a.moray {
 .wrap {
   white-space: pre-wrap;
 }
+
+// Fieldset and Legend
+
+fieldset {
+  border: 2px solid $super-light-grey;
+  margin-bottom: 3rem !important;
+}
+
+legend {
+  border: none;
+  width: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: 1rem;
+  color: $light-grey;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+// Sticky polyfill
+
+.sticky-menu-button {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 1rem;
+  z-index: 1;
+}
+
+.sticky-menu {
+  background-color: $grey;
+  color: $white;
+  font-size: 12px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  a {
+    color: $white;
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.sticky-menu:before,
+.sticky-menu:after {
+    content: '';
+    display: table;
+}
+
+.sticky-menu-button:before,
+.sticky-menu-button:after {
+    content: '';
+    display: table;
+}

@@ -1,0 +1,22 @@
+<div class='container'>
+
+  <div class='row'>
+    <div class='col game-system-logo my-5'>
+      <%= render 'character_sheets/logo_resolver', character_sheet: @character_sheet %>
+    </div>
+  </div>
+
+  <%= render 'jump_to_sections', character_sheet: @character_sheet %>
+
+  <%= form_for @character_sheet, as: :character_sheet, url: create_character_sheet_url, html: html_options do |f| %>
+
+    <%= render 'character_sheets/gurps/form', f: f %>
+
+    <div class='row'>
+      <div class='col-4'>
+        <%= f.submit t('character_sheets.gurps.form.create_character'), class: 'btn btn-md btn-success', id: 'submit_char', autocomplete: 'off' %>
+      </div>
+    </div>
+
+  <% end%>
+</div>

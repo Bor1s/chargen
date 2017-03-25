@@ -1,0 +1,181 @@
+en:
+  character_sheets:
+    gurps:
+      defaults: &defaults
+        basic:
+          basic: 'Basics'
+          name: 'Character Name'
+          player: 'Player Name'
+          point_total: 'Point Total'
+          height: 'Height'
+          weight: 'Weight'
+          size_modifier: 'Size Modifier'
+          age: 'Age'
+          unspent_points: 'Unspent Points'
+          appearance: 'Appearance'
+
+        stats:
+          stats: 'Stats'
+          st: 'ST'
+          stcost: 'Points spent on ST'
+          hp: 'HP'
+          hpcurrent: 'Current HP'
+          hpcost: 'Points spent on HP (+/- 2 points per level)'
+          dx: 'DX'
+          dxcost: 'Points spent on DX'
+          will: 'Will'
+          willcost: 'Points spent on Will (+/- 5 points per level)'
+          iq: 'IQ'
+          iqcost: 'Points spent on IQ'
+          per: 'Per'
+          percost: 'Points spent on Per (+/- 5 points per level)'
+          ht: 'HT'
+          htcost: 'Points spent on HT'
+          fp: 'FP'
+          fpcost: 'Points spent on FP (+/- 3 points per level)'
+          fpcurrent: 'Current Fatigue Points'
+
+        movement_and_damage:
+          movement_and_damage: 'Movement and Damage'
+          basic_lift: 'BASIC LIFT (STxST)/5'
+          basic_lift_info: 'Maximum weight you can lift over your head with one hand in one second.'
+          thrust: 'DAMAGE Thr'
+          thrust_info: 'Thrust damage'
+          swing: 'DAMAGE Sw'
+          swing_info: 'Swing damage'
+          basic_speed: 'Basic Speed'
+          basic_speed_info: 'Basic Speed (default is (HT+DX)/4, including decimals)'
+          basic_speed_cost: 'Points spent on Basic Speed (BS) (+/- 5 points per 0.25 Speed)'
+          basic_move: 'Basic Move'
+          basic_move_info: 'Basic Move (default is Basic Speed, dropping decimals)'
+          basic_move_cost: 'Points spent on Basic Move (BM) (+/- 5 points per yard/second)'
+
+        encumbrance:
+          encumbrance: 'Encumbrance'
+
+        move:
+          move: 'Move'
+
+        dodge:
+          dodge: 'Dodge'
+
+        languages:
+          languages: 'Languages'
+          language: 'Language'
+          written: 'Written'
+          spoken: 'Spoken'
+          language_cost: 'Point cost of this language'
+
+        dr:
+          dr: 'DR'
+          head: 'Head'
+          torso: 'Torso'
+          arm: 'Arm'
+          hand: 'Hand'
+          leg: 'Leg'
+          foot: 'Foot'
+          dr_head: 'Damage Resistance (DR) for the Head'
+          dr_torso: 'Damage Resistance (DR) for the Torso'
+          dr_arm: 'Damage Resistance (DR) for the Arm'
+          dr_hand: 'Damage Resistance (DR) for the Hand'
+          dr_leg: 'Damage Resistance (DR) for the Leg'
+          dr_foot: 'Damage Resistance (DR) for the Foot'
+
+        tl:
+          tl: 'TL'
+          techlevel: 'TL'
+          tlcost: 'Point cost of this Tech Level (TL)'
+
+        cultural_familiarities:
+          cultural_familiarities: 'Cultural Familiarities'
+          cultfam: 'Cultural Familiarity'
+          cfcost: 'Point cost of this Cultural Familiarity'
+
+        parry:
+          parry: 'Parry'
+          parry_recipe: 'Parry (3 + 1/2 weapon or unarmed skill)'
+          parry_note: 'Which skill/weapon the Parry score is from'
+
+        block:
+          block: 'Block'
+          block_recipe: 'Block (3 + 1/2 Shield skill)'
+
+        reaction_modifiers:
+          reaction_modifiers: 'Reaction Modifiers'
+          appearance_reaction: 'Appearance Reaction'
+          status: 'Status'
+          reputation: 'Reputation'
+
+        advantages:
+          advantages: 'Advantages and Perks'
+          advantage: 'Advantage'
+          adv_cost: 'Point cost of this advantage'
+
+        disadvantages:
+          disadvantages: 'Disadvantages and Quirks'
+          disadvantage: 'Disadvantage'
+          disad_cost: 'Point cost of this disadvantage'
+
+        skills:
+          skills: 'Skills'
+          skill: 'Skill'
+          level: 'Level'
+          rel_level: 'Relative Level'
+          skill_cost: 'Point cost of this skill'
+
+        hand_weapons:
+          hand_weapons: 'Hand Weapons'
+          hand_weapon: 'Weapon name'
+          damage: 'Damage'
+          reach: 'Weapon reach'
+          parry: 'Parry of the weapon'
+          notes: 'Notes'
+          cost: 'Cost'
+          weight: 'Weight'
+
+        ranged_weapons:
+          ranged_weapons: 'Ranged Weapons'
+          ranged_weapon: 'Weapon name'
+          damage: 'Damage'
+          range: 'Range'
+          acc: 'Accuracy'
+          rof: 'Rate of fire of the ranged weapon'
+          shots: 'Shots of the ranged weapon (ammo capacity)'
+          st: 'Minimum Strength (ST) needed to wield the ranged weapon'
+          bulk: 'Bulk of the ranged weapon'
+          rcl: 'Recoil of the ranged weapon'
+          lc: 'Legality Class of the ranged weapon'
+          notes: 'Notes'
+          cost: 'Cost'
+          weight: 'Weight'
+
+        armor_and_posessions:
+          armor_and_posessions: 'Armor and Posessions'
+          item: 'Item'
+          location: 'Location'
+          cost: 'Cost'
+          weight: 'Weight'
+          total_cost: 'Total Cost'
+          total_weight: 'Total Weight'
+
+        notes:
+          notes: 'Character Notes'
+          note: 'Note'
+
+        points:
+          points_summary: 'Points Summary'
+          attributes: 'Attributes/Secondary Characteristics'
+          advantages: 'Advantages/Perks/TL/Languages/Cultural Familiarity'
+          disadvantages: 'Disadvantages/Quirks'
+          skills: 'Skills/Techniques'
+          other: 'Other'
+
+      edit_sections:
+        <<: *defaults
+
+      show_sections:
+        <<: *defaults
+
+      form:
+        create_character: 'Create'
+

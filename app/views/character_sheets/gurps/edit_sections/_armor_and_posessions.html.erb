@@ -1,0 +1,64 @@
+<fieldset id='armor_and_posessions' class='form-group row'>
+  <legend><%= t('.armor_and_posessions') %></legend>
+    <div class='col-12'>
+
+      <% 0.upto(33) do |i| %>
+        <div class='row'>
+          <div class='col-12 col-md-3 col-lg-3'>
+            <div class='form-group'>
+              <%= f.text_field "item_#{i}".to_sym, class: 'form-control', placeholder: t('.item') %>
+            </div>
+          </div>
+
+          <div class='col-12 col-md-3 col-lg-3'>
+            <div class='form-group'>
+              <%= f.text_field "itemloc_#{i}".to_sym, class: 'form-control', placeholder: t('.location'), title: t('.location'), data: {toggle: 'tooltip', placement: 'top'} %>
+            </div>
+          </div>
+
+          <div class='col-12 col-md-3 col-lg-3'>
+            <div class='form-group'>
+              <%= f.number_field "itemcost_#{i}".to_sym, class: 'form-control', placeholder: t('.cost'), title: t('.cost'), data: {cost: true, toggle: 'tooltip', placement: 'top'} %>
+            </div>
+          </div>
+
+          <div class='col-12 col-md-3 col-lg-3'>
+            <div class='form-group'>
+              <%= f.number_field "itemweight_#{i}".to_sym, class: 'form-control', placeholder: t('.weight'), title: t('.weight'), data: {weight: true, toggle: 'tooltip', placement: 'top'} %>
+            </div>
+          </div>
+
+          <div class='col-12 mb-3 hidden-md-up'>
+            <hr />
+          </div>
+        </div>
+      <% end %>
+
+      <div class='col-12 mb-3'>
+        <hr />
+      </div>
+
+      <div class='row'>
+        <div class='col-sm-12 col-md-6 col-lg-6'>
+          <div class='form-group row'>
+            <%= f.label :totalcost, t('.total_cost'), class: 'col-form-label col-4 col-md-5 col-lg-5 font-weight-bold' %>
+            <div class='col-8 col-md-6 col-lg-6'>
+              <%= f.number_field :totalcost, class: 'form-control', placeholder: t('.total_cost'), title: t('.total_cost'), data: {toggle: 'tooltip', placement: 'top'} %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class='row'>
+        <div class='col-sm-12 col-md-6 col-lg-6'>
+          <div class='form-group row'>
+            <%= f.label :totalweight, t('.total_weight'), class: 'col-form-label col-4 col-md-5 col-lg-5 font-weight-bold' %>
+            <div class='col-8 col-md-6 col-lg-6'>
+              <%= f.number_field :totalweight.to_sym, class: 'form-control', placeholder: t('.total_weight'), title: t('.total_weight'), data: {toggle: 'tooltip', placement: 'top'} %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+</fieldset>

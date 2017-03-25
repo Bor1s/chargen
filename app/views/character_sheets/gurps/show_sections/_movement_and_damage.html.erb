@@ -1,0 +1,73 @@
+<fieldset id='movement_and_damage' class='form-group row'>
+  <legend><%= t('.movement_and_damage') %></legend>
+  <div class='col-12'>
+    <div class='row'>
+      <div class='col-sm-12 col-md-12 col-lg-4'>
+        <div class='row'>
+          <div class='col-6'>
+            <p class='font-weight-bold'>Basic Lift</p>
+          </div>
+          <div class='col-6'>
+            <p><%= sheet.basic_lift %></p>
+          </div>
+        </div>
+      </div>
+
+      <div class='col-sm-12 col-md-12 col-lg-4'>
+        <div class='row'>
+          <div class='col-6'>
+            <p class='font-weight-bold'>Thrust</p>
+          </div>
+          <div class='col-6'>
+            <p title="<%= t('.thrust_info') %>" data-toggle='tooltip' data-placement='left'><%= sheet.thrust %></p>
+          </div>
+        </div>
+      </div>
+
+      <div class='col-sm-12 col-md-12 col-lg-4'>
+        <div class='row'>
+          <div class='col-6'>
+            <p class='font-weight-bold'>Swing</p>
+          </div>
+          <div class='col-6'>
+            <p title="<%= t('.swing_info') %>" data-toggle='tooltip' data-placement='left'><%= sheet.swing %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class='col-sm-12 col-md-12 col-lg-6'>
+        <div class='row'>
+          <div class='col-4'>
+            <p class='font-weight-bold'>Basic Speed</p>
+          </div>
+
+          <div class='col-4'>
+            <p title="<%= t('.basic_speed') %>" data-toggle='tooltip' data-placement='left'><%= sheet.basic_speed %></p>
+          </div>
+
+          <div class='col-4'>
+            <p title="<%= t('.basic_speed_cost') %>" data-toggle='tooltip' data-placement='left'><%= sheet.bscost %></p>
+          </div>
+        </div>
+      </div>
+
+      <div class='col-sm-12 col-md-12 col-lg-6'>
+        <div class='row'>
+          <div class='col-4'>
+            <p class='font-weight-bold'>Basic Move</p>
+          </div>
+
+          <div class='col-4'>
+            <p title="<%= t('.basic_move') %>" data-toggle='tooltip' data-placement='left'><%= sheet.basic_move %></p>
+          </div>
+
+          <div class='col-4'>
+            <p title="<%= t('.basic_move_cost') %>" data-toggle='tooltip' data-placement='left'><%= sheet.bmcost %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</fieldset>

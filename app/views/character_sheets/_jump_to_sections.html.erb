@@ -1,0 +1,30 @@
+<% if character_sheet.is_a?(CharacterSheets::Gurps) %>
+  <div class='row sticky-menu mb-3'>
+    <div class='col-12 text-center'>
+      <span>
+        <%= link_to 'Basics', '#basics', data: { trigger: 'anchor' } %> |
+        <%= link_to 'Stats', '#stats', data: { trigger: 'anchor' } %> |
+        <%= link_to 'Damage', '#movement_and_damage', data: { trigger: 'anchor' } %> |
+        <%= link_to 'Encumbrance', '#encumbrance', data: { trigger: 'anchor' } %> |
+        <%= link_to 'Move', '#move', data: { trigger: 'anchor' } %> |
+        <%= link_to 'Dodge', '#dodge', data: { trigger: 'anchor' } %> |
+        <%= link_to 'Languages', '#languages', data: { trigger: 'anchor' } %> |
+        <%= link_to 'DR', '#dr', data: { trigger: 'anchor' } %> |
+        <%= link_to 'TL', '#tl', data: { trigger: 'anchor' } %> |
+        <%= link_to 'Culture', '#cultural_familiarities', data: { trigger: 'anchor' } %> |
+        <%= link_to 'Parry', '#parry', data: { trigger: 'anchor' } %> |
+        <%= link_to 'Block', '#block', data: { trigger: 'anchor' } %> |
+        <%= link_to 'Reactions', '#reaction_modifiers', data: { trigger: 'anchor' } %> |
+        <%= link_to 'Advantages', '#advantages', data: { trigger: 'anchor' } %> |
+        <%= link_to 'Disadvantages', '#disadvantages', data: { trigger: 'anchor' } %> |
+        <%= link_to 'Skills', '#skills', data: { trigger: 'anchor' } %> |
+        <%= link_to 'Hand Weapons', '#hand_weapons', data: { trigger: 'anchor' } %> |
+        <%= link_to 'Ranged Weapons', '#ranged_weapons', data: { trigger: 'anchor' } %> |
+        <%= link_to 'Armor', '#armor_and_posessions', data: { trigger: 'anchor' } %> |
+        <%= link_to 'Notes', '#notes', data: { trigger: 'anchor' } %> |
+        <%= link_to 'Points', '#points', data: { trigger: 'anchor' } %>
+      </span>
+    </div>
+  </div>
+<% end %>
+

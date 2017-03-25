@@ -1,9 +1,12 @@
 <div class='container'>
+
   <div class='row'>
     <div class='col game-system-logo my-5'>
       <%= render 'character_sheets/logo_resolver', character_sheet: @character_sheet %>
     </div>
   </div>
+
+  <%= render 'jump_to_sections', character_sheet: @character_sheet %>
 
   <%= form_for @character_sheet, as: :character_sheet, url: character_sheet_path(@character_sheet), method: :put do |f| %>
 

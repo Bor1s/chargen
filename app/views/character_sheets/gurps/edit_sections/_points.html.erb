@@ -1,0 +1,60 @@
+<fieldset id='points' class='form-group row'>
+  <legend><%= t('.points_summary') %></legend>
+  <div class='col-12'>
+    <div class='row'>
+      <div class='col-12'>
+        <div class='form-group row'>
+          <%= f.label :sumatts, t('.attributes'), class: 'col-form-label col-9 font-weight-bold' %>
+          <div class='col-3'>
+            <%= f.number_field :sumatts, class: 'form-control' %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class='col-12'>
+        <div class='form-group row'>
+          <%= f.label :sumads, t('.advantages'), class: 'col-form-label col-9 font-weight-bold' %>
+          <div class='col-3'>
+            <%= f.number_field :sumads, class: 'form-control' %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class='col-12'>
+        <div class='form-group row'>
+          <%= f.label :sumdisads, t('.disadvantages'), class: 'col-form-label col-9 font-weight-bold' %>
+          <div class='col-3'>
+            <%= f.number_field :sumdisads, class: 'form-control' %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class='col-12'>
+        <div class='form-group row'>
+          <%= f.label :sumskills, t('.skills'), class: 'col-form-label col-9 font-weight-bold' %>
+          <div class='col-3'>
+            <%= f.number_field :sumskills, class: 'form-control' %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='row'>
+      <div class='col-12'>
+        <div class='form-group row'>
+          <%= f.label :sumother, t('.other'), class: 'col-form-label col-9 font-weight-bold' %>
+          <div class='col-3'>
+            <%= f.number_field :sumother, class: 'form-control' %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</fieldset>

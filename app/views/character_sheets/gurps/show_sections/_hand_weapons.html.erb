@@ -1,0 +1,44 @@
+<fieldset id='hand_weapons' class='form-group row'>
+  <legend><%= t('.hand_weapons') %></legend>
+    <div class='col-12'>
+
+      <% 0.upto(4) do |i| %>
+        <% if sheet.send(:"hwname_#{i}").present? %>
+          <div class='row'>
+            <div class='col-12 col-md-6 col-lg-2'>
+              <p title="<%= t('.hand_weapon') %>" data-toggle='tooltip' data-placement='top'><%= sheet.send(:"hwname_#{i}") %></p>
+            </div>
+
+            <div class='col-12 col-md-6 col-lg-2'>
+              <p title="<%= t('.damage') %>" data-toggle='tooltip' data-placement='top'><%= sheet.send(:"hwdamage_#{i}") %></p>
+            </div>
+
+            <div class='col-12 col-md-2 col-lg-1'>
+              <p title="<%= t('.reach') %>" data-toggle='tooltip' data-placement='top'><%= sheet.send(:"hwreach_#{i}") %></p>
+            </div>
+
+            <div class='col-12 col-md-2 col-lg-1'>
+              <p title="<%= t('.parry') %>" data-toggle='tooltip' data-placement='top'><%= sheet.send(:"hwparry_#{i}") %></p>
+            </div>
+
+            <div class='col-12 col-md-4 col-lg-2'>
+              <p title="<%= t('.notes') %>" data-toggle='tooltip' data-placement='top'><%= sheet.send(:"hwnotes_#{i}") %></p>
+            </div>
+
+            <div class='col-12 col-md-2 col-lg-2'>
+              <p title="<%= t('.cost') %>" data-toggle='tooltip' data-placement='top'><%= sheet.send(:"hwcost_#{i}") %></p>
+            </div>
+
+            <div class='col-12 col-md-2 col-lg-2'>
+              <p title="<%= t('.weight') %>" data-toggle='tooltip' data-placement='top'><%= sheet.send(:"hwweight_#{i}") %></p>
+            </div>
+
+            <div class='col-12 hidden-lg-up mb-3'>
+              <hr />
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+
+    </div>
+</fieldset>

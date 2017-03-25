@@ -1,0 +1,22 @@
+<fieldset id='cultural_familiarities' class='form-group row'>
+  <legend><%= t('.cultural_familiarities') %></legend>
+    <div class='col-12'>
+
+      <% 0.upto(2) do |i| %>
+        <div class='row'>
+          <div class='col-8 col-md-8 col-lg-8'>
+            <div class='form-group'>
+              <p title="<%= t('.cultfam') %>" data-toggle='tooltip' data-placement='right'><%= sheet.send(:"cultfam_#{i}") %></p>
+            </div>
+          </div>
+
+          <div class='col-4 col-md-4 col-lg-4'>
+            <div class='form-group'>
+              <p title="<%= t('.cfcost') %>" data-toggle='tooltip' data-placement='left'><%= sheet.send(:"cfcost_#{i}") %></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+
+    </div>
+</fieldset>

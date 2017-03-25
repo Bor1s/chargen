@@ -1,0 +1,21 @@
+<fieldset id='parry' class='form-group row'>
+  <legend><%= t('.parry') %></legend>
+    <div class='col-12'>
+
+      <div class='row'>
+        <div class='col-12 col-md-5 col-lg-5'>
+          <div class='form-group row'>
+            <%= f.label :parry, t('.parry'), class: 'col-form-label col-2 font-weight-bold' %>
+            <div class='col-5'>
+              <%= f.text_field :parry, class: 'form-control', placeholder: t('.parry_recipe'), title: t('.parry_recipe'), data: {toggle: 'tooltip', placement: 'top'} %>
+            </div>
+
+            <div class='col-5'>
+              <%= f.text_field :parrynote, class: 'form-control', placeholder: t('.parry_note'), title: t('.parry_note'), data: {toggle: 'tooltip', placement: 'left'} %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+</fieldset>

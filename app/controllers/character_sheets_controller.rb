@@ -1,5 +1,5 @@
 class CharacterSheetsController < ApplicationController
-  before_action :authenticate_user!, except: [:export, :fate, :hero_quest, :fae]
+  before_action :authenticate_user!, except: [:export, :fate, :hero_quest, :fae, :gurps]
 
   # New Fate
   def fate
@@ -25,6 +25,15 @@ class CharacterSheetsController < ApplicationController
       @character_sheet = current_user.fate_accelerated_character_sheets.build
     else
       @character_sheet = CharacterSheets::FateAccelerated.new
+    end
+  end
+
+  # New GURPS
+  def gurps
+    if user_signed_in?
+      @character_sheet = current_user.gurps_character_sheets.build
+    else
+      @character_sheet = CharacterSheets::Gurps.new
     end
   end
 

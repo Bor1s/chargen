@@ -1,0 +1,64 @@
+<fieldset id='armor_and_posessions' class='form-group row'>
+  <legend><%= t('.armor_and_posessions') %></legend>
+    <div class='col-12'>
+
+      <% 0.upto(33) do |i| %>
+        <% if sheet.send(:"item_#{i}").present? %>
+          <div class='row'>
+            <div class='col-12 col-md-3 col-lg-3'>
+              <p title="<%= t('.item') %>" data-toggle='tooltip' data-placement='top'><%= sheet.send(:"item_#{i}") %></p>
+            </div>
+
+            <div class='col-12 col-md-3 col-lg-3'>
+              <p title="<%= t('.location') %>" data-toggle='tooltip' data-placement='top'><%= sheet.send(:"itemloc_#{i}") %></p>
+            </div>
+
+            <div class='col-12 col-md-3 col-lg-3'>
+              <p title="<%= t('.cost') %>" data-toggle='tooltip' data-placement='top'><%= sheet.send(:"itemcost_#{i}") %></p>
+            </div>
+
+            <div class='col-12 col-md-3 col-lg-3'>
+              <p title="<%= t('.weight') %>" data-toggle='tooltip' data-placement='top'><%= sheet.send(:"itemweight_#{i}") %></p>
+            </div>
+
+            <div class='col-12 mb-3 hidden-md-up'>
+              <hr />
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+
+      <div class='col-12 mb-3'>
+        <hr />
+      </div>
+
+      <div class='row'>
+        <div class='col-sm-12 col-md-6 col-lg-6'>
+          <div class='row'>
+            <div class='col-4 col-md-5 col-lg-5'>
+              <p class='font-weight-bold'>Total Cost</p>
+            </div>
+
+            <div class='col-8 col-md-6 col-lg-6'>
+              <p><%= sheet.totalcost %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class='row'>
+        <div class='col-sm-12 col-md-6 col-lg-6'>
+          <div class='row'>
+            <div class='col-4 col-md-5 col-lg-5'>
+              <p class='font-weight-bold'>Total Weight</p>
+            </div>
+
+            <div class='col-8 col-md-6 col-lg-6'>
+              <p><%= sheet.totalweight %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+</fieldset>
