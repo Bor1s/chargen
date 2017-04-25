@@ -2,7 +2,7 @@ FactoryGirl.define do
   factory :character_sheet do
 
     factory :fate_core_sheet, class: CharacterSheets::FateCore do
-      data_fields({ 'CharacterName' => 'Frodo' })
+      data_fields({ 'name' => 'Frodo' })
     end
 
     factory :fate_accelerated_sheet, class: CharacterSheets::FateAccelerated do

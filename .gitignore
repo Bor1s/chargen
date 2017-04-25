@@ -65,10 +65,18 @@ build-iPhoneSimulator/
 
 # Ignore all logfiles and tempfiles.
 /log/*
-/tmp/*
+/tmp/cache/
+/tmp/pids/
+/tmp/pdfformfiller.tar.gz
+/tmp/pdfformfiller/
+/tmp/restart.txt
+/tmp/downloads/*.txt
+/tmp/downloads/*.pdf
+
 !/tmp/pdf_templates
 !/log/.keep
 !/tmp/.keep
+!/tmp/downloads/.keep
 
 # Ignore Byebug command history file.
 .byebug_history

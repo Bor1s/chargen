@@ -38,14 +38,14 @@ class CharacterSheetsController < ApplicationController
   end
 
   def create
-    service = CreateCharacterSheetService.new(current_user, system_params, character_sheet_params)
+    service = CreateCharacterSheetService.new(current_user, system, character_sheet_params)
 
     if service.save
       service.generate_shareable_link
       redirect_to edit_character_sheet_path(service.character_sheet), notice: t('.character_sheet_created')
     else
       @character_sheet = service.character_sheet
-      render system_params
+      render system
     end
   end
 
@@ -79,10 +79,11 @@ class CharacterSheetsController < ApplicationController
   end
 
   def export
-    if user_signed_in?
-      export_saved_sheet
+    service = CharacterSheetExportService.new(extract_character_sheet)
+    if service.export
+      send_file service.output_pdf, type: 'application/pdf', disposition: 'inline'
     else
-      export_unsaved_sheet
+      render 'export_failed'
     end
   end
 
@@ -92,21 +93,15 @@ class CharacterSheetsController < ApplicationController
     params.require(:character_sheet).permit!
   end
 
-  def system_params
+  def system
     params.require(:system)
   end
 
-  def export_saved_sheet
-    character_sheet = current_user.character_sheets.find(params[:id])
-    service = CharacterSheetService.new(character_sheet)
-    service.export_to_pdf!
-    send_file service.pdf_path, type: 'application/pdf', disposition: 'inline'
-  end
-
-  def export_unsaved_sheet
-    @character_sheet = CharacterSheetFactory.build(system_params, character_sheet_params)
-    service = CharacterSheetService.new(@character_sheet)
-    service.export_to_pdf!
-    send_file service.pdf_path, type: 'application/pdf', disposition: 'inline'
+  def extract_character_sheet
+    if user_signed_in?
+      current_user.character_sheets.find(params[:id])
+    else
+      CharacterSheetFactory.build(system, character_sheet_params)
+    end
   end
 end

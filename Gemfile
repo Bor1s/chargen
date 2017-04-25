@@ -48,6 +48,8 @@ group :test do
   gem 'shoulda-matchers', '~> 3.1'
   gem 'database_cleaner'
   gem 'rails-controller-testing'
+  gem 'capybara'
+  gem 'poltergeist'
 end
 
 group :development do
