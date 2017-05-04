@@ -1,28 +1,29 @@
+<%= render 'profiles/profile_navbar' %>
+
 <div class='container'>
   <div class='row'>
-    <div class='col game-system-logo my-5'>
-      <%= render 'logo_resolver', character_sheet: @character_sheet %>
+    <div class='col'>
+      <hr class='my-5' />
+
+      <div class='row align-items-center'>
+        <div class='col-12 col-md-12 col-lg-6 text-center'>
+          <p><%= render 'logo_resolver', character_sheet: @character_sheet %></p>
+        </div>
+
+        <div class='col-12 col-md-12 col-lg-6 text-center'>
+          <p><%= render 'manage_buttons', character_sheet: @character_sheet %></p>
+        </div>
+      </div>
+
+      <hr class='my-5' />
     </div>
   </div>
 
   <%= render 'character_sheets/show_resolver', character_sheet: @character_sheet %>
 
-  <div class='row'>
-    <div class='col'>
-      <%= link_to t('.edit'), edit_character_sheet_path(@character_sheet), class: 'btn btn-success' %>
-      <%= link_to t('.export'), export_character_sheet_path(@character_sheet), target: '_blank', class: 'btn btn-primary' %>
-      <%= link_to 'javascript:void(0)',
-        class: 'btn btn-secondary',
-        tabindex: 0,
-        role: 'button',
-        title: t('character_sheets.actions.share'),
-        data: { toggle: 'popover', placement: 'top', 'content-id': dom_id(@character_sheet)} do %>
-        <%= fa_icon 'link', text: 'Share' %>
-        <%= fa_icon 'caret-down' %>
-      <% end %>
-      <%= link_to t('.back'), character_sheets_profile_path, class: 'btn btn-secondary' %>
-    </div>
-  </div>
+  <p id='footer-manage-buttons'>
+    <%= render 'manage_buttons', character_sheet: @character_sheet %>
+  </p>
 </div>
 
 <%= render 'popover_content', object: @character_sheet %>
