@@ -66,13 +66,13 @@ en:
       update: 'Update'
       view: 'View'
       export: 'Export to PDF'
-      back: 'Back'
+      back: 'Sheets'
       jump_to: 'Jump To'
 
-    show:
+    manage_buttons:
       edit: 'Edit'
       export: 'Export to PDF'
-      back: 'Back'
+      back: 'Sheets'
 
     # Fate Core
     fate_cores:

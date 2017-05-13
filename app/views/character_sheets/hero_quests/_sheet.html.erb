@@ -3,17 +3,14 @@
 <% end %>
 
 <!-- General section -->
-<div class='row'>
-  <div class='col-4'>
-    <p><%= character_sheet.character_name %></p>
+<div class='row text-center'>
+  <div class='col-12 col-md-6 col-lg-6'>
+    <h3><%= character_sheet.character_name %></h3>
+    <p>(<%= character_sheet.player_name %>)</p>
   </div>
 
-  <div class='col-4'>
-    <p><%= character_sheet.game_name %></p>
-  </div>
-
-  <div class='col-4'>
-    <p><%= character_sheet.player_name %></p>
+  <div class='col-12 col-md-6 col-lg-6'>
+    <h3 class='text-muted'><%= character_sheet.game_name %></h3>
   </div>
 </div>
 <!-- END General section -->
@@ -29,7 +26,7 @@
 <!-- Hero Points section -->
 <div class='row mt-4'>
   <div class='col'>
-    <h4 class='hero-quest-header text-center'><%= t('.hero_points') %></h4>
+    <h3 class='hero-quest-header text-center'><%= t('.hero_points') %></h3>
   </div>
 </div>
 
@@ -43,8 +40,8 @@
 <div class='row'>
   <!-- Abilities section -->
   <div class='grid-row col-12 col-sm-12 col-md-6 col-lg-4'>
-    <div class='row'>
-      <div class='col-2'>
+    <div class='row text-center'>
+      <div class='col-12'>
         <p class='mt-4'>
           <h4 class='hero-quest-header'><%= t('.abilities') %></h4>
         </p>
@@ -69,8 +66,8 @@
 
   <!-- Flaws section -->
   <div class='grid-row col-12 col-sm-12 col-md-6 col-lg-4'>
-    <div class='row'>
-      <div class='col-2'>
+    <div class='row text-center'>
+      <div class='col-12'>
         <p class='mt-4'>
           <h4 class='hero-quest-header'><%= t('.flaws') %></h4>
         </p>
@@ -94,7 +91,7 @@
 
   <!-- Benefits/penalties section -->
   <div class='grid-row col-12 col-sm-12 col-md-6 col-lg-4'>
-    <div class='row'>
+    <div class='row text-center'>
       <div class='col-12'>
         <p class='mt-4'>
           <h4 class='hero-quest-header'><%= t('.benefits') %></h4>

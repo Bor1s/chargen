@@ -1,5 +1,5 @@
 # config valid only for current version of Capistrano
-lock "3.7.1"
+lock "3.8.1"
 
 set :application, "character_sheets"
 set :repo_url, "git@github.com:Bor1s/chargen.git"
