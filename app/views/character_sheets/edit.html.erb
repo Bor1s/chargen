@@ -1,15 +1,23 @@
 <%= render 'profiles/profile_navbar' %>
 
 <div class='container'>
+  <%= form_for @character_sheet, as: :character_sheet, url: character_sheet_path(@character_sheet), method: :put do |f| %>
   <div class='row'>
-    <div class='col game-system-logo my-5'>
-      <%= render 'character_sheets/logo_resolver', character_sheet: @character_sheet %>
+    <div class='col'>
+      <hr class='my-5' />
+
+      <div class='row align-items-center'>
+        <div class='col-12 text-center'>
+          <%= render 'character_sheets/logo_resolver', character_sheet: @character_sheet %>
+        </div>
+      </div>
+
+      <hr class='my-5' />
     </div>
   </div>
 
   <%= render 'jump_to_sections', character_sheet: @character_sheet %>
 
-  <%= form_for @character_sheet, as: :character_sheet, url: character_sheet_path(@character_sheet), method: :put do |f| %>
     <%= render 'character_sheets/form_resolver', f: f %>
     <div class='row'>
       <div class='col'>
