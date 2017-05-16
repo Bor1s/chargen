@@ -1,4 +1,10 @@
-class CharacterSheets::Null < CharacterSheet
+class CharacterSheets::Null
   SYSTEM_NAME = 'null'
-  self.abstract_class = true
+
+  def initialize(params)
+  end
+
+  def self.stored_attributes
+    { data_fields: [] }
+  end
 end
