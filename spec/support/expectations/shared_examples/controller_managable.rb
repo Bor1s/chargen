@@ -45,7 +45,18 @@ RSpec.shared_examples 'controller_managable' do |new_sheet_route, system, params
           it 'renders export_failed page' do
             allow_any_instance_of(CharacterSheetExportService).to receive(:export).and_return(false)
             get :export, params: { id: sheet.id }
-            expect(response).to have_http_status(200)
+            expect(response).to render_template(:export_failed)
+          end
+        end
+
+        context 'with malicious request' do
+          before do
+            sign_out user
+          end
+
+          it 'renders malicious_request page' do
+            get :export, params: { id: sheet.id }
+            expect(response).to render_template(:malicious_request)
           end
         end
       end
@@ -82,7 +93,15 @@ RSpec.shared_examples 'controller_managable' do |new_sheet_route, system, params
           allow_any_instance_of(CharacterSheetExportService).to receive(:export).and_return(false)
           data = Hash[params.keys.first, 'Frodo']
           post :export, params: { system: sheet.class::SYSTEM_NAME, character_sheet: data }
-          expect(response).to have_http_status(200)
+          expect(response).to render_template(:export_failed)
+        end
+      end
+
+      context 'with malicious request' do
+        it 'renders malicious_request page' do
+          data = Hash[params.keys.first, 'Frodo']
+          post :export, params: { system: nil, character_sheet: data }
+          expect(response).to render_template(:malicious_request)
         end
       end
     end

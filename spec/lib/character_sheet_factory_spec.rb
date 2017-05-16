@@ -12,7 +12,7 @@ RSpec.describe CharacterSheetFactory, type: :lib do
     end
 
     it 'makes new null object' do
-      expect { described_class.build(nil, {}) }.to raise_error(NotImplementedError, 'CharacterSheets::Null is an abstract class and cannot be instantiated.')
+      expect(described_class.build(nil, {}).class).to eq CharacterSheets::Null
     end
   end
 end

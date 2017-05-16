@@ -5,6 +5,10 @@ class ApplicationController < ActionController::Base
               ActionController::MissingFile,
               with: :not_found
 
+  rescue_from ActionController::ParameterMissing do |e|
+    render 'malicious_request'
+  end
+
   private
 
   def not_found
